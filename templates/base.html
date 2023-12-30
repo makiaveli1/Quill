@@ -1,50 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {%block meta%}
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    {% load static %}
+    {% block meta %}
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     {% endblock %}
 
-    {%block extra_meta%}
+    {% block extra_meta %}
+
     {% endblock %}
 
     {% block corecss %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      </style>
+      <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% endblock %}
 
-    {% block extr_css %}
+    {% block extra_css %}
+
     {% endblock %}
 
     {% block corejs %}
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
     {% endblock %}
 
     {% block extra_js %}
+
     {% endblock %}
 
+    <title>
+      Quill - Your Next Adventure{% block extra_title %}
 
-
-    <title>Quill - Your Next Adventure {% block extra_title %} {% endblock %} </title>
+      {% endblock %}
+    </title>
   </head>
   <body>
-    <header class="container-fluid fixed-top"></header> 
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="{% url 'home' %}"><img width="64" height="64" src="https://img.icons8.com/glyph-neue/64/quill-pen.png" alt="Quill Pen Logo" /> <!-- Logo --></a>
+          <!-- Toggler/Collapsible Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Books</a>
+              </li>
+              <!-- Add other links here -->
+            </ul>
+            <!-- Search form -->
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <!-- Account icon -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href=""><img src="" alt="Account" style="max-height: 24px;" /> <!-- Update the path to your account icon --></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     {% if messages %}
-    <div class="message-container"></div>
+      <div class="message-container"></div>
     {% endif %}
 
-    {% block page_header%}
+    {% block page_header %}
+
     {% endblock %}
 
     {% block content %}
+
     {% endblock %}
 
     {% block postload_js %}
+
     {% endblock %}
 
+    <footer>
+      <!-- ... your existing footer ... -->
+      <div class="icons8-attribution">
+        <a href="https://icons8.com/icon/hGBTBdUownyO/quill-pen">Quill Pen</a> icon by <a href="https://icons8.com">Icons8</a>
+      </div>
+    </footer>
   </body>
 </html>

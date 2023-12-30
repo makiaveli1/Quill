@@ -1,0 +1,113 @@
+/* General Reset */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header */
+  .navbar {
+    background: transparent;
+    border-bottom: 2px solid #eee; /* Adjust to match design */
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem; /* Adjust to match design */
+    color: #333; /* Adjust to match design */
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  /* Adjust logo and menu for mobile */
+  .navbar-brand img {
+    max-height: 40px; /* Adjust based on actual logo size */
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  /* Benefits Section */
+  .benefits-section img {
+    width: 50px; /* Adjust to match design */
+    height: auto;
+    margin-bottom: .5rem;
+  }
+  
+  .benefits-section div {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* Mailing List Section */
+  .subscribe-section {
+    background: #f8f9fa; /* Adjust to match design */
+    padding: 2rem 1rem;
+  }
+  
+  .subscribe-section form {
+    margin-top: 1rem;
+  }
+  
+  .subscribe-section input[type="email"] {
+    border: 0;
+    padding: .5rem;
+    margin-right: .5rem;
+  }
+  
+  .subscribe-section button {
+    background: #000; /* Adjust to match design */
+    color: #fff; /* Adjust to match design */
+    border: 0;
+    padding: .5rem 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    background: #333; /* Adjust to match design */
+    color: #fff; /* Adjust to match design */
+    padding: 1rem 0;
+  }
+  
+  footer p, footer a {
+    color: inherit;
+  }
+  
+  /* Social Media Icons */
+  footer .social-icons img {
+    width: 30px; /* Adjust to match design */
+    height: auto;
+    margin: 0 .5rem;
+  }
+  
+  /* Responsive adjustments for tablet and desktop */
+  @media (min-width: 768px) {
+    /* Adjust styles for larger screens */
+    .navbar {
+      background: #fff; /* Adjust to match design */
+    }
+    
+    .navbar-brand img {
+      max-height: 60px; /* Adjust based on actual logo size */
+    }
+  }
+
+  /* Add this to your custom.css */
+.icons8-attribution {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+  }
+  
