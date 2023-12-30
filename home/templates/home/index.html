@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+{% endblock extracss %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="container-fluid p-0 hero-section">
+  <img src="{% static 'images/hero-background.jpg' %}" alt="Background" class="img-fluid" />
+  <div class="hero-text">
+    <h1 class="display-4">Begin Your Next Adventure</h1>
+    <p>Buy two and get one free</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Shop Now</a>
+  </div>
+</div>
+
+<!-- Benefits Section -->
+<div class="container benefits-section text-center">
+  <div class="row">
+    <div class="col-4">
+      <img src="{% static 'images/instant-delivery-icon.png' %}" alt="Instant Delivery" class="img-fluid" />
+      <p>Instant Delivery</p>
+    </div>
+    <div class="col-4">
+      <img src="{% static 'images/secure-payments-icon.png' %}" alt="Secure Payments" class="img-fluid" />
+      <p>Secure Payments</p>
+    </div>
+    <div class="col-4">
+      <img src="{% static 'images/free-returns-icon.png' %}" alt="Free Returns" class="img-fluid" />
+      <p>Free Returns</p>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+{% block footer %}
+<div class="container-fluid p-0 footer-section text-center">
+  <div class="row">
+    <div class="col-12">
+      <p>About Us | Privacy Policy | FAQ</p>
+      <div class="social-icons">
+        <a href="#"><img src="{% static 'images/facebook-icon.png' %}" alt="Facebook" /></a>
+        <a href="#"><img src="{% static 'images/twitter-icon.png' %}" alt="Twitter" /></a>
+        <a href="#"><img src="{% static 'images/instagram-icon.png' %}" alt="Instagram" /></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock footer %}
