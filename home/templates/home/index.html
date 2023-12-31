@@ -8,27 +8,27 @@
   <!-- Hero Section -->
   <div class="container-fluid p-0 hero-section">
     <img src="{{ MEDIA_URL }}Hero_Image.png" alt="Background" class="img-fluid" />
-    <div class="hero-text">
-      <h1 class="display-4">Begin Your Next Adventure</h1>
-      <p>Buy two and get one free</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Shop Now</a>
+    <div class="hero-text text-center">
+      <h1 class="display-4 text-warning">Begin Your Next Adventure</h1>
+      <p class="lead text-light">Buy two and get one free</p>
+      <a class="btn btn-lg text-light" href="#" role="button" style="background-color: var(--shop-now);">Shop Now</a>
     </div>
   </div>
 
   <!-- Benefits Section -->
-  <div class="container benefits-section text-center">
+  <div class="container benefits-section text-center my-5">
     <div class="row">
-      <div class="col-4">
-        <img src="{% static 'images/instant-delivery-icon.png' %}" alt="Instant Delivery" class="img-fluid" />
-        <p>Instant Delivery</p>
+      <div class="col-4 my-3">
+        <img width="64" height="64" src="https://img.icons8.com/ios-filled/50/000000/delivery.png" alt="Instant Delivery" class="img-fluid" />
+        <p class="text-dark">Instant Delivery</p>
       </div>
-      <div class="col-4">
-        <img src="{% static 'images/secure-payments-icon.png' %}" alt="Secure Payments" class="img-fluid" />
-        <p>Secure Payments</p>
+      <div class="col-4 my-3">
+        <img width="64" height="64" src="https://img.icons8.com/ios-filled/50/000000/card-security.png" alt="Secure Payments" class="img-fluid" />
+        <p class="text-dark">Secure Payments</p>
       </div>
-      <div class="col-4">
-        <img src="{% static 'images/free-returns-icon.png' %}" alt="Free Returns" class="img-fluid" />
-        <p>Free Returns</p>
+      <div class="col-4 my-3">
+        <img width="64" height="64" src="https://img.icons8.com/ios-filled/50/000000/forward-30.png" alt="30 Day Free Return" class="img-fluid" />
+        <p class="text-dark">Free Returns</p>
       </div>
     </div>
   </div>
