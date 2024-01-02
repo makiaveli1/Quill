@@ -51,6 +51,13 @@
           // Adjust layout on window resize
           $(window).on('resize', adjustHeroLayout)
         })
+        
+        $(document).ready(function () {
+          // Toggle search bar on search icon click
+          $('.search-icon').click(function () {
+            $('.search-bar-container').collapse('toggle')
+          })
+        })
       </script>
     {% endblock %}
 
@@ -64,56 +71,59 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
+          <!-- Hamburger Menu on the far right -->
+          <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
           <!-- Logo on the far left -->
-          <a class="navbar-brand" href="{% url 'home' %}"><img src="https://img.icons8.com/glyph-neue/64/quill-pen.png" alt="Quill Pen Logo" style="height: 50px; width: 50px;" /></a>
+          <a class="navbar-brand order-2" href="{% url 'home' %}"><img src="https://img.icons8.com/glyph-neue/64/quill-pen.png" alt="Quill Pen Logo" style="height: 50px; width: 50px;" /></a>
 
-          <!-- Toggler/Collapsible Button -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <!-- Cart Icon with badge next to the logo -->
+          <div class="cart-icon-container order-3">
+            <a class="nav-icon position-relative" href="#">
+              <img src="media/FastCart.svg" alt="Cart" style="max-height: 24px;" />
+              <span class="badge badge-warning">$0.00</span>
+            </a>
+          </div>
 
-          <!-- Centered nav links with increased spacing -->
-          <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+          <!-- Search icon next to the cart icon -->
+          <div class="search-icon-container order-4 mx-auto">
+            <button class="search-icon-btn" style="border: none; background: none;" onclick="toggleSearch()"><img src="media/Search.svg" alt="Search" class="search-icon" style="height: 24px;" /></button>
+          </div>
+
+          <!-- Collapsible content for nav links -->
+          <div class="collapse navbar-collapse order-last" id="navbarContent">
             <ul class="navbar-nav mx-auto">
-              <li class="nav-item active mx-3">
+              <li class="nav-item active">
                 <a class="nav-link" href="{% url 'home' %}">HOME</a>
               </li>
-              <li class="nav-item mx-3">
+              <li class="nav-item">
                 <a class="nav-link" href="#">BOOKS</a>
               </li>
-              <li class="nav-item mx-3">
+              <li class="nav-item">
                 <a class="nav-link" href="#">MEDICAL</a>
               </li>
-              <li class="nav-item mx-3">
+              <li class="nav-item">
                 <a class="nav-link" href="#">BIOGRAPHY</a>
               </li>
-              <li class="nav-item mx-3">
+              <li class="nav-item">
                 <a class="nav-link" href="#">COMPUTING</a>
               </li>
-              <li class="nav-item mx-3">
+              <li class="nav-item">
                 <a class="nav-link" href="#">CRIME-THRILLER</a>
               </li>
             </ul>
           </div>
-
-          <!-- Right aligned items -->
-          <div class="ml-auto d-flex align-items-center">
-            <!-- Search form -->
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search" />
-              <button class="btn" type="submit" style="border: none; background: none;"><img src="media/Search.svg" alt="Search" style="max-height: 24px;" /></button>
-            </form>
-
-            <!-- Account Icon -->
-            <a class="nav-icon position-relative mx-3" href="#"><img src="media/person.svg" alt="Account" style="max-height: 24px;" /></a>
-            <!-- Cart Icon with badge -->
-            <a class="nav-link" href="#">
-              <img src="media\FastCart.svg" alt="Cart" style="max-height: 24px;" />
-              <span class="badge badge-warning">$0.00</span> <!-- Replace with dynamic cart total -->
-            </a>
-          </div>
         </div>
       </nav>
+      <!-- Collapsible Search Bar -->
+      <div class="search-bar-container collapse" id="searchBar">
+        <!-- New search form -->
+        <form class="search-form" action="#" method="get">
+          <input class="search-input" type="text" placeholder="Search our library" name="search" required />
+          <button class="search-button" type="submit"><img src="media/Search.svg" alt="Search" /></button>
+        </form>
+      </div>
     </header>
-
     {% if messages %}
       <div class="message-container"></div>
     {% endif %}
@@ -131,6 +141,7 @@
     {% endblock %}
 
     <footer>
+      <!-- mailchimp signup form -->
       <div class="container-fluid">
         <div id="mc_embed_shell">
           <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
@@ -163,53 +174,34 @@
             </form>
           </div>
         </div>
+        <!-- Footer navigation -->
+        <ul class="footer-nav list-unstyled text-center pt-4">
+          <li class="d-inline mx-2">
+            <a href="link-to-about-us" class="footer-link">About Us</a>
+          </li>
+          <li class="d-inline mx-2">
+            <a href="link-to-privacy-policy" class="footer-link">Privacy Policy</a>
+          </li>
+          <li class="d-inline mx-2">
+            <a href="link-to-contact-us" class="footer-link">Contact Us</a>
+          </li>
+          <li class="d-inline mx-2">
+            <a href="link-to-faq" class="footer-link">FAQ</a>
+          </li>
+        </ul>
       </div>
-      <!-- Footer Links and Social Media Icons -->
-      <div class="footer-middle pt-3 pb-3">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 mb-2 mb-md-0">
-              <!-- Footer navigation -->
-              <ul class="list-unstyled">
-                <li>
-                  <a href="link-to-about-us" class="footer-link">About Us</a>
-                </li>
-                <li>
-                  <a href="link-to-privacy-policy" class="footer-link">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="link-to-faq" class="footer-link">Contact Us</a>
-                </li>
-                <li>
-                  <a href="link-to-faq" class="footer-link">FAQ</a>
-                </li>
-              </ul>
-            </div>
-            <!-- Social links -->
-            <div class="social-links text-center">
-              <a href="link-to-facebook" class="social-link"><img src="media\Facebook.svg" alt="Facebook" /></a>
-              <a href="link-to-twitter" class="social-link"><img src="media\Twitter.svg" alt="Twitter" /></a>
-              <a href="link-to-instagram" class="social-link"><img src="media\Instagram.svg" alt="Instagram" /></a>
-            </div>
-            <div class="col-md-4 text-md-right">
-              <!-- Attribution link -->
-              <div class="mt-2">
-                <a href="https://icons8.com" class="attribution-link">All icons by Icons8</a>
-              </div>
-            </div>
-          </div>
-        </div>
+
+      <!-- Social Media Icons -->
+      <div class="social-links text-center pt-4">
+        <a href="link-to-facebook" class="social-link d-inline mx-2"><img src="media\Facebook.svg" alt="Facebook" style="width: 24px; height: auto;" /></a>
+        <a href="link-to-twitter" class="social-link d-inline mx-2"><img src="media\Twitter.svg" alt="Twitter" style="width: 24px; height: auto;" /></a>
+        <a href="link-to-instagram" class="social-link d-inline mx-2"><img src="media\Instagram.svg" alt="Instagram" style="width: 24px; height: auto;" /></a>
       </div>
 
       <!-- Bottom Attribution -->
-      <div class="footer-bottom py-2">
-        <div class="container">
-          <div class="row">
-            <div class="col text-center">
-              <p class="mb-0">&copy; 2024 Quill. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
+      <div class="footer-bottom text-center py-4">
+        <p class="mb-0">&copy; Created by Gbemi Akadiri for CI P5.</p>
+        <a href="https://icons8.com" class="attribution-link">All icons by Icons8</a>
       </div>
     </footer>
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
