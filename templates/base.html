@@ -31,7 +31,27 @@
     {% endblock %}
 
     {% block extra_js %}
-
+      <script>
+        // Function to adjust hero section padding and hero text position
+        function adjustHeroLayout() {
+          var navbarHeight = $('.navbar').outerHeight() // Get the current height of the navbar
+          $('.hero-section').css('padding-top', navbarHeight + 'px') // Adjust top padding of hero section
+          $('.hero-text').css('top', navbarHeight + 'px') // Adjust top position of hero text
+        }
+        
+        $(document).ready(function () {
+          // Call the function to set the initial layout
+          adjustHeroLayout()
+        
+          // Listen for Bootstrap collapse events on the navbar
+          $('#navbarContent').on('shown.bs.collapse hidden.bs.collapse', function () {
+            adjustHeroLayout()
+          })
+        
+          // Adjust layout on window resize
+          $(window).on('resize', adjustHeroLayout)
+        })
+      </script>
     {% endblock %}
 
     <title>
@@ -43,47 +63,52 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container">
-          <!-- Logo -->
-          <a class="navbar-brand" href="{% url 'home' %}"><img width="64" height="64" src="https://img.icons8.com/glyph-neue/64/quill-pen.png" alt="Quill Pen Logo" /> <!-- Logo --></a>
+        <div class="container-fluid">
+          <!-- Logo on the far left -->
+          <a class="navbar-brand" href="{% url 'home' %}"><img src="https://img.icons8.com/glyph-neue/64/quill-pen.png" alt="Quill Pen Logo" style="height: 50px; width: 50px;" /></a>
+
           <!-- Toggler/Collapsible Button -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <!-- Navbar links -->
-          <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
+
+          <!-- Centered nav links with increased spacing -->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item active mx-3">
                 <a class="nav-link" href="{% url 'home' %}">HOME</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">BOOKS</a>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="#">BOOKS</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">MEDICAL</a>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="#">MEDICAL</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">BIOGRAPHY</a>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="#">BIOGRAPHY</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">COMPUTING</a>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="#">COMPUTING</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">CRIME-THRILLER</a>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="#">CRIME-THRILLER</a>
               </li>
             </ul>
+          </div>
+
+          <!-- Right aligned items -->
+          <div class="ml-auto d-flex align-items-center">
             <!-- Search form -->
             <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search" />
+              <button class="btn" type="submit" style="border: none; background: none;"><img src="media/Search.svg" alt="Search" style="max-height: 24px;" /></button>
             </form>
-            <!-- Account icon -->
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="">
-                  <!-- Update with your account URL -->
-                  <img src="media\person.svg" alt="Account" style="max-height: 24px;" /> <!-- Icons8 icon -->
-                </a>
-              </li>
-            </ul>
+
+            <!-- Account Icon -->
+            <a class="nav-icon position-relative mx-3" href="#"><img src="media/person.svg" alt="Account" style="max-height: 24px;" /></a>
+            <!-- Cart Icon with badge -->
+            <a class="nav-link" href="#">
+              <img src="media\FastCart.svg" alt="Cart" style="max-height: 24px;" />
+              <span class="badge badge-warning">$0.00</span> <!-- Replace with dynamic cart total -->
+            </a>
           </div>
         </div>
       </nav>
@@ -106,10 +131,106 @@
     {% endblock %}
 
     <footer>
-      <!-- ... your existing footer ... -->
-      <div class="icons8-attribution">
-        <a href="https://icons8.com">All icons by Icons8</a>
+      <div class="container-fluid">
+        <div id="mc_embed_shell">
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
+          <div id="mc_embed_signup">
+            <form action="https://gmail.us12.list-manage.com/subscribe/post?u=2868e4a701640baa5cf3fc157&amp;id=8fc5d103a8&amp;f_id=0051bbe0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+              <div id="mc_embed_signup_scroll">
+                <h2>Subscribe</h2>
+                <div class="indicates-required">
+                  <span class="asterisk">*</span> indicates required
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" /><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+                </div>
+                <div id="mce-responses" class="clear foot">
+                  <div class="response" id="mce-error-response" style="display: none;"></div>
+                  <div class="response" id="mce-success-response" style="display: none;"></div>
+                </div>
+                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                  /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */<input type="text" name="b_2868e4a701640baa5cf3fc157_8fc5d103a8" tabindex="-1" value="" />
+                </div>
+                <div class="optionalParent">
+                  <div class="clear foot">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe" />
+                    <p style="margin: 0px auto;">
+                      <a href="http://eepurl.com/iG_9FM" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;" /></span></a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Links and Social Media Icons -->
+      <div class="footer-middle pt-3 pb-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-2 mb-md-0">
+              <!-- Footer navigation -->
+              <ul class="list-unstyled">
+                <li>
+                  <a href="link-to-about-us" class="footer-link">About Us</a>
+                </li>
+                <li>
+                  <a href="link-to-privacy-policy" class="footer-link">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="link-to-faq" class="footer-link">Contact Us</a>
+                </li>
+                <li>
+                  <a href="link-to-faq" class="footer-link">FAQ</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Social links -->
+            <div class="social-links text-center">
+              <a href="link-to-facebook" class="social-link"><img src="media\Facebook.svg" alt="Facebook" /></a>
+              <a href="link-to-twitter" class="social-link"><img src="media\Twitter.svg" alt="Twitter" /></a>
+              <a href="link-to-instagram" class="social-link"><img src="media\Instagram.svg" alt="Instagram" /></a>
+            </div>
+            <div class="col-md-4 text-md-right">
+              <!-- Attribution link -->
+              <div class="mt-2">
+                <a href="https://icons8.com" class="attribution-link">All icons by Icons8</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Attribution -->
+      <div class="footer-bottom py-2">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <p class="mb-0">&copy; 2024 Quill. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+      ;(function ($) {
+        window.fnames = new Array()
+        window.ftypes = new Array()
+        fnames[0] = 'EMAIL'
+        ftypes[0] = 'email'
+        fnames[1] = 'FNAME'
+        ftypes[1] = 'text'
+        fnames[2] = 'LNAME'
+        ftypes[2] = 'text'
+        fnames[3] = 'ADDRESS'
+        ftypes[3] = 'address'
+        fnames[4] = 'PHONE'
+        ftypes[4] = 'phone'
+        fnames[5] = 'BIRTHDAY'
+        ftypes[5] = 'birthday'
+      })(jQuery)
+      var $mcj = jQuery.noConflict(true)
+    </script>
   </body>
 </html>

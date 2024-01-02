@@ -5,16 +5,18 @@
 {% endblock %}
 
 {% block content %}
-  <!-- Hero Section -->
-  <div class="container-fluid p-0 hero-section">
-    <img src="{{ MEDIA_URL }}Hero_Image.png" alt="Background" class="img-fluid" />
-    <div class="hero-text text-center">
-      <h1 class="display-4 text-warning">Begin Your Next Adventure</h1>
-      <p class="lead text-light">Buy two and get one free</p>
-      <a class="btn btn-lg text-light" href="#" role="button" style="background-color: var(--shop-now);">Shop Now</a>
-    </div>
+  <!-- Promotion Banner -->
+  <div class="promotion-banner text-white py-2">
+    <p class="mb-0">Buy two and get one free</p>
   </div>
 
+  <!-- Hero Section -->
+  <div class="hero-section d-flex align-items-center justify-content-center vh-100">
+    <div class="hero-text text-center">
+      <h1 class="display-4">Begin Your Next Adventure</h1>
+      <a class="btn btn-lg btn-warning" href="#" role="button">Shop Now</a>
+    </div>
+  </div>
   <!-- Benefits Section -->
   <div class="container benefits-section text-center my-5">
     <div class="row">
