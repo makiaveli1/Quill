@@ -4,7 +4,8 @@
         "model": "products.category",
         "fields": {
             "name": "medical",
-            "friendly_name": "Medical"
+            "friendly_name": "Medical",
+            "description": "Books related to medical science, healthcare, and medicine. Ideal for medical professionals, students, and enthusiasts."
         }
     },
     {
@@ -12,7 +13,8 @@
         "model": "products.category",
         "fields": {
             "name": "biography",
-            "friendly_name": "Biography"
+            "friendly_name": "Biography",
+            "description": "This category includes biographies and autobiographies, offering deep insights into the lives of notable individuals."
         }
     },
     {
@@ -20,7 +22,8 @@
         "model": "products.category",
         "fields": {
             "name": "crime-thriller",
-            "friendly_name": "Crime-Thriller"
+            "friendly_name": "Crime-Thriller",
+            "description": "Thrilling narratives involving crime, mystery, and suspense. Perfect for readers who love a good mystery."
         }
     },
     {
@@ -28,7 +31,8 @@
         "model": "products.category",
         "fields": {
             "name": "computing",
-            "friendly_name": "Computing"
+            "friendly_name": "Computing",
+            "description": "Books covering topics in computing, software development, and information technology."
         }
     }
 ]

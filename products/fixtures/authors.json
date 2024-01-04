@@ -1,0 +1,688 @@
+[
+    {
+        "pk": 1,
+        "model": "products.author",
+        "fields": {
+            "name": "Blake Crouch"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.author",
+        "fields": {
+            "name": "Dr. Lindsay Murray"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.author",
+        "fields": {
+            "name": "Dana Carpender"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.author",
+        "fields": {
+            "name": "A.G. Mohan"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.author",
+        "fields": {
+            "name": "Sophie Fletcher"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.author",
+        "fields": {
+            "name": "Susan C. Shelmerdine"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.author",
+        "fields": {
+            "name": "Walter Mischel"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.author",
+        "fields": {
+            "name": "Kathy L. Kain"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.author",
+        "fields": {
+            "name": "Colin A. Espie"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.author",
+        "fields": {
+            "name": "Kay Redfield Jamison"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.author",
+        "fields": {
+            "name": "Eleanor Main"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.author",
+        "fields": {
+            "name": "Ryan M. Niemiec"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.author",
+        "fields": {
+            "name": "Angela E. McHolm"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.author",
+        "fields": {
+            "name": "Paramahansa Yogananda"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.author",
+        "fields": {
+            "name": "Kate Collins-Donnelly"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.author",
+        "fields": {
+            "name": "Dicken Weatherby"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.author",
+        "fields": {
+            "name": "Atul Gawande"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.author",
+        "fields": {
+            "name": "Randine Lewis"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.author",
+        "fields": {
+            "name": "Domini Kemp"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.author",
+        "fields": {
+            "name": "Jonathan V. Wright"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.author",
+        "fields": {
+            "name": "Sue Walker"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.author",
+        "fields": {
+            "name": "Brian Weiss"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.author",
+        "fields": {
+            "name": "Jolene Hart"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.author",
+        "fields": {
+            "name": "Nadia Murad"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.author",
+        "fields": {
+            "name": "Sheryl Sandberg"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.author",
+        "fields": {
+            "name": "Laura Hillenbrand"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.author",
+        "fields": {
+            "name": "Tina Hutchence"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.author",
+        "fields": {
+            "name": "Magda Szubanski"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.author",
+        "fields": {
+            "name": "Terry Wahls"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.author",
+        "fields": {
+            "name": "Ant Middleton"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.author",
+        "fields": {
+            "name": "Judy Melinek"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.author",
+        "fields": {
+            "name": "Ryszard Kapuscinski"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.author",
+        "fields": {
+            "name": "Fr. Tony Coote"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.author",
+        "fields": {
+            "name": "Billy Connolly"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "products.author",
+        "fields": {
+            "name": "The Countess of Carnarvon"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "products.author",
+        "fields": {
+            "name": "Dr. Munjed Al Muderis"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "products.author",
+        "fields": {
+            "name": "Maya Angelou"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "products.author",
+        "fields": {
+            "name": "Andrew Roberts"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "products.author",
+        "fields": {
+            "name": "John Howard Griffin"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "products.author",
+        "fields": {
+            "name": "Greg Mortenson"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "products.author",
+        "fields": {
+            "name": "Celeste Barber"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "products.author",
+        "fields": {
+            "name": "ARCHER JEFFREY"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "products.author",
+        "fields": {
+            "name": "Knut Hamsun"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "products.author",
+        "fields": {
+            "name": "Nigel Slater"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "products.author",
+        "fields": {
+            "name": "Mark Owen"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "products.author",
+        "fields": {
+            "name": "Sarah MacDonald"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "products.author",
+        "fields": {
+            "name": "Chesley B. Sullenberger"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "products.author",
+        "fields": {
+            "name": "Anthony Ray Hinton"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "products.author",
+        "fields": {
+            "name": "Michael Robotham"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "products.author",
+        "fields": {
+            "name": "Patricia Cornwell"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "products.author",
+        "fields": {
+            "name": "Catharina Ingelman-Sundberg"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "products.author",
+        "fields": {
+            "name": "Camilla L\u00e4ckberg"
+        }
+    },
+    {
+        "pk": 53,
+        "model": "products.author",
+        "fields": {
+            "name": "Harlan Coben"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "products.author",
+        "fields": {
+            "name": "Peter Temple"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "products.author",
+        "fields": {
+            "name": "Andrea Camilleri"
+        }
+    },
+    {
+        "pk": 56,
+        "model": "products.author",
+        "fields": {
+            "name": "Pittacus Lore"
+        }
+    },
+    {
+        "pk": 57,
+        "model": "products.author",
+        "fields": {
+            "name": "Sally Hepworth"
+        }
+    },
+    {
+        "pk": 58,
+        "model": "products.author",
+        "fields": {
+            "name": "Ian McEwan"
+        }
+    },
+    {
+        "pk": 59,
+        "model": "products.author",
+        "fields": {
+            "name": "Daniel Silva"
+        }
+    },
+    {
+        "pk": 60,
+        "model": "products.author",
+        "fields": {
+            "name": "A S a Harrison"
+        }
+    },
+    {
+        "pk": 61,
+        "model": "products.author",
+        "fields": {
+            "name": "Genevieve Cogman"
+        }
+    },
+    {
+        "pk": 62,
+        "model": "products.author",
+        "fields": {
+            "name": "Adrian McKinty"
+        }
+    },
+    {
+        "pk": 63,
+        "model": "products.author",
+        "fields": {
+            "name": "Robert Harris"
+        }
+    },
+    {
+        "pk": 64,
+        "model": "products.author",
+        "fields": {
+            "name": "Stephen King"
+        }
+    },
+    {
+        "pk": 65,
+        "model": "products.author",
+        "fields": {
+            "name": "Elly Griffiths"
+        }
+    },
+    {
+        "pk": 66,
+        "model": "products.author",
+        "fields": {
+            "name": "Kathryn Bonella"
+        }
+    },
+    {
+        "pk": 67,
+        "model": "products.author",
+        "fields": {
+            "name": "Liz Nugent"
+        }
+    },
+    {
+        "pk": 68,
+        "model": "products.author",
+        "fields": {
+            "name": "Kentaro Miura"
+        }
+    },
+    {
+        "pk": 69,
+        "model": "products.author",
+        "fields": {
+            "name": "Charlaine Harris"
+        }
+    },
+    {
+        "pk": 70,
+        "model": "products.author",
+        "fields": {
+            "name": "Arundhati Roy"
+        }
+    },
+    {
+        "pk": 71,
+        "model": "products.author",
+        "fields": {
+            "name": "Alexander McCall Smith"
+        }
+    },
+    {
+        "pk": 72,
+        "model": "products.author",
+        "fields": {
+            "name": "Colleen Hoover"
+        }
+    },
+    {
+        "pk": 73,
+        "model": "products.author",
+        "fields": {
+            "name": "Kyle Simpson"
+        }
+    },
+    {
+        "pk": 74,
+        "model": "products.author",
+        "fields": {
+            "name": "Andrew Faulkner"
+        }
+    },
+    {
+        "pk": 75,
+        "model": "products.author",
+        "fields": {
+            "name": "Vaughn Vernon"
+        }
+    },
+    {
+        "pk": 76,
+        "model": "products.author",
+        "fields": {
+            "name": "Marijn Haverbeke"
+        }
+    },
+    {
+        "pk": 77,
+        "model": "products.author",
+        "fields": {
+            "name": "Mike Cohn"
+        }
+    },
+    {
+        "pk": 78,
+        "model": "products.author",
+        "fields": {
+            "name": "Noam Nisan"
+        }
+    },
+    {
+        "pk": 79,
+        "model": "products.author",
+        "fields": {
+            "name": "Nykolai Aleksander"
+        }
+    },
+    {
+        "pk": 80,
+        "model": "products.author",
+        "fields": {
+            "name": "Sara Tasker"
+        }
+    },
+    {
+        "pk": 81,
+        "model": "products.author",
+        "fields": {
+            "name": "James Barrat"
+        }
+    },
+    {
+        "pk": 82,
+        "model": "products.author",
+        "fields": {
+            "name": "Ray Kurzweil"
+        }
+    },
+    {
+        "pk": 83,
+        "model": "products.author",
+        "fields": {
+            "name": "Esther Derby"
+        }
+    },
+    {
+        "pk": 84,
+        "model": "products.author",
+        "fields": {
+            "name": "Catherine Price"
+        }
+    },
+    {
+        "pk": 85,
+        "model": "products.author",
+        "fields": {
+            "name": "Tom Ang"
+        }
+    },
+    {
+        "pk": 86,
+        "model": "products.author",
+        "fields": {
+            "name": "Roger Penrose"
+        }
+    },
+    {
+        "pk": 87,
+        "model": "products.author",
+        "fields": {
+            "name": "Marco Russo"
+        }
+    },
+    {
+        "pk": 88,
+        "model": "products.author",
+        "fields": {
+            "name": "Robert Nystrom"
+        }
+    },
+    {
+        "pk": 89,
+        "model": "products.author",
+        "fields": {
+            "name": "Alan Cooper"
+        }
+    },
+    {
+        "pk": 90,
+        "model": "products.author",
+        "fields": {
+            "name": "Gabriel Kirmaier"
+        }
+    },
+    {
+        "pk": 91,
+        "model": "products.author",
+        "fields": {
+            "name": "Aditya Y. Bhargava"
+        }
+    },
+    {
+        "pk": 92,
+        "model": "products.author",
+        "fields": {
+            "name": "Ben Forta"
+        }
+    },
+    {
+        "pk": 93,
+        "model": "products.author",
+        "fields": {
+            "name": "Yoshihito Isogawa"
+        }
+    },
+    {
+        "pk": 94,
+        "model": "products.author",
+        "fields": {
+            "name": "Jane McGonigal"
+        }
+    },
+    {
+        "pk": 95,
+        "model": "products.author",
+        "fields": {
+            "name": "Andy Brunning"
+        }
+    },
+    {
+        "pk": 96,
+        "model": "products.author",
+        "fields": {
+            "name": "A. Agrawal"
+        }
+    },
+    {
+        "pk": 97,
+        "model": "products.author",
+        "fields": {
+            "name": "Dr. Simon Singh"
+        }
+    },
+    {
+        "pk": 98,
+        "model": "products.author",
+        "fields": {
+            "name": "Eric Topol"
+        }
+    }
+]
