@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_meta %}
+  <meta name="description" content="Discover a world of ebooks at [Your Store Name], from latest releases to timeless classics." />
+  <meta name="keywords" content="ebooks, digital books, online bookstore, [Your Store Name], reading, authors" />
+  <meta name="author" content="[Your Name/Store's Name]" />
+{% endblock %}
+
+{% block extra_title %}
+  Ebooks Collection
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'products\static\products\css\products.css' %}" />
+{% endblock %}
+
+{% block page_header %}
+  <!-- Page header setup -->
+  <div class="container header-container">
+    <!-- header elements here if needed -->
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="overlay"></div>
+
+  <!-- Core of the page -->
+  <div class="container">
+    <!-- Page title and category filters -->
+    <div class="row">
+      <div class="col text-center mt-3">
+        <h2 class="ebook-font mt-3">Explore Our Ebooks</h2>
+        {% for c in current_categories %}
+          <a class="category-badge text-decoration-none" href="{% url 'products' %}?category_name={{ c.name }}"><span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.name }}</span></a>
+        {% endfor %}
+        <hr class="w-50 mb-1" />
+      </div>
+    </div>
+
+    <!-- Sorting and Product Cards -->
+    <div class="row">
+      <div class="product-container col-10 offset-1">
+        <!-- Sorting Dropdown -->
+        <div class="row mt-1 mb-2">
+          <!-- sorting logic and dropdown here -->
+        </div>
+
+        <!-- Products Display -->
+        <div class="row">
+          {% for product in products %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+              <div class="card h-100 border-0">
+                <!-- Product Image -->
+                {% if product.image %}
+                  <a href="{% url 'product_detail' product.id %}"><img class="card-img-top img-fluid img-responsive" src="{{ product.image.url }}" alt="{{ product.name }}" height="100%" width="100%" /></a>
+                {% else %}
+                  <!-- Fallback Image if None Available -->
+                  <a href="{% url 'product_detail' product.id %}"><img class="card-img-top img-fluid img-responsive" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" height="100%" width="100%" /></a>
+                {% endif %}
+
+                <!-- Product Details -->
+                <div class="card-body pt-1">
+                  <h5 class="card-title">{{ product.name }}</h5>
+                  <p class="card-text">{{ product.author }}</p>
+                  <p class="card-text">{{ product.format }}</p>
+                  <p class="card-text">ISBN: {{ product.isbn }}</p>
+                  <p class="card-text">Price: €{{ product.price }}</p>
+                </div>
+
+                <!-- Add to Cart Button -->
+                <div class="card-footer bg-white pt-0 border-0 text-left">
+                  <a href="{% url 'add_to_bag' product.id %}" aria-label="Add to My Cart" class="btn btn-black rounded-0 text-uppercase text-white mt-2" title="Add to My Cart">Add to my Cart</a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <div class="btt-button shadow-sm rounded-0 border border-black">
+    <a class="btt-link d-flex h-300"><i class="fas fa-arrow-up text-black mx-auto my-auto"></i></a>
+    <p class="text-muted text-center">Top</p>
+  </div>
+{% endblock %}
+
+{% block postloadjs %}
+  {{ block.super }}
+  <script>
+    //  JavaScript for product page here
+  </script>
+{% endblock %}
