@@ -43,7 +43,14 @@
       <div class="product-container col-10 offset-1">
         <!-- Sorting Dropdown -->
         <div class="row mt-1 mb-2">
-          <!-- sorting logic and dropdown here -->
+            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-black">
+                <option value="reset">Sort by...</option>
+                <option value="author_asc">Author (A-Z)</option>
+                <option value="author_desc">Author (Z-A)</option>
+                <option value="price_asc">Price (low to high)</option>
+                <option value="price_desc">Price (high to low)</option>
+                <!-- Add more sorting options as needed -->
+            </select>            
         </div>
 
         <!-- Products Display -->

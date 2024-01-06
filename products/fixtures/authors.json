@@ -3,686 +3,784 @@
         "pk": 1,
         "model": "products.author",
         "fields": {
-            "name": "Blake Crouch"
+            "name": "Blake Crouch",
+            "slug": "blake-crouch"
         }
     },
     {
         "pk": 2,
         "model": "products.author",
         "fields": {
-            "name": "Dr. Lindsay Murray"
+            "name": "Dr. Lindsay Murray",
+            "slug": "dr.-lindsay-murray"
         }
     },
     {
         "pk": 3,
         "model": "products.author",
         "fields": {
-            "name": "Dana Carpender"
+            "name": "Dana Carpender",
+            "slug": "dana-carpender"
         }
     },
     {
         "pk": 4,
         "model": "products.author",
         "fields": {
-            "name": "A.G. Mohan"
+            "name": "A.G. Mohan",
+            "slug": "a.g.-mohan"
         }
     },
     {
         "pk": 5,
         "model": "products.author",
         "fields": {
-            "name": "Sophie Fletcher"
+            "name": "Sophie Fletcher",
+            "slug": "sophie-fletcher"
         }
     },
     {
         "pk": 6,
         "model": "products.author",
         "fields": {
-            "name": "Susan C. Shelmerdine"
+            "name": "Susan C. Shelmerdine",
+            "slug": "susan-c.-shelmerdine"
         }
     },
     {
         "pk": 7,
         "model": "products.author",
         "fields": {
-            "name": "Walter Mischel"
+            "name": "Walter Mischel",
+            "slug": "walter-mischel"
         }
     },
     {
         "pk": 8,
         "model": "products.author",
         "fields": {
-            "name": "Kathy L. Kain"
+            "name": "Kathy L. Kain",
+            "slug": "kathy-l.-kain"
         }
     },
     {
         "pk": 9,
         "model": "products.author",
         "fields": {
-            "name": "Colin A. Espie"
+            "name": "Colin A. Espie",
+            "slug": "colin-a.-espie"
         }
     },
     {
         "pk": 10,
         "model": "products.author",
         "fields": {
-            "name": "Kay Redfield Jamison"
+            "name": "Kay Redfield Jamison",
+            "slug": "kay-redfield-jamison"
         }
     },
     {
         "pk": 11,
         "model": "products.author",
         "fields": {
-            "name": "Eleanor Main"
+            "name": "Eleanor Main",
+            "slug": "eleanor-main"
         }
     },
     {
         "pk": 12,
         "model": "products.author",
         "fields": {
-            "name": "Ryan M. Niemiec"
+            "name": "Ryan M. Niemiec",
+            "slug": "ryan-m.-niemiec"
         }
     },
     {
         "pk": 13,
         "model": "products.author",
         "fields": {
-            "name": "Angela E. McHolm"
+            "name": "Angela E. McHolm",
+            "slug": "angela-e.-mcholm"
         }
     },
     {
         "pk": 14,
         "model": "products.author",
         "fields": {
-            "name": "Paramahansa Yogananda"
+            "name": "Paramahansa Yogananda",
+            "slug": "paramahansa-yogananda"
         }
     },
     {
         "pk": 15,
         "model": "products.author",
         "fields": {
-            "name": "Kate Collins-Donnelly"
+            "name": "Kate Collins-Donnelly",
+            "slug": "kate-collins-donnelly"
         }
     },
     {
         "pk": 16,
         "model": "products.author",
         "fields": {
-            "name": "Dicken Weatherby"
+            "name": "Dicken Weatherby",
+            "slug": "dicken-weatherby"
         }
     },
     {
         "pk": 17,
         "model": "products.author",
         "fields": {
-            "name": "Atul Gawande"
+            "name": "Atul Gawande",
+            "slug": "atul-gawande"
         }
     },
     {
         "pk": 18,
         "model": "products.author",
         "fields": {
-            "name": "Randine Lewis"
+            "name": "Randine Lewis",
+            "slug": "randine-lewis"
         }
     },
     {
         "pk": 19,
         "model": "products.author",
         "fields": {
-            "name": "Domini Kemp"
+            "name": "Domini Kemp",
+            "slug": "domini-kemp"
         }
     },
     {
         "pk": 20,
         "model": "products.author",
         "fields": {
-            "name": "Jonathan V. Wright"
+            "name": "Jonathan V. Wright",
+            "slug": "jonathan-v.-wright"
         }
     },
     {
         "pk": 21,
         "model": "products.author",
         "fields": {
-            "name": "Sue Walker"
+            "name": "Sue Walker",
+            "slug": "sue-walker"
         }
     },
     {
         "pk": 22,
         "model": "products.author",
         "fields": {
-            "name": "Brian Weiss"
+            "name": "Brian Weiss",
+            "slug": "brian-weiss"
         }
     },
     {
         "pk": 23,
         "model": "products.author",
         "fields": {
-            "name": "Jolene Hart"
+            "name": "Jolene Hart",
+            "slug": "jolene-hart"
         }
     },
     {
         "pk": 24,
         "model": "products.author",
         "fields": {
-            "name": "Nadia Murad"
+            "name": "Nadia Murad",
+            "slug": "nadia-murad"
         }
     },
     {
         "pk": 25,
         "model": "products.author",
         "fields": {
-            "name": "Sheryl Sandberg"
+            "name": "Sheryl Sandberg",
+            "slug": "sheryl-sandberg"
         }
     },
     {
         "pk": 26,
         "model": "products.author",
         "fields": {
-            "name": "Laura Hillenbrand"
+            "name": "Laura Hillenbrand",
+            "slug": "laura-hillenbrand"
         }
     },
     {
         "pk": 27,
         "model": "products.author",
         "fields": {
-            "name": "Tina Hutchence"
+            "name": "Tina Hutchence",
+            "slug": "tina-hutchence"
         }
     },
     {
         "pk": 28,
         "model": "products.author",
         "fields": {
-            "name": "Magda Szubanski"
+            "name": "Magda Szubanski",
+            "slug": "magda-szubanski"
         }
     },
     {
         "pk": 29,
         "model": "products.author",
         "fields": {
-            "name": "Terry Wahls"
+            "name": "Terry Wahls",
+            "slug": "terry-wahls"
         }
     },
     {
         "pk": 30,
         "model": "products.author",
         "fields": {
-            "name": "Ant Middleton"
+            "name": "Ant Middleton",
+            "slug": "ant-middleton"
         }
     },
     {
         "pk": 31,
         "model": "products.author",
         "fields": {
-            "name": "Judy Melinek"
+            "name": "Judy Melinek",
+            "slug": "judy-melinek"
         }
     },
     {
         "pk": 32,
         "model": "products.author",
         "fields": {
-            "name": "Ryszard Kapuscinski"
+            "name": "Ryszard Kapuscinski",
+            "slug": "ryszard-kapuscinski"
         }
     },
     {
         "pk": 33,
         "model": "products.author",
         "fields": {
-            "name": "Fr. Tony Coote"
+            "name": "Fr. Tony Coote",
+            "slug": "fr.-tony-coote"
         }
     },
     {
         "pk": 34,
         "model": "products.author",
         "fields": {
-            "name": "Billy Connolly"
+            "name": "Billy Connolly",
+            "slug": "billy-connolly"
         }
     },
     {
         "pk": 35,
         "model": "products.author",
         "fields": {
-            "name": "The Countess of Carnarvon"
+            "name": "The Countess of Carnarvon",
+            "slug": "the-countess-of-carnarvon"
         }
     },
     {
         "pk": 36,
         "model": "products.author",
         "fields": {
-            "name": "Dr. Munjed Al Muderis"
+            "name": "Dr. Munjed Al Muderis",
+            "slug": "dr.-munjed-al-muderis"
         }
     },
     {
         "pk": 37,
         "model": "products.author",
         "fields": {
-            "name": "Maya Angelou"
+            "name": "Maya Angelou",
+            "slug": "maya-angelou"
         }
     },
     {
         "pk": 38,
         "model": "products.author",
         "fields": {
-            "name": "Andrew Roberts"
+            "name": "Andrew Roberts",
+            "slug": "andrew-roberts"
         }
     },
     {
         "pk": 39,
         "model": "products.author",
         "fields": {
-            "name": "John Howard Griffin"
+            "name": "John Howard Griffin",
+            "slug": "john-howard-griffin"
         }
     },
     {
         "pk": 40,
         "model": "products.author",
         "fields": {
-            "name": "Greg Mortenson"
+            "name": "Greg Mortenson",
+            "slug": "greg-mortenson"
         }
     },
     {
         "pk": 41,
         "model": "products.author",
         "fields": {
-            "name": "Celeste Barber"
+            "name": "Celeste Barber",
+            "slug": "celeste-barber"
         }
     },
     {
         "pk": 42,
         "model": "products.author",
         "fields": {
-            "name": "ARCHER JEFFREY"
+            "name": "ARCHER JEFFREY",
+            "slug": "archer-jeffrey"
         }
     },
     {
         "pk": 43,
         "model": "products.author",
         "fields": {
-            "name": "Knut Hamsun"
+            "name": "Knut Hamsun",
+            "slug": "knut-hamsun"
         }
     },
     {
         "pk": 44,
         "model": "products.author",
         "fields": {
-            "name": "Nigel Slater"
+            "name": "Nigel Slater",
+            "slug": "nigel-slater"
         }
     },
     {
         "pk": 45,
         "model": "products.author",
         "fields": {
-            "name": "Mark Owen"
+            "name": "Mark Owen",
+            "slug": "mark-owen"
         }
     },
     {
         "pk": 46,
         "model": "products.author",
         "fields": {
-            "name": "Sarah MacDonald"
+            "name": "Sarah MacDonald",
+            "slug": "sarah-macdonald"
         }
     },
     {
         "pk": 47,
         "model": "products.author",
         "fields": {
-            "name": "Chesley B. Sullenberger"
+            "name": "Chesley B. Sullenberger",
+            "slug": "chesley-b.-sullenberger"
         }
     },
     {
         "pk": 48,
         "model": "products.author",
         "fields": {
-            "name": "Anthony Ray Hinton"
+            "name": "Anthony Ray Hinton",
+            "slug": "anthony-ray-hinton"
         }
     },
     {
         "pk": 49,
         "model": "products.author",
         "fields": {
-            "name": "Michael Robotham"
+            "name": "Michael Robotham",
+            "slug": "michael-robotham"
         }
     },
     {
         "pk": 50,
         "model": "products.author",
         "fields": {
-            "name": "Patricia Cornwell"
+            "name": "Patricia Cornwell",
+            "slug": "patricia-cornwell"
         }
     },
     {
         "pk": 51,
         "model": "products.author",
         "fields": {
-            "name": "Catharina Ingelman-Sundberg"
+            "name": "Catharina Ingelman-Sundberg",
+            "slug": "catharina-ingelman-sundberg"
         }
     },
     {
         "pk": 52,
         "model": "products.author",
         "fields": {
-            "name": "Camilla L\u00e4ckberg"
+            "name": "Camilla L\u00e4ckberg",
+            "slug": "camilla-l\u00e4ckberg"
         }
     },
     {
         "pk": 53,
         "model": "products.author",
         "fields": {
-            "name": "Harlan Coben"
+            "name": "Harlan Coben",
+            "slug": "harlan-coben"
         }
     },
     {
         "pk": 54,
         "model": "products.author",
         "fields": {
-            "name": "Peter Temple"
+            "name": "Peter Temple",
+            "slug": "peter-temple"
         }
     },
     {
         "pk": 55,
         "model": "products.author",
         "fields": {
-            "name": "Andrea Camilleri"
+            "name": "Andrea Camilleri",
+            "slug": "andrea-camilleri"
         }
     },
     {
         "pk": 56,
         "model": "products.author",
         "fields": {
-            "name": "Pittacus Lore"
+            "name": "Pittacus Lore",
+            "slug": "pittacus-lore"
         }
     },
     {
         "pk": 57,
         "model": "products.author",
         "fields": {
-            "name": "Sally Hepworth"
+            "name": "Sally Hepworth",
+            "slug": "sally-hepworth"
         }
     },
     {
         "pk": 58,
         "model": "products.author",
         "fields": {
-            "name": "Ian McEwan"
+            "name": "Ian McEwan",
+            "slug": "ian-mcewan"
         }
     },
     {
         "pk": 59,
         "model": "products.author",
         "fields": {
-            "name": "Daniel Silva"
+            "name": "Daniel Silva",
+            "slug": "daniel-silva"
         }
     },
     {
         "pk": 60,
         "model": "products.author",
         "fields": {
-            "name": "A S a Harrison"
+            "name": "A S a Harrison",
+            "slug": "a-s-a-harrison"
         }
     },
     {
         "pk": 61,
         "model": "products.author",
         "fields": {
-            "name": "Genevieve Cogman"
+            "name": "Genevieve Cogman",
+            "slug": "genevieve-cogman"
         }
     },
     {
         "pk": 62,
         "model": "products.author",
         "fields": {
-            "name": "Adrian McKinty"
+            "name": "Adrian McKinty",
+            "slug": "adrian-mckinty"
         }
     },
     {
         "pk": 63,
         "model": "products.author",
         "fields": {
-            "name": "Robert Harris"
+            "name": "Robert Harris",
+            "slug": "robert-harris"
         }
     },
     {
         "pk": 64,
         "model": "products.author",
         "fields": {
-            "name": "Stephen King"
+            "name": "Stephen King",
+            "slug": "stephen-king"
         }
     },
     {
         "pk": 65,
         "model": "products.author",
         "fields": {
-            "name": "Elly Griffiths"
+            "name": "Elly Griffiths",
+            "slug": "elly-griffiths"
         }
     },
     {
         "pk": 66,
         "model": "products.author",
         "fields": {
-            "name": "Kathryn Bonella"
+            "name": "Kathryn Bonella",
+            "slug": "kathryn-bonella"
         }
     },
     {
         "pk": 67,
         "model": "products.author",
         "fields": {
-            "name": "Liz Nugent"
+            "name": "Liz Nugent",
+            "slug": "liz-nugent"
         }
     },
     {
         "pk": 68,
         "model": "products.author",
         "fields": {
-            "name": "Kentaro Miura"
+            "name": "Kentaro Miura",
+            "slug": "kentaro-miura"
         }
     },
     {
         "pk": 69,
         "model": "products.author",
         "fields": {
-            "name": "Charlaine Harris"
+            "name": "Charlaine Harris",
+            "slug": "charlaine-harris"
         }
     },
     {
         "pk": 70,
         "model": "products.author",
         "fields": {
-            "name": "Arundhati Roy"
+            "name": "Arundhati Roy",
+            "slug": "arundhati-roy"
         }
     },
     {
         "pk": 71,
         "model": "products.author",
         "fields": {
-            "name": "Alexander McCall Smith"
+            "name": "Alexander McCall Smith",
+            "slug": "alexander-mccall-smith"
         }
     },
     {
         "pk": 72,
         "model": "products.author",
         "fields": {
-            "name": "Colleen Hoover"
+            "name": "Colleen Hoover",
+            "slug": "colleen-hoover"
         }
     },
     {
         "pk": 73,
         "model": "products.author",
         "fields": {
-            "name": "Kyle Simpson"
+            "name": "Kyle Simpson",
+            "slug": "kyle-simpson"
         }
     },
     {
         "pk": 74,
         "model": "products.author",
         "fields": {
-            "name": "Andrew Faulkner"
+            "name": "Andrew Faulkner",
+            "slug": "andrew-faulkner"
         }
     },
     {
         "pk": 75,
         "model": "products.author",
         "fields": {
-            "name": "Vaughn Vernon"
+            "name": "Vaughn Vernon",
+            "slug": "vaughn-vernon"
         }
     },
     {
         "pk": 76,
         "model": "products.author",
         "fields": {
-            "name": "Marijn Haverbeke"
+            "name": "Marijn Haverbeke",
+            "slug": "marijn-haverbeke"
         }
     },
     {
         "pk": 77,
         "model": "products.author",
         "fields": {
-            "name": "Mike Cohn"
+            "name": "Mike Cohn",
+            "slug": "mike-cohn"
         }
     },
     {
         "pk": 78,
         "model": "products.author",
         "fields": {
-            "name": "Noam Nisan"
+            "name": "Noam Nisan",
+            "slug": "noam-nisan"
         }
     },
     {
         "pk": 79,
         "model": "products.author",
         "fields": {
-            "name": "Nykolai Aleksander"
+            "name": "Nykolai Aleksander",
+            "slug": "nykolai-aleksander"
         }
     },
     {
         "pk": 80,
         "model": "products.author",
         "fields": {
-            "name": "Sara Tasker"
+            "name": "Sara Tasker",
+            "slug": "sara-tasker"
         }
     },
     {
         "pk": 81,
         "model": "products.author",
         "fields": {
-            "name": "James Barrat"
+            "name": "James Barrat",
+            "slug": "james-barrat"
         }
     },
     {
         "pk": 82,
         "model": "products.author",
         "fields": {
-            "name": "Ray Kurzweil"
+            "name": "Ray Kurzweil",
+            "slug": "ray-kurzweil"
         }
     },
     {
         "pk": 83,
         "model": "products.author",
         "fields": {
-            "name": "Esther Derby"
+            "name": "Esther Derby",
+            "slug": "esther-derby"
         }
     },
     {
         "pk": 84,
         "model": "products.author",
         "fields": {
-            "name": "Catherine Price"
+            "name": "Catherine Price",
+            "slug": "catherine-price"
         }
     },
     {
         "pk": 85,
         "model": "products.author",
         "fields": {
-            "name": "Tom Ang"
+            "name": "Tom Ang",
+            "slug": "tom-ang"
         }
     },
     {
         "pk": 86,
         "model": "products.author",
         "fields": {
-            "name": "Roger Penrose"
+            "name": "Roger Penrose",
+            "slug": "roger-penrose"
         }
     },
     {
         "pk": 87,
         "model": "products.author",
         "fields": {
-            "name": "Marco Russo"
+            "name": "Marco Russo",
+            "slug": "marco-russo"
         }
     },
     {
         "pk": 88,
         "model": "products.author",
         "fields": {
-            "name": "Robert Nystrom"
+            "name": "Robert Nystrom",
+            "slug": "robert-nystrom"
         }
     },
     {
         "pk": 89,
         "model": "products.author",
         "fields": {
-            "name": "Alan Cooper"
+            "name": "Alan Cooper",
+            "slug": "alan-cooper"
         }
     },
     {
         "pk": 90,
         "model": "products.author",
         "fields": {
-            "name": "Gabriel Kirmaier"
+            "name": "Gabriel Kirmaier",
+            "slug": "gabriel-kirmaier"
         }
     },
     {
         "pk": 91,
         "model": "products.author",
         "fields": {
-            "name": "Aditya Y. Bhargava"
+            "name": "Aditya Y. Bhargava",
+            "slug": "aditya-y.-bhargava"
         }
     },
     {
         "pk": 92,
         "model": "products.author",
         "fields": {
-            "name": "Ben Forta"
+            "name": "Ben Forta",
+            "slug": "ben-forta"
         }
     },
     {
         "pk": 93,
         "model": "products.author",
         "fields": {
-            "name": "Yoshihito Isogawa"
+            "name": "Yoshihito Isogawa",
+            "slug": "yoshihito-isogawa"
         }
     },
     {
         "pk": 94,
         "model": "products.author",
         "fields": {
-            "name": "Jane McGonigal"
+            "name": "Jane McGonigal",
+            "slug": "jane-mcgonigal"
         }
     },
     {
         "pk": 95,
         "model": "products.author",
         "fields": {
-            "name": "Andy Brunning"
+            "name": "Andy Brunning",
+            "slug": "andy-brunning"
         }
     },
     {
         "pk": 96,
         "model": "products.author",
         "fields": {
-            "name": "A. Agrawal"
+            "name": "A. Agrawal",
+            "slug": "a.-agrawal"
         }
     },
     {
         "pk": 97,
         "model": "products.author",
         "fields": {
-            "name": "Dr. Simon Singh"
+            "name": "Dr. Simon Singh",
+            "slug": "dr.-simon-singh"
         }
     },
     {
         "pk": 98,
         "model": "products.author",
         "fields": {
-            "name": "Eric Topol"
+            "name": "Eric Topol",
+            "slug": "eric-topol"
         }
     }
 ]
