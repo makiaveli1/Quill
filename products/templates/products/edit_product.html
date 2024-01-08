@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block extra_meta %}
+  <meta name="description" content="Authorized Shop Owner only. Edit a product in the bookstore." />
+  <meta name="keywords" content="manage products, bookstore management, edit book details, online bookstore backend" />
+  <meta name="author" content="Your Site's Name" />
+{% endblock %}
+
+{% block extra_title %}
+  Store Management - Edit {{ product.name }}
+{% endblock %}
+
+{% block content %}
+  <div class="overlay"></div>
+  <div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+      <div class="col-12 mt-5 mb-4">
+        <hr />
+        <h2 class="logo-font mb-4">Store Management</h2>
+        <h3 class="text-muted">Edit Product - {{ product.name }}</h3>
+        <hr />
+      </div>
+    </div>
+
+    <!-- Form to Edit Product -->
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <form method="POST" action="{% url 'edit_product' product.id %}" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <div class="form-group text-right">
+            <a href="{% url 'product_management' %}" class="btn btn-outline-black rounded-0">Cancel</a>
+            <button type="submit" class="btn btn-black rounded-0">Update Product</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block postload_js %}
+  {{ block.super }}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const quantityInput = document.querySelector('.quantity-input');
+        const decrementBtn = document.querySelector('.decrement-quantity-btn');
+        const incrementBtn = document.querySelector('.increment-quantity-btn');
+
+        decrementBtn.addEventListener('click', function() {
+            let quantity = parseInt(quantityInput.value, 10);
+            if (quantity > 1) {
+                quantityInput.value = quantity - 1;
+            }
+        });
+
+        incrementBtn.addEventListener('click', function() {
+            let quantity = parseInt(quantityInput.value, 10);
+            let maxQuantity = 99; // Set your maximum quantity limit
+            if (quantity < maxQuantity) {
+                quantityInput.value = quantity + 1;
+            }
+        });
+
+        // Optional: Prevent manual editing of the quantity input field
+        quantityInput.addEventListener('change', function() {
+            let quantity = parseInt(quantityInput.value, 10);
+            let minQuantity = 1;
+            let maxQuantity = 99; // Match this to the maxQuantity above
+            if (quantity < minQuantity) {
+                quantityInput.value = minQuantity;
+            } else if (quantity > maxQuantity) {
+                quantityInput.value = maxQuantity;
+            }
+        });
+
+        // Handle form submission
+        const addToCartForm = document.querySelector('form[action="{% url 'add_to_cart' product.id %}"]');
+        addToCartForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Here you would typically handle the form submission
+            // For example, making an AJAX request to your backend
+            // This is a placeholder to illustrate where that code would go
+            console.log('Form submitted, quantity: ' + quantityInput.value);
+            // Redirect to cart, update UI, etc.
+        });
+    });
+</script>
+{% endblock %}

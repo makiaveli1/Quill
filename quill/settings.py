@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'storages',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -103,6 +104,8 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'quill.wsgi.application'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 
 # Database

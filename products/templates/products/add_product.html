@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block extra_meta %}
+  <meta name="description" content="For Authorized Shop Owner only. Edit existing books in the bookshop." />
+  <meta name="keywords" content="manage books, shop management, edit product, bookstore backend" />
+  <meta name="author" content="Your Site's Name" />
+{% endblock %}
+
+{% block extra_title %}
+  Store Management - Edit Product
+{% endblock %}
+
+{% block content %}
+  <div class="overlay"></div>
+  <div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+      <div class="col-12 mt-5 mb-4">
+        <hr />
+        <h2 class="logo-font mb-4">Store Management</h2>
+        <h3 class="text-muted">Edit Product Details</h3>
+        <hr />
+      </div>
+    </div>
+
+    <!-- Form to Edit Product -->
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <form method="POST" action="{% url 'edit_product' product.id %}" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <div class="form-group text-right">
+            <a href="{% url 'product_management' %}" class="btn btn-outline-black rounded-0">Cancel</a>
+            <button type="submit" class="btn btn-black rounded-0">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block postloadjs %}
+  {{ block.super }}
+  <!-- Additional scripts if necessary -->
+{% endblock %}

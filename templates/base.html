@@ -119,11 +119,11 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="https://quill-01.s3.amazonaws.com/media/icons8-person-64.png" alt="User Account" style="height: 24px;" /></a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   {% if user.is_authenticated %}
-                    <a class="dropdown-item" href="#">Profile</a>
-                    <a class="dropdown-item" href="#">Log out</a>
+                    <a class="dropdown-item" href="#">Profile</a> <!-- Link to the user profile -->
+                    <a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a> <!-- Link to logout -->
                   {% else %}
-                    <a class="dropdown-item" href="#">Sign in</a>
-                    <a class="dropdown-item" href="#">Create account</a>
+                    <a class="dropdown-item" href="{% url 'account_login' %}">Sign in</a> <!-- Link to login -->
+                    <a class="dropdown-item" href="{% url 'account_signup' %}">Create account</a> <!-- Link to signup -->
                   {% endif %}
                 </div>
               </li>
