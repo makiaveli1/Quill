@@ -10,31 +10,81 @@ body, h1, h2, h3, p {
     font-family: 'Jost', sans-serif;
 }
 
-.btn-shop-now {
-    background-color: var(--shop-now);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-    transition: background-color 0.3s ease;
-}
-
-.btn-shop-now:hover {
-    background-color: var(--shop-now-hover);
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px; /* Example radius */
-}
-
-.container {
-    padding: 2rem; /* Example padding */
+.book-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 0.5rem;
 }
 
 .row {
-    margin: 1rem 0; /* Example margin between rows */
+    width: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.card {
+    margin: 0.5rem;
+    padding: 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+    width: 100%;
+    transition: all 0.3s ease;
+    background-color: #EAE4D4 !important;
+    display: flex;
+    flex-direction: column;
+    transform: scale(1.01);
+    justify-content: space-between;
+}
+
+.card-body {
+    padding: 1rem; /* Increase padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.card-title, .card-text {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    width: 100%;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.card-img-top {
+    width: 100%; /* Full width of the card */
+    height: 25rem; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+.card-footer {
+    text-align: center;
+    position: relative;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 2rem;
+}
+
+.row {
+    margin: 1rem 0;
 }
 
 h2.logo-font {
@@ -43,15 +93,71 @@ h2.logo-font {
 }
 .category-badge {
     background-color: var(--background-logo);
-    color: var(--text-adventure);
-    border-color: var(--text-adventure);
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    margin: 0 1rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    border: none;
+    transition: background-color 0.3s ease;
+    background-color: #c4a443;
+    border-radius: 0.25rem !important;
+}
+
+.btn-primary.btn-block {
+    width: auto;
+    display: block;
+    margin: 0.5rem auto;
+}
+
+.btn-primary:hover {
+    background-color: var(--text-adventure);
+    color: #fff;
+}
+
+.btt-button {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #f8f9fa; /* This color should match your design */
+padding: 10px;
+border-radius: 5px;
+z-index: 1000; /* Make sure it appears above other content */
+}
+
+.btt-link {
+text-decoration: none;
+}
+
+.btt-link i {
+color: #000; /* Color for the arrow icon */
 }
 
 
-
-@media screen and (max-width: 768px) {
-    .card-img-top {
-        width: 100%;
-        height: auto;
+/* Media query for extra small devices */
+@media (max-width: 575.98px) {
+    .col-12 {
+        padding-right: 0; /* Remove padding to allow full width */
+        padding-left: 0; /* Remove padding to allow full width */
     }
+
+    .card {
+        margin-left: 0.5rem; /* Add some margin to the left */
+        margin-right: 0.5rem; /* Add some margin to the right */
+    }
+}
+
+/* Center the cards horizontally */
+.card {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Adjustments for card image on mobile */
+.card-img-top {
+    height: auto; /* Maintain aspect ratio */
 }

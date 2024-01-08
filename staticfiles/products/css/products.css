@@ -1,0 +1,57 @@
+:root {
+    --text-adventure: #e7b040;
+    --background-logo: #F2DBAF; 
+    --shop-now: #F2DBAF;
+    --shop-now-hover: #e0b469; 
+}
+
+
+body, h1, h2, h3, p {
+    font-family: 'Jost', sans-serif;
+}
+
+.btn-shop-now {
+    background-color: var(--shop-now);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-shop-now:hover {
+    background-color: var(--shop-now-hover);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* Example radius */
+}
+
+.container {
+    padding: 2rem; /* Example padding */
+}
+
+.row {
+    margin: 1rem 0; /* Example margin between rows */
+}
+
+h2.logo-font {
+    font-family: 'Jost', sans-serif;
+    color: var(--text-adventure);
+}
+.category-badge {
+    background-color: var(--background-logo);
+    color: var(--text-adventure);
+    border-color: var(--text-adventure);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .card-img-top {
+        width: 100%;
+        height: auto;
+    }
+}

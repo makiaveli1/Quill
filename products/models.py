@@ -53,7 +53,8 @@ class Category(models.Model):
     Model representing a category.
     """
     name = models.CharField(max_length=100, db_index=True)
-    friendly_name = models.CharField(max_length=100)
+    # Index added for sorting optimization
+    friendly_name = models.CharField(max_length=100, db_index=True)
     description = models.TextField()
     slug = models.SlugField(unique=True, blank=True)
 
@@ -63,6 +64,7 @@ class Category(models.Model):
         """
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
+        # Sort categories by friendly_name by default
         ordering = ['friendly_name']
 
     def save(self, *args, **kwargs):
@@ -70,16 +72,20 @@ class Category(models.Model):
         Save method for Category. Generates a slug if one isn't provided.
         """
         if not self.slug:
+            # Generate a slug based on friendly_name
             self.slug = slugify(self.friendly_name)
         super().save(*args, **kwargs)
 
     def get_friendly_name(self):
         """
-        Returns the friendly name of the category.
+        Returns the friendly name of the category for display purposes.
         """
         return self.friendly_name
 
     def __str__(self):
+        """
+        String representation of the Category, using the friendly name.
+        """
         return self.friendly_name
 
 
