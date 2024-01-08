@@ -1,7 +1,7 @@
     :root {
         --text-adventure: #e7b040;
         --background-logo: #F2DBAF; 
-        --shop-now: #F2DBAF;
+        --shop-now: #f0b954;
         --shop-now-hover: #e0b469; 
     }  
 
@@ -206,7 +206,7 @@
     
     .hero-text {
         position: relative;
-        top: 2%;
+        top: 15%;
         left: 50%;
         font-family: 'Jost', sans-serif;
         font-size: 3rem;
@@ -218,14 +218,15 @@
 
     .display-4 {
         font-size: 5rem;
+        line-height: 3;
     }
     
     /* Shop Now Button */
-    .btn-shop-now {
+    .btn-lg {
         background-color: var(--shop-now);
         color: white;
         border: none;
-        padding: 1rem 2rem;
+        padding: 0.5rem 2rem;
         font-size: 1.25rem;
         transition: background-color 0.3s ease;
     }

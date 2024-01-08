@@ -161,3 +161,166 @@ color: #000; /* Color for the arrow icon */
 .card-img-top {
     height: auto; /* Maintain aspect ratio */
 }
+
+
+/* Product detail page */
+.product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    gap: 20px; /* Adds space between image and details */
+    margin-top: 2rem;
+    padding: 1rem; /* Adds padding around the content */
+  }
+  
+  .product-image-container {
+    flex: 1; /* Allows the image container to grow */
+    max-width: 600px; /* Maximum width for the image container */
+    text-align: center;
+  }
+  
+  .product-img {
+    width: 100%; /* Full width */
+    max-height: 500px; /* Maximum height for the image */
+    object-fit: contain; /* Ensures the image is fully visible */
+    border-radius: 0.25rem;
+  }
+  
+  .product-details-container {
+    flex: 1; /* Allows the details container to grow */
+    max-width: 600px; /* Maximum width for the details container */
+    background-color: #EAE4D4 !important;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  }
+  
+  .product-name {
+    font-size: 2rem; /* Larger font size for the product name */
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .product-rating {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem; /* Larger font size for the rating */
+    margin-bottom: 1rem;
+  }
+  
+  .product-description {
+    font-size: 1.1rem; /* Slightly larger font size for the description */
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+  
+  .product-price .price {
+    font-size: 1rem; /* Larger font size for the price */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-price .delivery-info,
+  .product-price .free-delivery {
+    font-size: 1.25rem; /* Slightly larger font size for delivery info */
+    margin-bottom: 0.25rem;
+  }
+
+  .old-price {
+    text-decoration: line-through; /* Strike-through for the old price */
+    color: #777; /* Greyed out to differentiate from the current price */
+    font-size: 1rem; /* Slightly smaller font size */
+    margin-top: 0.5rem; /* Space from the description */
+  }
+
+  .add-to-cart-btn {
+    display: block; /* Make the button a block element to occupy full width */
+    width: 100%; /* Full width of the container */
+    padding: 1rem; /* Padding for a larger clickable area */
+    margin-top: 1rem; /* Margin on top for spacing */
+    background-color: #c4a443; /* The specified background color */
+    color: white; /* Text color for the button */
+    border: none; /* No border */
+    border-radius: 0.25rem; /* Rounded corners */
+    font-size: 1.25rem; /* Larger font size */
+    cursor: pointer; /* Cursor to indicate the button is clickable */
+    transition: background-color 0.3s ease; /* Transition for a hover effect */
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #af9c3c; /* Darker shade on hover */
+  } 
+  
+  .keep-shopping-btn {
+    display: inline-block; /* Make the button inline-block for proper spacing */
+    padding: 1rem; /* Padding for clickable area */
+    margin-top: 1rem; /* Margin on top for spacing */
+    margin-bottom: 1rem; /* Margin on the bottom for spacing */
+    background-color: #EAE4D4; /* Background color from your scheme */
+    color: #333; /* Text color consistent with your branding */
+    text-decoration: none; /* Remove underline from link */
+    border: 2px solid #333; /* Border color from your branding */
+    border-radius: 0.25rem; /* Rounded corners */
+    font-size: 1rem; /* Font size consistent with your branding */
+    transition: all 0.3s ease; /* Transition for hover effects */
+    text-align: center; /* Center the text */
+    width: calc(100% - 2rem); /* Full width minus padding for container */
+    box-sizing: border-box; /* Include padding and border in the width */
+  }
+  
+  .keep-shopping-btn:hover {
+    background-color: #c4a443; /* Hover color similar to Add to Cart button */
+    color: white; /* Text color change on hover */
+    text-decoration: none; /* Ensure underline doesn't reappear on hover */
+    border-color: #c4a443; /* Border color change on hover */
+  }
+
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .decrement-quantity-btn,
+  .increment-quantity-btn {
+    padding: 0.5rem 1rem;
+    background-color: #c4a443; /* Consistent with Add to Cart button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 0.25rem;
+  }
+  
+  .decrement-quantity-btn:hover,
+  .increment-quantity-btn:hover {
+    background-color: #af9c3c; /* Darker shade on hover */
+  }
+  
+  .quantity-input {
+    width: 150px;
+    text-align: center;
+    margin: 0 10px;
+    border: 3px solid #333;
+    border-radius: 0.20rem;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .product-detail {
+      flex-direction: column;
+    }
+  
+    .product-image-container,
+    .product-details-container {
+      max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .add-to-cart-btn {
+        font-size: 1rem; /* Smaller font size on smaller screens */
+    }
+  }
+  

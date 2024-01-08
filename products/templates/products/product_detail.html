@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_meta %}
+  <meta name="description" content="Discover our range of bestsellers, highly recommended by book enthusiasts. Enjoy instant downloads. Shop online or visit us in store." />
+  <meta name="keywords" content="bestseller books, instant downloads, book enthusiasts, online bookshop, Irish-owned" />
+  <meta name="author" content="Your Name Here" />
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'products/css/products.css' %}" />
+{% endblock %}
+
+{% block extra_title %}
+  - {{ product.name }}
+{% endblock %}
+
+{% block content %}
+  <div class="overlay"></div>
+  <div class="container-fluid product-detail">
+    <div class="row">
+      <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
+        <div class="product-image-container my-5">
+          {% if product.image_url %}
+            <a href="{{ product.image_url }}" target="_blank"><img class="product-img img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}" /></a>
+          {% else %}
+            <img class="product-img img-fluid" src="{% static 'images/noimage.png' %}" alt="{{ product.name }}" />
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
+        <div class="product-details-container my-5">
+          <h1 class="product-name">{{ product.name }}</h1>
+          {% if product.rating %}
+            <div class="product-rating">
+              <i class="fas fa-star mr-1"></i>
+              <span>{{ product.rating }} / 5</span>
+            </div>
+          {% else %}
+            <div class="product-rating">No Rating</div>
+          {% endif %}
+          <div class="product-description">
+            <p>
+              <strong>Description:</strong> {{ product.description }}
+              <p>
+                <strong>Format:</strong> {{ product.format }}
+              </p>
+              <p>
+                <strong>ISBN:</strong> {{ product.isbn }}
+              </p>
+            </p>
+          </div>
+          <div class="product-price">
+            {% if product.old_price %}
+              <p class="old-price">
+                <strong>Was:</strong> €{{ product.old_price }}
+              </p>
+              <p class="price">€{{ product.price }}</p>
+            {% endif %}
+            <p class="delivery-info">Instant Downloads after purchase</p>
+          </div>
+          <!-- Quantity Selector -->
+          <div class="quantity-selector">
+            <button class="decrement-quantity-btn">-</button>
+            <input type="number" name="quantity" value="1" min="1" class="quantity-input" readonly />
+            <button class="increment-quantity-btn">+</button>
+          </div>
+          <a href="{% url 'products' %}" class="keep-shopping-btn">Keep Shopping</a>
+          <button class="add-to-cart-btn">Add to Cart</button> <!-- Add to Cart button -->
+          <!-- Product form will go here -->
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block postload_js %}
+  {{ block.super }}
+  {% include 'products/includes/quantity_input_script.html' %}
+{% endblock %}
