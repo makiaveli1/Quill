@@ -94,28 +94,38 @@
     }
 
     .search-form {
-        display: inline-block;
-        margin-top: 10px;
-        margin-top: 10px;
+        display: flex;
+        justify-content: center; /* Center the input and button inside the form */
+        width: 100%; /* Make the form take the full width of its parent */
+        margin-top: 10px; /* Only one margin-top is necessary */
     }
+    
 
     .search-input {
         font-size: 16px;
         padding: 10px;
         border: 2px solid #333;
-        border-right: none; /* Remove border on the right side to connect with the button */
+        border-right: none; /* Keep this if you want the button to be flush with the input */
         line-height: 1;
-        min-width: 200px;
+        width: 20rem;
     }
 
     .search-bar-container {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 5px 15px;
-        order: 5;
-        width: 100%;
+        justify-content: center; /* This will center the search form horizontally */
+        align-items: center; /* This will center the search form vertically */
+        position: absolute;
+        top: 100%; /* Adjust if necessary to position below the header */
+        left: 0;
+        right: 0;
+        background: white;
+        z-index: 1030;
+        display: none; /* Initially hidden */
+        border-top: 1px solid #ccc;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px 20px;
     }
+    
 
     .search-button {
         padding: 10px;
@@ -123,11 +133,27 @@
         color: white;
         border: none;
         cursor: pointer;
+        /* If you removed the border-right from the input, you might want to add a border to the left of the button to separate it visually */
+        border-left: 2px solid #333;
     }
 
     .search-button img {
         width: 24px;
         height: auto;
+    }
+
+    .show {
+        display: block;
+    }
+
+    /* Promo Banner Styling */
+    .promo-banner {
+        transition: margin-top 0.3s ease; /* Smooth transition for pushing down */
+    }
+
+    /* Adjusting the Promo Banner When Search is Visible */
+    .has-search-bar .promo-banner {
+        margin-top: 50px;
     }
 
     .nav-item.dropdown {
