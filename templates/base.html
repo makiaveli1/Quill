@@ -136,9 +136,15 @@
 
               <!-- Cart Icon with badge -->
               <div class="cart-icon-container">
-                <a class="nav-icon position-relative" href="#">
+                <a class="nav-icon position-relative" href="{% url 'view_bag' %}">
                   <img src="https://quill-01.s3.amazonaws.com/media/FastCart.svg" alt="Cart" style="max-height: 24px;" />
-                  <span class="badge badge-warning">$0.00</span>
+                  <span class="badge badge-warning">
+                    {% if total_items %}
+                      {{ total_items }} item{{ total_items|pluralize }}
+                    {% else %}
+                      0 items
+                    {% endif %}
+                  </span>
                 </a>
               </div>
             </div>
@@ -152,6 +158,14 @@
           </form>
         </div>
       </header>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('.search-icon-btn').addEventListener('click', function () {
+            var searchBar = document.getElementById('searchBar')
+            searchBar.classList.toggle('show')
+          })
+        })
+      </script>
     {% endblock %}
 
     {% block content %}

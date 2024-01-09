@@ -1,0 +1,9 @@
+<form class="form-inline" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+  {% csrf_token %}
+  <input type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" class="form-control form-control-sm mx-1" id="id_qty_{{ item.item_id }}" />
+  <button type="submit" class="btn btn-sm btn-outline-secondary mx-1">Update</button>
+</form>
+<form class="form-inline" method="POST" action="{% url 'delete_from_bag' item.item_id %}">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-sm btn-outline-danger mx-1">Remove</button>
+</form>

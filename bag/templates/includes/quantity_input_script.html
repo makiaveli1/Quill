@@ -1,0 +1,40 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Function to update the quantity
+    function updateQuantity(operation, input) {
+      let currentVal = parseInt(input.value, 10)
+      if (operation === 'increment') {
+        currentVal++
+      } else if (operation === 'decrement' && currentVal > 1) {
+        currentVal--
+      }
+      input.value = currentVal
+    }
+  
+    // Attach event listeners to the buttons
+    const decrementButtons = document.querySelectorAll('.decrement-quantity-btn')
+    const incrementButtons = document.querySelectorAll('.increment-quantity-btn')
+  
+    decrementButtons.forEach((btn) => {
+      btn.addEventListener('click', function () {
+        const input = this.nextElementSibling
+        updateQuantity('decrement', input)
+      })
+    })
+  
+    incrementButtons.forEach((btn) => {
+      btn.addEventListener('click', function () {
+        const input = this.previousElementSibling
+        updateQuantity('increment', input)
+      })
+    })
+  
+    // Prevent manual editing of the quantity input
+    const quantityInputs = document.querySelectorAll('.quantity-input')
+    quantityInputs.forEach((input) => {
+      input.addEventListener('keydown', function (e) {
+        e.preventDefault()
+      })
+    })
+  })
+</script>
