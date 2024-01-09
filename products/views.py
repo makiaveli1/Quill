@@ -93,9 +93,13 @@ def product_detail(request, product_id):
     """A view to show a product's details"""
 
     product = get_object_or_404(Product, pk=product_id)
+    author = product.author
+    category = product.category
 
     context = {
         "product": product,
+        "author": author,
+        "category": category,
     }
 
     return render(request, "products/product_detail.html", context)
@@ -103,8 +107,6 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """Add a Product to the store"""
-
     if not request.user.is_superuser:
         messages.error(request, "Sorry, only store owners can do that.")
         return redirect(reverse("home"))
@@ -113,50 +115,43 @@ def add_product(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, "Successfully added a Product!")
+            messages.success(
+                request, "Successfully added the product: " + product.name)
             return redirect(reverse("product_detail", args=[product.id]))
         else:
             messages.error(
-                request, """Failed to add product.
-                Please check the form is valid.""")
+                request, "Failed to add product. Please check the form is valid.")
     else:
         form = ProductForm()
 
-    template = "products/add_product.html"
-    context = {"form": form}
-    return render(request, template, context)
+    return render(request, "products/add_product.html", {"form": form})
 
 
 @login_required
 def add_author(request):
-    """Add an Author to the store listing"""
-
     if not request.user.is_superuser:
         messages.error(request, "Sorry, only store owners can do that.")
         return redirect(reverse("home"))
 
     if request.method == "POST":
-        form = AuthorForm(request.POST)
+        # Include request.FILES if your form handles image uploads
+        form = AuthorForm(request.POST, request.FILES)
         if form.is_valid():
-            author = form.save()
+            form.save()
             messages.success(request, "Successfully added a new Author!")
-            return redirect(reverse("add_product"))
+            # Redirect to the authors list or another appropriate view
+            return redirect(reverse("authors_list"))
         else:
             messages.error(
-                request, """Failed to add a new Author.
-                Please check the form is valid.""")
+                request, "Failed to add a new Author. Please check the form is valid.")
     else:
         form = AuthorForm()
 
-    template = "products/add_author.html"
-    context = {"form": form}
-    return render(request, template, context)
+    return render(request, "products/add_author.html", {"form": form})
 
 
 @login_required
 def edit_product(request, product_id):
-    """Edit a Product in the store"""
-
     if not request.user.is_superuser:
         messages.error(request, "Sorry, only store owners can do that.")
         return redirect(reverse("home"))
@@ -166,19 +161,16 @@ def edit_product(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, "Successfully edited the Product!")
+            messages.success(request, f"Successfully updated {product.name}!")
             return redirect(reverse("product_detail", args=[product.id]))
         else:
             messages.error(
-                request, """Failed to update product.
-                Please check the form is valid.""")
+                request, "Failed to update product. Please check the form is valid.")
     else:
         form = ProductForm(instance=product)
         messages.info(request, f"You are editing {product.name}")
 
-    template = "products/edit_product.html"
-    context = {"form": form, "product": product}
-    return render(request, template, context)
+    return render(request, "products/edit_product.html", {"form": form, "product": product})
 
 
 @login_required

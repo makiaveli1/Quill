@@ -324,3 +324,145 @@ color: #000; /* Color for the arrow icon */
     }
   }
   
+
+  /* Profile page */
+
+  :root {
+    /* Brand colors from base.css */
+    --text-adventure: #e7b040;
+    --background-logo: #F2DBAF; 
+    --shop-now: #f0b954;
+    --shop-now-hover: #e0b469; 
+}
+
+
+/* Profile Page Styles */
+.profile-container {
+    padding: 2rem 0;
+}
+
+.profile-header {
+    text-align: center;
+    font-size: large;
+}
+
+.profile-image-container img,
+.default-profile-icon {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid var(--text-adventure); /* Adds border with the brand color */
+    padding: 2px; /* Adds space between the image and border */
+}
+
+.profile-bio-container {
+    margin-bottom: 2rem;
+}
+
+.edit-profile-btn {
+    margin-bottom: 2rem;
+}
+
+.order-history-section {
+    margin-top: 2rem;
+}
+
+.order-history-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.order-history table {
+    width: 100%;
+}
+
+/* This is to hide the form initially */
+.edit-profile-form {
+    display: none;
+}
+
+/* Button to toggle the display of the edit form */
+.edit-profile-btn {
+    cursor: pointer;
+    background-color: #d8aa2c;
+    color: white;
+    border: none;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.save-changes-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+
+/* Apply the 'Jost' font family to all text elements */
+body, h1, h2, h3, p, .btn {
+    font-family: 'Jost', sans-serif;
+  }
+
+
+  /* Profile Card */
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds depth */
+    border: none; /* Removes border */
+}
+
+/* Typography */
+.display-4 {
+    font-size: 2.5rem; /* Larger font size for better readability */
+    font-weight: bold; /* Adds weight to the header */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle text shadow for depth */
+}
+
+/* Buttons */
+.btn-shop-now {
+    background-image: linear-gradient(to right, var(--shop-now), var(--shop-now-hover)); /* Gradient effect */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.btn-shop-now:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* More pronounced shadow on hover */
+}
+
+/* Order History Table */
+.order-history table {
+    margin-top: 1rem;
+}
+
+.order-history th {
+    background-color: var(--background-logo); /* Matches the brand background color */
+    font-weight: bold;
+}
+
+.order-history tbody tr:hover {
+    background-color: var(--shop-now-hover); /* Hover effect for rows */
+}
+
+/* Edit Profile Form */
+.edit-profile-form {
+    transition: all 0.5s ease; /* Smooth transition for form display */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 1.75rem; /* Smaller font size for mobile devices */
+    }
+
+    .profile-image-container img {
+        width: 120px;
+        height: 120px; /* Smaller profile images on mobile devices */
+    }
+}
+
+/* Ensures that the elements are centered and the text is easily readable */
+.text-muted {
+    color: var(--text-adventure) !important; /* Improves contrast and readability */
+}

@@ -3,45 +3,38 @@
 {% load crispy_forms_tags %}
 
 {% block extra_meta %}
-  <meta name="description" content="For Authorised Shop Owner only. Edit or add a new author to the bookshop." />
-  <meta name="keywords" content="manage authors, shop management, edit author, add author, bookstore backend" />
+  <meta name="description" content="For Authorized Shop Owner only. Add a new author to the bookshop." />
+  <meta name="keywords" content="manage authors, shop management, add author, bookstore backend" />
   <meta name="author" content="Your Site's Name" />
 {% endblock %}
 
 {% block extra_title %}
-  Store Management - Edit Author
+  Store Management - Add Author
 {% endblock %}
 
 {% block content %}
   <div class="overlay"></div>
   <div class="container-fluid">
-    <!-- Page Heading -->
     <div class="row">
       <div class="col-12 mt-5 mb-4">
         <hr />
         <h2 class="logo-font mb-4">Store Management</h2>
-        <h3 class="text-muted">Edit Author Details</h3>
+        <h3 class="text-muted">Add a New Author</h3>
         <hr />
       </div>
     </div>
 
-    <!-- Form to Edit Author -->
     <div class="row">
       <div class="col-12 col-lg-6">
-        <form method="POST" action="{% url 'edit_author' author_id %}" enctype="multipart/form-data">
+        <form method="POST" action="{% url 'add_author' %}" enctype="multipart/form-data">
           {% csrf_token %}
           {{ form|crispy }}
           <div class="form-group text-right">
-            <a href="{% url 'author_management' %}" class="btn btn-outline-black rounded-0">Cancel</a>
-            <button type="submit" class="btn btn-black rounded-0">Save Changes</button>
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0">Cancel</a>
+            <button type="submit" class="btn btn-black rounded-0">Add Author</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-{% endblock %}
-
-{% block postloadjs %}
-  {{ block.super }}
-  <!-- Additional scripts if necessary -->
 {% endblock %}
