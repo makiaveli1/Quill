@@ -17,9 +17,30 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import HttpResponse
+
+
+def robots_txt(request):
+    """
+    View function for generating the robots.txt file.
+
+    This function returns a HttpResponse object with the content of the robots.txt file.
+    The robots.txt file contains instructions for web robots (also known as web crawlers) on how to crawl and index a website.
+
+    :param request: The HTTP request object.
+    :return: A HttpResponse object with the content of the robots.txt file.
+    """
+    lines = [
+        "User-agent: *",
+        "Disallow: /admin/",
+        "Sitemap: https://www.yourdomain.com/sitemap.xml"
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("robots.txt", robots_txt),
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
     path('products/', include('products.urls')),
