@@ -198,6 +198,8 @@ A user can finalise their purchase of the products on this page.  They are requi
 
 On the checkout page, a user can opt-in to update their profile with their shipping details for speed of checkout on their next visit to the store and so a returning logged-in user will have most of their details pre-populated into this form, save for the Name field, and the credit card field, both of which they are required to complete for each checkout process.
 
+#####  BUG
+Could not finish stripe setup due to a bug where whenever user clicked to complete order, stripe said webhook not responding and you get an invalid information error in admin console.  I have tried to fix this issue by setting up stripe again and making sure all credentials wheere present, but it still does not work.  I have also tried to contact stripe support
 #### Products
 
 The products available for purchase on Quill are listed on this page and the page provides easy-to-use sorting and filtering options to help users find what they want within the product listings.

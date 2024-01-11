@@ -211,9 +211,9 @@ ADMINS = [('Gbemi', 'likwidtv@gmail.com')]
 
 # stripe
 STRIPE_CURRENCY = 'usd'
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', 'pk_test_51N09VeLjvedDFbO8JKYnOb7ULYbHUugCqqplna4Zo2N0Q910HSFdSF5zxsijTNAS1PjDE3M04Id6NH3vVKlrltUY00CCTUOFKV')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_51N09VeLjvedDFbO81u2hK03pSpSMEEr6MrtNFSOrlFUK9GJtXVIlb5kd5WbLa1epvyCE8HwcgbxO52bUTy9hz1el00AEFNOFMH')
-STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', 'whsec_6qnIKmZIcIcMIi6BhrUBgpuyN3nEM28g')
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
