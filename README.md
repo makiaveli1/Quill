@@ -1,39 +1,593 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Quill	
 
-Welcome,
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## Project Overview
 
-## Codeanywhere Reminders
+Quill is a ficticious eCommerce bookshop, built using Django, Python, Javascript and Bootstrap 4.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+Quill is a Business to Customer online retailer selling books.
 
-`python3 -m http.server`
+Developed by Monica Murray
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
 
-`http_server`
+![techsini!](readme_media/screenshots/am_i_responsive_screenshot.png) 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+An image of the finished site generated from [techsini](https://techsini.com/multi-mockup/index.php) which displays the application at four screen size breakpoints.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+Please visit the live site via [this link](https://mym-Quill-et-al-b7ea61e35a6e.herokuapp.com/).
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+## Purpose
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The 'Quill' application is designed and build as a fictitious online presence of a physical bookshop, with the purpose of creating an online presence for the store to extend its customer reach. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The design encourages users to browse and to make a purchase.
 
----
+## Business Owner's Goals
 
-Happy coding!
+The business owner's goal is to have a profitable eCommerce presence of its physical bookshop, which extends its customer base by providing an intuitive, robust and visually appealing website with secure and simple payment system.  The Store Owner wants to manage the product offerings of the eCommerce site securely, and add, edit or delete items via a secure interactive front-end.
+
+## User/Customer's Goals
+
+A customer of Quill wants to buy books.  They will understand the application's purpose when first arriving to the site, be able to navigate intuitively around the pages of the website, view all products, click on any product to view it in more detail, and be able to purchase one or many books securely.  A user or customer of this website may also want to be able to Register to create a user profile, and so can Login and Logout of their account on website, view and edit their personal data securely via their account, and view their purchase history.  Registered Users with a delivery address in Ireland can avail of free delivery.  All customer actions are met with feedback via the interactive front end to confirm their chosen action has been performed successfully or has been unsuccessful.
+
+## Project Goal
+
+Quill is my fifth and final Portfolio Project for Code Institute's Diploma in Full Stack Software Development (Ecommerce Applications) and is a Full Stack site based on business logic used to control a centrally-owned dataset.  
+
+Quill contains an authentication mechanism and provides for the online, secure payment for products which are available and stored via the site's relational database.
+
+## Business Model
+
+Quill is a Business to Consumer (B2C) direct seller of books which takes single payments - the transaction ends once the payment is made.
+
+
+
+# CONTENTS
+
+1. [User Experience(UX)](#ux)
+
+2.  [Agile Methodologies](#agile)
+
+3.  [Design](#design)
+
+4.  [Features](#features)
+
+5.  [Technologies](#technologies)
+
+6. [Testing](#testing)
+
+7. [Deployment](#deployment)
+
+8. [Credits](#credits)
+
+
+
+
+## User Experience (UX) Design<a name="ux"></a>
+
+### Strategy
+
+Our user seeks a convenient, attractive, and secure online book shopping experience. The ability to categorize books by genre and organize listings is an added advantage. The website's design prioritizes user-friendliness. Its branding is straightforward, neat, and free of distractions, yet not overly simplistic. Every feature is developed with the user's ease in mind.
+
+Every interaction on the site aims to elicit a positive reaction from the user. This is achieved through the strategic arrangement of information, color schemes, clear and straightforward navigation, and immediate feedback on user actions. The site avoids intrusive pop-ups. Users have full control over their actions, with visible progress indicators and transaction feedback.
+
+### Scope
+
+An intuitive simple, responsive online shopping experience with the following features is the Minimum Viable Product (MVP):
+
+- full-stack website with an interactive front-end, a main navigation menu and a structured layout,
+- a product structure contained within a cloud-hosted, relational database,
+- secure authentication and role-based authorisation, 
+- current login state is reflected to the user,
+- secure ecommerce payment system,(INCOMPLETE, DUE TO UNFIXABLE BUG) 
+- fully implemented CRUD - Create, Add, Update and Delete items from a secure front-end,
+
+
+### Structure
+
+In the Quill ecommerce platform, users can browse and purchase without needing to register. However, registration enhances the user experience, allowing for the storage and modification of shipping details and previous purchase records in their Profile. To maintain the security of the ecommerce operations and its products, only Store Owner/Admin users, following authenticated superuser login, can add products to the store.
+
+The user registration and login options are accessible via the Navigation bar. Once logged in successfully, the Navigation bar is expanded to include a 'Profile' page link for registered users. For superusers, like the Store Owner, additional links such as 'Add Product/Add Author' become available for expanding the store's inventory. Moreover, the Store Owner has the capability to add, edit, and delete products directly from the main Products page, facilitating efficient management of the store's offerings.
+
+The Search feature on the Navigation bar is accessible to all users. Following a successful login, the Logout feature is automatically displayed on the Navigation bar for logged-in users. Logging out redirects users back to the Home page.
+
+The interactive footer hosts internal links to the About Us and Privacy Policy pages. It also includes a link to subscribe to the Bookworm's Newsletter VIP Club, along with external links to the website's social media platforms.
+
+Quill's functionality is underpinned by a cloud-based relational database that manages the product offering. It integrates Stripe for secure payment processing, concluding transactions with a single payment. The data is consistently and methodically stored in the database, ensuring any updates are promptly reflected on the user-facing end of the website.
+
+### Skeleton
+
+This ecommerce site adheres to the standard practices common to online stores. Users will find the interface intuitive, with the ability to click on links and icons to perform actions, add items to a Shopping Cart, and go through a Checkout and card validation process for secure payments. This application aligns with these established conventions. The information on the site is systematically displayed, ensuring that each detail is easily accessible. 
+
+### Surface
+
+Quill website features an elegant and inviting color scheme, anchored by a warm beige backdrop that provides a neutral stage for the vivid covers of the books on display. The chosen font, Jont, is selected for its readability across all devices, contributing to the site's clean and uncluttered aesthetic. This font choice, along with the thoughtful contrast between the text and the background, ensures that the website is not only aesthetically pleasing but also accessible to users with screen readers and assistive technologies.
+
+User interaction with this responsive application is intended to be intuitive and straightforward. The use of links and icons is designed to be self-explanatory, guiding users through their actions with ease. The application also employs clear feedback messages to inform users of both successful and unsuccessful actions promptly, ensuring a seamless and user-friendly experience at the front-end.
+
+## Agile Methodology<a name="agile"></a>
+
+Please follow this link to open my [AGILE.md](AGILE.md) file and read about how I used Agile Methodology in the planning and development of Quill application.
+
+
+### Colour Scheme
+
+Quill' colour scheme is designed to be crisp, clean and sophisticated.  The colour palette is primarily black and white to optimise colour contrast.  
+
+I used [Coolors](https://coolors.co) to generate a complimentary colour palette.
+
+The colour palette is generated from the landing page image.
+
+![landing page image!](media/Readme_media/Hero_Image.png)
+![colour palette!](media/Readme_media/Color_Image.png). 
+
+
+### Typography
+
+I chose Montserrat font from Google Fonts for my website.
+
+![Jost font!](media/Readme_media/Jost_font.png)
+
+
+### Wireframes
+
+I created my wireframes using [Figma.com](www.figma.com) to create the early UX Design Wireframe images.
+
+| Page                  | Wireframe Link                              |
+|-----------------------|-------------------------------------------------------------|
+| Log-In Page           | [Log-In -  wireframe](media\Readme_media\LOG-IN.png) |
+| Product Page          | [Product - wireframe](media\Readme_media\productpage.png) |
+| All BOOKS Products    | [All BOOKS -  wireframe](media\Readme_media\Productspage.png) |
+| Sign-Up Page          | [Sign-Up -  wireframe](media\Readme_media\signup.png) |
+| Home Page             | [Homepage - wireframe](media\Readme_media\homepage.png) |
+
+
+### Favicon
+
+A favicon appears in the browser tab with the website name as a visual reminder to enable a user to easily recognise and identify a company's website in a busy browser with many open tabs.  
+
+The favicon for Quill is also the website's landing page image.  I chose this image from [freepik.com](www.freepik.com), saved it to my local machine, and used [favicon.io](https://icons8.com) to download the image and generate the favicon files and the link tags to insert in the Head of my base.html.
+
+![Favicon!](media\icons8-quill-pen-32.png)
+
+
+
+## Features<a name="features"></a>
+
+#### Homepage
+
+Quill home page is the primary web page that a visitor will view when they navigate to the website via a search engine, and it also functions as a redirection point following many of site's actions. It establishes Quill' brand and entices a visitor to delve deeper into the website.  Our home page contains one call to action, the 'Shop Now' button.
+
+#### Registration/Authentication
+
+Wikipedia defines website user registration and login as a function which "enables a system to personalize itself".  This personalisation is what offers users exclusivity, and convenience for a returning user. The Quill website personalises the experience for a registered and logged in user by displaying a welcome message containing the user's name on login, and the Navigation content is changed to reflect the access level of the authenticated user. Quill allows a logged-in user to view and modify personal shipping details and previous purchase information, and even receive free shipping if they have an address in Ireland.
+
+#### Navigation 
+
+The Navigation bar of Quill is designed to help a site user to move smoothly around the site, allowing users to navigate the layout of the site intuitively.  It is organised in a way to link the other pages of the website.  Our user can use the following functions with ease:
+
+- Search bar function,
+- My Account, which contains Registration and Login features to an unauthenticated user, or the Logout, Profile/Add Author and Books features to an authenticated user, with the content depending on their level of authentication,
+- Shopping Cart and Checkout function,
+- Category filtering feature.
+
+The Navigation bar is available and offers the same functionality on each page of the website.
+
+#### My Account
+
+My Account is a tool designed for ease of use of the site user.  It also creates a sense of exclusivity for a user, with certain content only available to a logged in user. 
+
+The My Account tool contains features for all users, be that Registration for an account, Login to an account, or when logged in changes to contain a link to the user's Profile and a Logout link to logout and preserve the user's secure content of the site.  It also provides a front-end means of managing the store's product offering for the Store Owner and requires authentication of their credentials to display this functionality.
+
+#### Shopping Cart
+
+The shopping cart is for the site user to add products to for purchase.  
+
+When a product is successfully added to the shopping cart a success message is displayed to the user giving a thumbnail view and synopsis of the product added.  It conveniently provides a total monetary value of the products in the shopping cart so the user can keep a running count of the cost of the contents of the cart.
+
+Within the shopping cart page, a user has additional functionality and can increase or decrease the quantity of a product they have selected to purchase up to a maximum of 5, or remove it entirely, and can see the running total of their purchase update with every change they make.
+
+The shopping cart contains a button link to the secure Checkout.
+
+#### Checkout
+
+A user can finalise their purchase of the products on this page.  They are required to add shipping details for their order, and securely add their card details.  The processing of the user's card is managed using Stripe secure payments system.  
+
+On the checkout page, a user can opt-in to update their profile with their shipping details for speed of checkout on their next visit to the store and so a returning logged-in user will have most of their details pre-populated into this form, save for the Name field, and the credit card field, both of which they are required to complete for each checkout process.
+
+#### Products
+
+The products available for purchase on Quill are listed on this page and the page provides easy-to-use sorting and filtering options to help users find what they want within the product listings.
+
+A product can be added directly to the shopping cart using the 'Add to My Cart' button function on each product.  Alternatively, a user can opt to open a product detail page for a product to view that offering in more details.
+
+The 'Add to My Cart' button is not displayed to the Store Owner on this page as they do not need the function to add products to the shopping cart.
+
+#### Product Detail
+
+The product detail page outlines everything a user might wish to know about a product offered on Quill.  Product name, description, rating, price and a quantity picker are all features of this page.  A product can be added to the shopping cart, and the quantity of the product can be increased up to a maximum of 5 before the 'Add to My Cart' button is clicked.
+
+#### CRUD
+
+All of the major functions of the product management of the Quill store can be controlled by the authenticated Store Owner via the front-end on either the Products page or the Product detail page.  New products can be added, and existing product detail can be edited, or deleted from the store entirely, with all changes being reflected immediately to the Store Owner on the front-end and to the data on the database.
+
+#### User Feedback Messages
+
+Could not complete due to time constraints
+
+#### Email Confirmation
+
+Could not complete due to time constraints
+
+#### Search Feature
+
+Search feature, which is available to all site users, can be found in the Navigation bar and is used to search the website's content with convenience for the user in mind.  A user's search term is checked against product titles and descriptions, category names or author names and any matches found are returned to the front-end, with the number of the returned matches displayed over the list of those items.
+
+#### Footer
+
+The website's footer is thoughtfully crafted to enhance user navigation, featuring internal links for 'About Us', 'Privacy Policy', 'Contact Us', and 'FAQ' sections for easy access to more information. Additionally, the footer credits the creation of the site to 'Gbemi Akadiri for CI P5', suggesting a personalized touch and a nod to the project or course it was created for. Social media engagement is facilitated through sleek icons linking to platforms like Facebook, Twitter, and Instagram, inviting users to join the brand's social community. The minimalist design of the footer, with its clean font and well-organized layout against a warm beige background, aligns with the website's sophisticated aesthetic.
+
+#### Bespoke Error Page
+
+could not be completed in time.
+
+
+### Future Implementations
+
+Future features to develop will be:
+
+- enable registered users to review their purchased books and to rate the book(s) purchased;
+- enable the Store Owner to reply to customer comments and reviews.
+
+
+### Accessibility
+
+Throughout this project I have endeavoured to implement good accessibility practices.  
+
+- Semantic HTML is used throughout
+- descriptive alt text attributes are used on all site images
+- I have used [Icons8](https://icons8.com) icons in my application and to each icon I have added aria-labels to enable screen readers to understand them
+
+I tested each site page on Lighthouse and detail these tests and scores in [Testing.md](TESTING.md)
+
+
+## Technologies Used**<a name="technologies"></a>
+
+### Languages Used
+
+Languages in this project were:
+
+- Python, 
+- HTML, 
+- CSS,  and 
+- JavaScript.
+
+### Frameworks, Libraries & Programs Used
+
+- Figma.com - Used to create wireframes.
+
+- Vscode - The Cloud development environment used to develop the site.
+
+- Google Fonts - To import the fonts used on the website.
+
+- Google Developer Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+- TinyPNG - To compress the Homepage image.
+
+- Techsini - To show the website image on a range of devices.
+
+- Django framework and Bootstrap CSS library were both used in this project.
+
+- FIcons8 - Used for icons.
+
+- PostgreSQL database used to build the store product offering.
+
+- Heroku and ElephantSQL - For deployment and Hosting of the project.
+
+- GitHub - Distributed Version Control.
+
+- GitHub Projects - Used to support the Agile development of the website.
+
+- LucidChart - ERD Design and layout software.
+
+- Favicon.io - Used to create the website favicon.
+
+- Pillow - Installed to enable images to be viewed with the products in the models.
+
+- Django Countries - Installed to use a drop-down list of Countries to choose from.
+
+- Adobe Photoshop - Used on site images to optimise sizes.
+
+- JQuery code library.
+
+- Stripe payments system.
+
+- Amazon Web Services (AWS) used to store the images for the website.
+
+- Boto3 - to connect Django to AWS and enable us store static files.
+ 
+- Django-Storages - Used to connect Django to AWS.
+
+
+## Defensive Programming
+
+Defensive Programming was at the forefront of the site's development, with user authentication and authorisation implemented for all site users and limiting access to data to only the authenticated registered owner of that data.  In addition, Store Owner access is further restricted using the 'login_required' decorator with those front-end management views only rendering at the front-end to the authenticated superuser.
+
+## Marketing
+
+Could not complete due to time constraints.
+
+### Purpose of the Application
+
+The eCommerce aspect of the Quill business is specifically designed to facilitate commercial transactions, and it involves the online transfer of information.  As mentioned above, this is a Business to Customer eCommerce application type, selling physical products online.  Payments for those products is taken online.  The transaction is finished after a single payment is made and the product is shipped.
+
+### Core Business Intents
+
+The core business intent of Quill is to sell e-books online as a part of it's physical bookshop business, to extend it's market reach.
+
+### Marketing Strategies for app
+
+#### Content Marketing 
+
+- consistently creating, distributing and promoting relevant online materials in a way that is strategically designed to attract and convert my target market into customers using Newsletters and Social Media Marketing:
+
+##### Newsletters - VIP Club
+
+Quill can provide additional benefit to Subscribers by providing regular interesting content related to bestsellers, author signings and readings and special offers.
+
+- Newsletter subscription in this application is provided via a custom django app.  Any user, not just an authenticated user, may subscribe to receive a newsletter.  The subscription page is launched via a link in the footer.  Users may provide their name, but an email address is required in order to subscribe, and a user must opt-in to subscribe to comply with GDPR Regulations.  A user will receive feedback confirming their subscription, or in the event of an error there will be feedback inviting them to ensure the form is correctly filled in.
+                                    |
+
+
+#### Robots.txt and Sitemap.xml
+
+- robots.txt is a simple text file that tells search engines where they are not allowed to go on the application.  In Quill, the robots.txt file is in the root directory and includes the admin, profiles and checkout directories as urls that the spiders are not permitted to access.
+
+- sitemap.xml is a file that lists a website's import page urls, making sure that search engines can crawl, or navigate through them.  It helps a search engine to understand our website's structure and crawl every essential page on the website.  sitemap.xml was generated on [xml-sitemaps.com](https://www.xml-sitemaps.com/details-mym-Quill-et-al-b7ea61e35a6e.herokuapp.com-49873d773.html) and is located in the root directory.
+
+
+## Privacy Policy
+page unfinished
+
+
+## Testing<a name="testing"></a>
+
+Testing is documented in TESTING.md file [here](TESTING.md)
+
+
+## Setup and Deployment<a name="deployment"></a>
+
+- Prerequisites:
+
+	- GitHub;
+	- IDE, I use Vscode;
+	- Heroku;
+	- ElephantSQL;
+	- Amazon AWS;
+	- Stripe.
+
+
+### Setup
+
+- Create a new Repository in GitHub
+
+	- I created this project using the [Code Institute student custom template](https://github.com/Code-Institute-Org/gitpod-full-template); 
+	- click the 'Use this template' button in the template and then 'create a new respository' from the dropdown;
+	- Name the repository, then click 'Create Repository' button; 
+	- On your newly opened 'repo', click the button for the code editor of your choice, I use Gitpod, to launch the repo in the IDE;
+	- Paste in your new repository name where prompted to create a new Gitpod workspace, click Continue;
+	- optional: When the workspace opens, Pin your project to the top left of your browser window for ease of launching every time you code.
+
+
+- The following are the short set up steps to start a Django project
+
+	1.	Install Django, I used version 3.2.  In the IDE terminal type the following commands:
+
+		- pip3 install 'django<4'
+		- django-admin startproject Quill_et_al . (the dot is very important after the project name as it sets up all the files for the project!)
+		- python3. manage.py migrate
+	
+	2. Create a superuser to have administrative access of your project:
+
+		- python3 manage.py createsuperuser
+		Add a unique username, and password!
+
+	3. To Create an app within the project:
+
+		- python3 manage.py startapp APP_NAME
+		Add the new app to the list of installed apps in settings.py
+
+		To install project requirements as you install them in production, enter the command 
+		- pip3 freeze > requirements.txt 
+		in the Gitpod terminal.  A file with all the requirements will be created which will be used by the deployed project to run the project application in the browser.
+
+	4. Make migrations:
+
+		- python manage.py makemigrations
+
+	5. Migrate changes:
+
+		- python manage.py migrate
+
+	6. Create env.py file in the root directory to store secure environment variables, for example the Django Secret Key, which is a 16-random-character key is stored here and not commited to Github for the security of our project
+
+	7. Project is now up and running, test it by running 
+		
+		- python3 manage.py runserver
+
+	![Django Install Successful](readme_media/screenshots/Django_successful_install.png)
+
+
+My site is deployed using Heroku - [Quill](https://mym-Quill-et-al-b7ea61e35a6e.herokuapp.com/)
+
+
+### To Deploy the site using [Heroku](www.heroku.com):
+
+- Login (or signup) to Heroku;
+- From the dashboard, click on 'New' and select 'Create New App';
+- Populate the App Name field with your new Project or Application name, and select your local region ie. Europe. Click 'Create App' button.
+
+The app is now created and is listed in the Heroku dashboard.
+
+Click on your newly created app.
+
+In the 'Settings' tab of your Heroku app, add Config Variables.  The following is the key list required for this project:
+
+![Heroku Config Var Key List!](readme_media/screenshots/heroku_config_var_keynames.png)
+
+- AWS_ACCESS_KEY_ID: 'Secret key generated by AWS';
+- AWS_SECRET_ACCESS_KEY: 'Secret key';
+- DATABASE_URL: 'Paste ElephantSQL URL';
+- EMAIL_HOST_PASS: 'Secret key generated by email provider';
+- EMAIL_HOST_USER: 'Enter host user's email address';
+- SECRET_KEY: 'Paste in your secret key from Gitpod';
+- STRIPE_PUBLIC_KEY: 'Public key generated by Stripe';
+- STRIPE_SECRET_KEY: 'Secret key generated by Stripe';
+- STRIPE_WH_SECRET: 'Webhook secret key generated by Stripe';
+- USE_AWS: 'True';
+
+In the 'Deploy' tab of your Heroku app:
+
+- Select 'GitHub' from the Deployment method section;
+- Connect to the GitHub repository for this project;
+- Select 'Enable Automatic Deploys' from the the Automatic Deploy section which will ensure than any updated made and saved to GitHub will automatically update in the deployed project app.
+
+### Create a new database on ElephantSQL
+
+Heroku uses an ephemeral file system - which means it is wiped clean every time Heroku updates, or every time the app is redeployed.
+
+So Gunicorn which will act as the web server for the project, and the project will also use a server-based database called 'Postgres'.  It will be seperated from the  application, so it will survive even if the application server is destroyed.
+
+To Create the Postgres database:
+
+- Login or signup to ElephantSQL;
+- Click 'Create New Instance';
+- Populate the 'Name' field with the name of the Project or Application;
+- Leave the 'Plan' field with the pre-populated Tiny Turtle content;
+- Leave the 'Tags' field blank;
+- Click the 'Select Region' button and choose 'EU-West-1' as the local region;
+- Click the 'Review' button, ensure all the content is correct, with the correct spelling, then click 'Create Instance'.
+
+The Postgres database is now created on ElephantSQL and you can see it on your ElephantSQL dashboard. 
+
+Connect Gitpod development environment to Postgres database
+
+Through Gitpod, connect ElephantSQL through settings.py with a variable named 'DATABASE_URL', and then migrate the database structure to the newly connected ElephantSQL database.
+
+Test the connection in ElephantSQL:
+
+- Select the database instance from the dashboard;
+- Select 'Browser' tab, then click on 'Table Queries'.
+
+You should see that the dropped down list has been populated from the Django migrations.
+
+### Create Procfile in VScode
+
+Heroku needs a Procfile so it knows how to run a project.
+
+In the newly created Procfile, add the line 'web: gunicorn PROJECTNAME.wsgi'.
+ - 'web:' tells Heroku that this is a process that should accept http traffic;
+ - 'gunicorn' is a web server installed for the project, a web services gateway server;
+ - '.wsgi' stands for 'web services gateway server' and is the standard that allows Python services to integrate with web servers.
+
+ The Project is now successfully deployed.
+
+
+### How to Fork this Project
+
+A Fork of a repository is a copy of the original repository that you now own. Any changes made to the project in your fork will not affect the original. 
+
+Use the following steps: 
+
+- Log in to GitHub and locate the repository Quill
+- At the top of the Repository (not the top of the page) just above the "Settings" Button on the menu, locate and click the "Fork" Button.
+
+You should now have a copy of the original repository in your GitHub account.  To deploy your forked project following customisation, follow the steps above.
+
+### How to Clone this Project
+
+Creating a clone enables you to make a copy of the repository at that point in time - this lets you run a copy of the project locally.
+
+To do this, you should:
+
+- Navigate to [my Github Repository](https://github.com/MoniMurray/Quill-et-al) 
+- Click on the arrow on the green code button at the top of the list of files
+- Select the 'Local' tab select the 'HTTPS' tab and click the icon to copy the prepopulated link
+- Navigate to your code editor of choice and within the terminal change the directory to the location you want to clone the repository to.
+- Type 'git clone' and paste the HTTPS link you copied from GitHub
+- Press enter, the Forked repository will now clone to your preferred development method on your local machine.
+
+
+### How Stripe Works - what's going on in the background
+
+- When a website user launches the Checkout page from the Shopping Cart, the checkout/view.py will call out to Stripe and create a "Payment Intent" for the current amount in the Shopping Cart.
+
+- When Stripe creates this payment intent, it will also have a secret that identifies it and when it is returned to the website, we send it to the template as the "client_secret" variable.
+
+- Then, in the javascript, on the client side (our website) we call the confirmCartPayment method from Stripe javascript using the client_secret which will verify our user's credit card number.
+
+#### Stripe Webhook
+
+- A webhook from Stripe tells your application whether your customer's payment went through or not.
+
+#### Connect to Stripe
+
+- In the logged in Stripe dashboard, click on Developers, and then API Keys - here you will find the key values which will be saved to Heroku Config Vars to connect the deployed project to Stripe;
+- Create a new webhook endpoint in Developers, Webhooks, select the 'add endpoint' link;
+- Paste in the Heroku app URL, followed by /checkout/WH and select to 'receive all events', the click 'add endpoint' button;
+- Reveal the webhook signing secret, copy and paste it as the value to the STRIPE_WH_SECRET config var in the Heroku app's Deploy tab.
+
+### Connect to AWS
+
+AWS is a cloud-based storage service which we use to store our media and static files for this project.
+
+- Login, or create an account with aws.amazon.com.
+- Select S3.
+- Click on 'Create Bucket' to create a new storage bucket.
+- Name the new bucket following the same naming convention as used when naming the Heroku app and the ElephantSQL database.  This bucket needs to be public in order to allow public access to the static files.
+- When the bucket is created, use the 'Properties' and 'Permissions' tabs to set the bucket's settings.
+- Create an Identify and Access Management (IAM) User Group into which we create the policy used to access our S3 bucket, and create a User to access the S3 bucket.  This static files user will have access keys which will be used to connect the bucket to our deployed app on Heroku via config var keys.
+- Connect Django to S3 in AWS by installing two packages in the terminal, Boto and Django Storages, and add settings, via keys, to tell our project which bucket it should be communicating with.  These keys will be added to the Config Vars in Heroku.
+- Tell Django, via settings.py, that in production we want to use S3 to store our static files and our media files whenever someone runs collectstatic, and that we want any uploaded product images to go there also, all via custom classes in custom_storage.py.
+- Finally, tell the browser to cache static files as they don't change very often, and this instruction will improve site speed and performance for the user.
+- Create a Media folder within the S3 bucket into which we upload all images used in our project, and grant them public-read access.
+
+You can see all this code in my [settings.py](Quill_et_al/settings.py) in this repo.
+
+
+
+## Credits<a name="credits"></a>
+
+For my Project I followed the advice given in the [CI Guide to MVP video for Project 5](https://youtu.be/i7clFOYiwS0) to use the Boutique Ado Walkthrough Project code as a boilerplate to get started and save precious time, and I then customised as much as I could.  So full credit to Boutique Ado walkthrough which I have used extensively throughout this eCommerce project. 
+ I also used the knowledge I learned from the design of both the 'Hello Django' and the 'Django Blog' Walkthrough projects during the CI Module on FST Frameworks. 
+
+Credit to the many [CI Community Q&A videos](https://www.youtube.com/playlist?list=PL_7334VduOHsrWzhu5Ta2lrkp016kcBWYvideos) for advice from MVP of Project 5, to how to study, to very valuable videos on Readme essential sections.
+
+Crerdit to my Mentor Oluwafemi Omedale for his assistance throughout the whole course and during this project.
+
+Credit to [this Stack Overflow post](https://stackoverflow.com/questions/29313879/shopping-cart-number-of-items-in-cart-css) from which I learned to apply a counter to the Shopping Cart icon on the nav bar.
+
+I took inspiration for the design of the Quill Bookshop from many leading Irish bookshops with strong online presence such as Easons and Dubray.
+
+To fix my footer to the bottom of every page, regardless of body content size, I used [flex](https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14) as outlined on this article.
+
+
+I used [Wikipedia](https://en.wikipedia.org/wiki/Registered_user#:~:text=User%20registration%20and%20login%20enables,preferences%20indicated%20by%20the%20user.) to define features of a website, such as Registration and Login.
+
+[WebAIM](https://webaim.org/resources/contrastchecker/) Colour Contrast Checker helped me select a better contrast combination to address WAVE warning.
+
+All wireframes, ERD and screenshots are my own creation.
+
+
+### Acknowledgments
+
+The CI Slack Community is a resource I used almost as much as Google for this project! This community is so kind and generous with their collective and individual knowlege and I used them to bounce ideas off, ask for advice, and to seek guidance where code went awry.  A Big thank you to CI colleagues for taking the time to thoroughly test the site for me.
+
+CI Tutor Support were an invaluable resource for this project and I'm so grateful to all the patient Tutors from whom I received a huge amount of reasurance and guidance.
+
+Thanks to my mentor oluwafemi Omedale for all his encouragement!
+
+
