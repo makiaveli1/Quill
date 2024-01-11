@@ -5312,3 +5312,349 @@ Traceback (most recent call last):
     raise VariableDoesNotExist("Failed lookup for key "
 django.template.base.VariableDoesNotExist: Failed lookup for key [total_items] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fe12650fe20>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <User: gbemi>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fe12657df60>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fe12657f6d0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'MEDIA_URL': '/media/', 'bag_items': [{'item_id': '2391', 'quantity': 1, 'product': <Product: Blue Shoes And Happiness>, 'subtotal': Decimal('7.36')}, {'item_id': '1794', 'quantity': 1, 'product': <Product: A Prison Diary Volume II>, 'subtotal': Decimal('7.67')}], 'total': Decimal('15.03'), 'product_count': 2, 'grand_total': Decimal('15.03'), 'categories': <QuerySet [<Category: Biography>, <Category: Computing>, <Category: Crime-Thriller>, <Category: Medical>]>}, {}, {'block': <Block Node: page_header. Contents: [<TextNode: '\n      <header class="fix'>, <django.template.defaulttags.URLNode object at 0x7fe1265633d0>, <TextNode: '"><img src="https://img.i'>, <django.template.defaulttags.URLNode object at 0x7fe1265632e0>, <TextNode: '">HOME</a>\n              '>, <django.template.defaulttags.URLNode object at 0x7fe126560cd0>, <TextNode: '">BOOKS</a>\n             '>, <django.template.defaulttags.URLNode object at 0x7fe127765a50>, <TextNode: '?category=medical">MEDICA'>, <django.template.defaulttags.URLNode object at 0x7fe127764520>, <TextNode: '?category=biography">BIOG'>, <django.template.defaulttags.URLNode object at 0x7fe127766a70>, <TextNode: '?category=computing">COMP'>, <django.template.defaulttags.URLNode object at 0x7fe127764970>, <TextNode: '?category=crime-thriller"'>, <IfNode>, <TextNode: '\n                </div>\n '>, <django.template.defaulttags.URLNode object at 0x7fe127765000>, <TextNode: '">\n                  <img'>, <IfNode>, <TextNode: '\n                  </span'>, <django.template.defaulttags.URLNode object at 0x7fe127767910>, <TextNode: '" method="get">\n         '>]>}]
 "GET / HTTP/1.1" 200 9983
+(0.007) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-01-11 11:08:32.735666' AND "django_session"."session_key" = 'q9ct774v6p3h4uarcq7qslry0x14mlur') LIMIT 21; args=('2024-01-11 11:08:32.735666', 'q9ct774v6p3h4uarcq7qslry0x14mlur')
+(0.003) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 2391 LIMIT 21; args=(2391,)
+(0.002) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 1794 LIMIT 21; args=(1794,)
+(0.003) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,)
+(0.003) SELECT "products_category"."id", "products_category"."name", "products_category"."friendly_name", "products_category"."description", "products_category"."slug" FROM "products_category" ORDER BY "products_category"."friendly_name" ASC LIMIT 21; args=()
+Exception while resolving variable 'total_items' in template 'home/index.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'total_items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'total_items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'total_items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [total_items] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fe1266693f0>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <User: gbemi>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fe12656c760>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fe1278df4f0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'MEDIA_URL': '/media/', 'bag_items': [{'item_id': '2391', 'quantity': 1, 'product': <Product: Blue Shoes And Happiness>, 'subtotal': Decimal('7.36')}, {'item_id': '1794', 'quantity': 1, 'product': <Product: A Prison Diary Volume II>, 'subtotal': Decimal('7.67')}], 'total': Decimal('15.03'), 'product_count': 2, 'grand_total': Decimal('15.03'), 'categories': <QuerySet [<Category: Biography>, <Category: Computing>, <Category: Crime-Thriller>, <Category: Medical>]>}, {}, {'block': <Block Node: page_header. Contents: [<TextNode: '\n      <header class="fix'>, <django.template.defaulttags.URLNode object at 0x7fe1265bad10>, <TextNode: '"><img src="https://img.i'>, <django.template.defaulttags.URLNode object at 0x7fe1265bae30>, <TextNode: '">HOME</a>\n              '>, <django.template.defaulttags.URLNode object at 0x7fe1265baf20>, <TextNode: '">BOOKS</a>\n             '>, <django.template.defaulttags.URLNode object at 0x7fe1265bb070>, <TextNode: '?category=medical">MEDICA'>, <django.template.defaulttags.URLNode object at 0x7fe1265bb220>, <TextNode: '?category=biography">BIOG'>, <django.template.defaulttags.URLNode object at 0x7fe1265bb370>, <TextNode: '?category=computing">COMP'>, <django.template.defaulttags.URLNode object at 0x7fe1265bb4c0>, <TextNode: '?category=crime-thriller"'>, <IfNode>, <TextNode: '\n                </div>\n '>, <django.template.defaulttags.URLNode object at 0x7fe1265b8220>, <TextNode: '">\n                  <img'>, <IfNode>, <TextNode: '\n                  </span'>, <django.template.defaulttags.URLNode object at 0x7fe1265b8b20>, <TextNode: '" method="get">\n         '>]>}]
+"GET / HTTP/1.1" 200 9983
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 304 0
+(0.009) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-01-11 11:08:40.659883' AND "django_session"."session_key" = 'q9ct774v6p3h4uarcq7qslry0x14mlur') LIMIT 21; args=('2024-01-11 11:08:40.659883', 'q9ct774v6p3h4uarcq7qslry0x14mlur')
+(0.004) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 2391 LIMIT 21; args=(2391,)
+(0.003) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 1794 LIMIT 21; args=(1794,)
+(0.003) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,)
+(0.004) SELECT "products_category"."id", "products_category"."name", "products_category"."friendly_name", "products_category"."description", "products_category"."slug" FROM "products_category" ORDER BY "products_category"."friendly_name" ASC LIMIT 21; args=()
+Exception while resolving variable 'total_items' in template 'home/index.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'total_items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'total_items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'total_items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [total_items] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fe1278cbc70>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <User: gbemi>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fe1278de800>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fe1278defe0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'MEDIA_URL': '/media/', 'bag_items': [{'item_id': '2391', 'quantity': 1, 'product': <Product: Blue Shoes And Happiness>, 'subtotal': Decimal('7.36')}, {'item_id': '1794', 'quantity': 1, 'product': <Product: A Prison Diary Volume II>, 'subtotal': Decimal('7.67')}], 'total': Decimal('15.03'), 'product_count': 2, 'grand_total': Decimal('15.03'), 'categories': <QuerySet [<Category: Biography>, <Category: Computing>, <Category: Crime-Thriller>, <Category: Medical>]>}, {}, {'block': <Block Node: page_header. Contents: [<TextNode: '\n      <header class="fix'>, <django.template.defaulttags.URLNode object at 0x7fe12656ee90>, <TextNode: '"><img src="https://img.i'>, <django.template.defaulttags.URLNode object at 0x7fe12656f280>, <TextNode: '">HOME</a>\n              '>, <django.template.defaulttags.URLNode object at 0x7fe12656f640>, <TextNode: '">BOOKS</a>\n             '>, <django.template.defaulttags.URLNode object at 0x7fe1265ba020>, <TextNode: '?category=medical">MEDICA'>, <django.template.defaulttags.URLNode object at 0x7fe1265ba050>, <TextNode: '?category=biography">BIOG'>, <django.template.defaulttags.URLNode object at 0x7fe1265bad10>, <TextNode: '?category=computing">COMP'>, <django.template.defaulttags.URLNode object at 0x7fe1265bad70>, <TextNode: '?category=crime-thriller"'>, <IfNode>, <TextNode: '\n                </div>\n '>, <django.template.defaulttags.URLNode object at 0x7fe1265bb700>, <TextNode: '">\n                  <img'>, <IfNode>, <TextNode: '\n                  </span'>, <django.template.defaulttags.URLNode object at 0x7fe1265ba440>, <TextNode: '" method="get">\n         '>]>}]
+"GET / HTTP/1.1" 200 9983
+(0.008) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-01-11 11:08:49.740175' AND "django_session"."session_key" = 'q9ct774v6p3h4uarcq7qslry0x14mlur') LIMIT 21; args=('2024-01-11 11:08:49.740175', 'q9ct774v6p3h4uarcq7qslry0x14mlur')
+(0.003) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 2391 LIMIT 21; args=(2391,)
+(0.002) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 1794 LIMIT 21; args=(1794,)
+(0.003) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 2391 LIMIT 21; args=(2391,)
+(0.002) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 1794 LIMIT 21; args=(1794,)
+(0.003) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,)
+"GET /bag/ HTTP/1.1" 200 13182
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'allauth.urls' from '/home/gbemi/.local/lib/python3.10/site-packages/allauth/urls.py'> (None:None) 'accounts/'>], [<URLResolver <module 'home.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/home/urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'home.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/home/urls.py'> (None:None) ''>, <URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'products.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/products/urls.py'> (None:None) 'products/'>], [<URLResolver <module 'profiles.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/profiles/urls.py'> (None:None) 'profile/'>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern '' [name='view_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'add/<item_id>/' [name='add_to_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'adjust/<item_id>/' [name='adjust_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'delete/<item_id>/' [name='delete_from_bag']>], [<URLResolver <module 'checkout.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/checkout/urls.py'> (None:None) 'checkout/'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'bag/media/icons8-quill-pen-32.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'allauth.urls' from '/home/gbemi/.local/lib/python3.10/site-packages/allauth/urls.py'> (None:None) 'accounts/'>], [<URLResolver <module 'home.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/home/urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'home.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/home/urls.py'> (None:None) ''>, <URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'products.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/products/urls.py'> (None:None) 'products/'>], [<URLResolver <module 'profiles.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/profiles/urls.py'> (None:None) 'profile/'>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern '' [name='view_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'add/<item_id>/' [name='add_to_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'adjust/<item_id>/' [name='adjust_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'delete/<item_id>/' [name='delete_from_bag']>], [<URLResolver <module 'checkout.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/checkout/urls.py'> (None:None) 'checkout/'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'bag/media/icons8-quill-pen-32.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'allauth.urls' from '/home/gbemi/.local/lib/python3.10/site-packages/allauth/urls.py'> (None:None) 'accounts/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'allauth.urls' from '/home/gbemi/.local/lib/python3.10/site-packages/allauth/urls.py'> (None:None) 'accounts/'>], [<URLResolver <module 'home.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/home/urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'home.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/home/urls.py'> (None:None) ''>, <URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'products.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/products/urls.py'> (None:None) 'products/'>], [<URLResolver <module 'profiles.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/profiles/urls.py'> (None:None) 'profile/'>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern '' [name='view_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'add/<item_id>/' [name='add_to_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'adjust/<item_id>/' [name='adjust_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'delete/<item_id>/' [name='delete_from_bag']>], [<URLResolver <module 'checkout.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/checkout/urls.py'> (None:None) 'checkout/'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'bag/media/icons8-quill-pen-32.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'allauth.urls' from '/home/gbemi/.local/lib/python3.10/site-packages/allauth/urls.py'> (None:None) 'accounts/'>], [<URLResolver <module 'home.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/home/urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'home.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/home/urls.py'> (None:None) ''>, <URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'products.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/products/urls.py'> (None:None) 'products/'>], [<URLResolver <module 'profiles.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/profiles/urls.py'> (None:None) 'profile/'>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern '' [name='view_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'add/<item_id>/' [name='add_to_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'adjust/<item_id>/' [name='adjust_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'delete/<item_id>/' [name='delete_from_bag']>], [<URLResolver <module 'checkout.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/checkout/urls.py'> (None:None) 'checkout/'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'bag/media/icons8-quill-pen-32.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'products.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/products/urls.py'> (None:None) 'products/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'allauth.urls' from '/home/gbemi/.local/lib/python3.10/site-packages/allauth/urls.py'> (None:None) 'accounts/'>], [<URLResolver <module 'home.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/home/urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'home.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/home/urls.py'> (None:None) ''>, <URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'products.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/products/urls.py'> (None:None) 'products/'>], [<URLResolver <module 'profiles.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/profiles/urls.py'> (None:None) 'profile/'>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern '' [name='view_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'add/<item_id>/' [name='add_to_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'adjust/<item_id>/' [name='adjust_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'delete/<item_id>/' [name='delete_from_bag']>], [<URLResolver <module 'checkout.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/checkout/urls.py'> (None:None) 'checkout/'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'bag/media/icons8-quill-pen-32.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'profiles.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/profiles/urls.py'> (None:None) 'profile/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'allauth.urls' from '/home/gbemi/.local/lib/python3.10/site-packages/allauth/urls.py'> (None:None) 'accounts/'>], [<URLResolver <module 'home.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/home/urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'home.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/home/urls.py'> (None:None) ''>, <URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'products.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/products/urls.py'> (None:None) 'products/'>], [<URLResolver <module 'profiles.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/profiles/urls.py'> (None:None) 'profile/'>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern '' [name='view_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'add/<item_id>/' [name='add_to_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'adjust/<item_id>/' [name='adjust_bag']>], [<URLResolver <module 'bag.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/bag/urls.py'> (None:None) 'bag/'>, <URLPattern 'delete/<item_id>/' [name='delete_from_bag']>], [<URLResolver <module 'checkout.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/checkout/urls.py'> (None:None) 'checkout/'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'bag/media/icons8-quill-pen-32.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'checkout.urls' from '/mnt/c/Users/likwi/Desktop/PROJS/Quill/checkout/urls.py'> (None:None) 'checkout/'>
+Not Found: /bag/media/icons8-quill-pen-32.png
+"GET /bag/media/icons8-quill-pen-32.png HTTP/1.1" 404 3798
+(0.007) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-01-11 11:08:55.248768' AND "django_session"."session_key" = 'q9ct774v6p3h4uarcq7qslry0x14mlur') LIMIT 21; args=('2024-01-11 11:08:55.248768', 'q9ct774v6p3h4uarcq7qslry0x14mlur')
+(0.002) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 2391 LIMIT 21; args=(2391,)
+(0.002) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 1794 LIMIT 21; args=(1794,)
+(0.003) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,)
+(0.003) SELECT "products_category"."id", "products_category"."name", "products_category"."friendly_name", "products_category"."description", "products_category"."slug" FROM "products_category" ORDER BY "products_category"."friendly_name" ASC LIMIT 21; args=()
+Exception while resolving variable 'total_items' in template 'home/index.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'total_items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'total_items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'total_items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [total_items] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fe12650fe20>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <User: gbemi>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fe12656d660>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fe12656d150>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'MEDIA_URL': '/media/', 'bag_items': [{'item_id': '2391', 'quantity': 1, 'product': <Product: Blue Shoes And Happiness>, 'subtotal': Decimal('7.36')}, {'item_id': '1794', 'quantity': 1, 'product': <Product: A Prison Diary Volume II>, 'subtotal': Decimal('7.67')}], 'total': Decimal('15.03'), 'product_count': 2, 'grand_total': Decimal('15.03'), 'categories': <QuerySet [<Category: Biography>, <Category: Computing>, <Category: Crime-Thriller>, <Category: Medical>]>}, {}, {'block': <Block Node: page_header. Contents: [<TextNode: '\n      <header class="fix'>, <django.template.defaulttags.URLNode object at 0x7fe1265b90c0>, <TextNode: '"><img src="https://img.i'>, <django.template.defaulttags.URLNode object at 0x7fe1265ba500>, <TextNode: '">HOME</a>\n              '>, <django.template.defaulttags.URLNode object at 0x7fe1265b9060>, <TextNode: '">BOOKS</a>\n             '>, <django.template.defaulttags.URLNode object at 0x7fe1265b9e70>, <TextNode: '?category=medical">MEDICA'>, <django.template.defaulttags.URLNode object at 0x7fe1265bb2b0>, <TextNode: '?category=biography">BIOG'>, <django.template.defaulttags.URLNode object at 0x7fe1265bb100>, <TextNode: '?category=computing">COMP'>, <django.template.defaulttags.URLNode object at 0x7fe1265b8a60>, <TextNode: '?category=crime-thriller"'>, <IfNode>, <TextNode: '\n                </div>\n '>, <django.template.defaulttags.URLNode object at 0x7fe126590610>, <TextNode: '">\n                  <img'>, <IfNode>, <TextNode: '\n                  </span'>, <django.template.defaulttags.URLNode object at 0x7fe126593df0>, <TextNode: '" method="get">\n         '>]>}]
+"GET / HTTP/1.1" 200 9983
