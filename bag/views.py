@@ -16,12 +16,15 @@ def view_bag(request):
     for item_id, quantity in bag.items():
         product = get_object_or_404(Product, pk=item_id)
         total += quantity * product.price
+        image_url = product.image.url if hasattr(product, 'image') and product.image else None
         bag_items.append({
             'item_id': item_id,
             'quantity': quantity,
             'product': product,
             'subtotal': quantity * product.price,
+            'image': image_url,
         })
+
 
     context = {
         'bag_items': bag_items,

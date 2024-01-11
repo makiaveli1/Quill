@@ -82,12 +82,24 @@
   <div class="row mt-3">
     <div class="col text-right">
       <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">Keep Shopping</a>
-      <a href="#" class="batn btn-black rounded-0 btn-lg">Secure Checkout</a>
+      <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">Secure Checkout</a>
     </div>
   </div>
 {% endblock %}
 
-{% block postloadjs %}
+{% block postload_js %}
   {{ block.super }}
-  <!-- [Your Customized JavaScript for Cart Functionality] -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const removeButtons = document.querySelectorAll('.btn-outline-danger')
+    
+      removeButtons.forEach((button) => {
+        button.addEventListener('click', function (event) {
+          if (!confirm('Are you sure you want to remove this item?')) {
+            event.preventDefault()
+          }
+        })
+      })
+    })
+  </script>
 {% endblock %}

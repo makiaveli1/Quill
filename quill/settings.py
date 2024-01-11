@@ -13,7 +13,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+from dotenv import load_dotenv
 
+# Load the environment variables from .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!%afc554mw#k5(11juwv-t##dd-a#!3bya$8go30(wmzqb3vt9'
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-!%afc554mw#k5(11juwv-t##dd-a#!3bya$8go30(wmzqb3vt9')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -50,6 +53,7 @@ INSTALLED_APPS = [
     'storages',
     'crispy_forms',
     'profiles',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -80,6 +84,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'bag.context_processors.bag_contents',
+                'bag.context_processors.categories_processor',
             ],
         },
     },
@@ -107,7 +112,6 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'quill.wsgi.application'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
 
 
 # Database
@@ -201,3 +205,54 @@ if 'USE_AWS' in os.environ:
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Define site admins
+ADMINS = [('Gbemi', 'likwidtv@gmail.com')]
+
+# stripe
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', 'pk_test_51N09VeLjvedDFbO8JKYnOb7ULYbHUugCqqplna4Zo2N0Q910HSFdSF5zxsijTNAS1PjDE3M04Id6NH3vVKlrltUY00CCTUOFKV')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_51N09VeLjvedDFbO81u2hK03pSpSMEEr6MrtNFSOrlFUK9GJtXVIlb5kd5WbLa1epvyCE8HwcgbxO52bUTy9hz1el00AEFNOFMH')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', 'whsec_6qnIKmZIcIcMIi6BhrUBgpuyN3nEM28g')
+
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'bookwormsetal@example.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+
+
+# Logging Configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'debug.log'),
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file', 'mail_admins'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+

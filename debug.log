@@ -1,0 +1,1909 @@
+(0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-01-11 07:13:07.889012' AND "django_session"."session_key" = 'q9ct774v6p3h4uarcq7qslry0x14mlur') LIMIT 21; args=('2024-01-11 07:13:07.889012', 'q9ct774v6p3h4uarcq7qslry0x14mlur')
+(0.002) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 2391 LIMIT 21; args=(2391,)
+(0.002) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 1794 LIMIT 21; args=(1794,)
+(0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,)
+(0.002) SELECT "profiles_profile"."id", "profiles_profile"."user_id", "profiles_profile"."image", "profiles_profile"."bio", "profiles_profile"."favorite_genre", "profiles_profile"."default_phone_number", "profiles_profile"."default_country", "profiles_profile"."default_post_code", "profiles_profile"."default_town_or_city", "profiles_profile"."default_address_line1", "profiles_profile"."default_address_line2", "profiles_profile"."default_county_or_state" FROM "profiles_profile" WHERE "profiles_profile"."user_id" = 2 LIMIT 21; args=(2,)
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,)
+(0.001) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 2391 LIMIT 21; args=(2391,)
+(0.001) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 1794 LIMIT 21; args=(1794,)
+(0.002) SELECT "products_category"."id", "products_category"."name", "products_category"."friendly_name", "products_category"."description", "products_category"."slug" FROM "products_category" ORDER BY "products_category"."friendly_name" ASC; args=()
+Exception while resolving variable 'image' in template 'checkout/checkout.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Product' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Product' object has no attribute 'image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [image] in <Product: Blue Shoes And Happiness>
+Exception while resolving variable 'image' in template 'checkout/checkout.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Product' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Product' object has no attribute 'image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [image] in <Product: A Prison Diary Volume II>
+Exception while resolving variable 'include_media' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'include_media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'include_media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'include_media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [include_media] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=Unknown, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 0, 'counter': 1, 'revcounter': 9, 'revcounter0': 8, 'first': True, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5000>}, {}]
+Exception while resolving variable 'form_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [form_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 0, 'counter': 1, 'revcounter': 9, 'revcounter0': 8, 'first': True, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5000>}, {}]
+Exception while resolving variable 'wrapper_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [wrapper_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 0, 'counter': 1, 'revcounter': 9, 'revcounter0': 8, 'first': True, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5000>}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 0, 'counter': 1, 'revcounter': 9, 'revcounter0': 8, 'first': True, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5000>}, {}, {}]
+Exception while resolving variable 'error_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [error_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 0, 'counter': 1, 'revcounter': 9, 'revcounter0': 8, 'first': True, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5000>}, {}, {}]
+File /home/gbemi/.local/lib/python3.10/site-packages/django/contrib/messages/storage/session.py first seen with mtime 1701687305.673992
+File /usr/lib/python3.10/shlex.py first seen with mtime 1700493245.0
+File /home/gbemi/.local/lib/python3.10/site-packages/django/contrib/messages/storage/cookie.py first seen with mtime 1701687305.673992
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 0, 'counter': 1, 'revcounter': 9, 'revcounter0': 8, 'first': True, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5000>}, {}, {}]
+File /home/gbemi/.local/lib/python3.10/site-packages/django/contrib/sessions/serializers.py first seen with mtime 1701687305.7339919
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 0, 'counter': 1, 'revcounter': 9, 'revcounter0': 8, 'first': True, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5000>}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 1, 'counter': 2, 'revcounter': 8, 'revcounter0': 7, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4fa0>}, {}]
+File /usr/lib/python3.10/netrc.py first seen with mtime 1700493245.0
+Exception while resolving variable 'form_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [form_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 1, 'counter': 2, 'revcounter': 8, 'revcounter0': 7, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4fa0>}, {}]
+File /home/gbemi/.local/lib/python3.10/site-packages/django/contrib/messages/storage/fallback.py first seen with mtime 1701687305.673992
+Exception while resolving variable 'wrapper_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [wrapper_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 1, 'counter': 2, 'revcounter': 8, 'revcounter0': 7, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4fa0>}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 1, 'counter': 2, 'revcounter': 8, 'revcounter0': 7, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4fa0>}, {}, {}]
+Exception while resolving variable 'error_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [error_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 1, 'counter': 2, 'revcounter': 8, 'revcounter0': 7, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4fa0>}, {}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 1, 'counter': 2, 'revcounter': 8, 'revcounter0': 7, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4fa0>}, {}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 1, 'counter': 2, 'revcounter': 8, 'revcounter0': 7, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4fa0>}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 2, 'counter': 3, 'revcounter': 7, 'revcounter0': 6, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4df0>}, {}]
+Exception while resolving variable 'form_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [form_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 2, 'counter': 3, 'revcounter': 7, 'revcounter0': 6, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4df0>}, {}]
+Exception while resolving variable 'wrapper_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [wrapper_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 2, 'counter': 3, 'revcounter': 7, 'revcounter0': 6, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4df0>}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 2, 'counter': 3, 'revcounter': 7, 'revcounter0': 6, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4df0>}, {}, {}]
+Exception while resolving variable 'error_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [error_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 2, 'counter': 3, 'revcounter': 7, 'revcounter0': 6, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4df0>}, {}, {}]
+File /home/gbemi/.local/lib/python3.10/site-packages/django/contrib/messages/utils.py first seen with mtime 1701687305.673992
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 2, 'counter': 3, 'revcounter': 7, 'revcounter0': 6, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4df0>}, {}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 2, 'counter': 3, 'revcounter': 7, 'revcounter0': 6, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4df0>}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 3, 'counter': 4, 'revcounter': 6, 'revcounter0': 5, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5660>}, {}]
+Exception while resolving variable 'form_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [form_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 3, 'counter': 4, 'revcounter': 6, 'revcounter0': 5, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5660>}, {}]
+Exception while resolving variable 'wrapper_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [wrapper_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 3, 'counter': 4, 'revcounter': 6, 'revcounter0': 5, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5660>}, {}]
+Exception while resolving variable 'use_custom_control' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'use_custom_control'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'use_custom_control'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'use_custom_control'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [use_custom_control] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 3, 'counter': 4, 'revcounter': 6, 'revcounter0': 5, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5660>}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 3, 'counter': 4, 'revcounter': 6, 'revcounter0': 5, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5660>}, {}, {}]
+Exception while resolving variable 'error_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [error_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 3, 'counter': 4, 'revcounter': 6, 'revcounter0': 5, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5660>}, {}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 3, 'counter': 4, 'revcounter': 6, 'revcounter0': 5, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5660>}, {}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 3, 'counter': 4, 'revcounter': 6, 'revcounter0': 5, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5660>}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 4, 'counter': 5, 'revcounter': 5, 'revcounter0': 4, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5690>}, {}]
+Exception while resolving variable 'form_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [form_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 4, 'counter': 5, 'revcounter': 5, 'revcounter0': 4, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5690>}, {}]
+Exception while resolving variable 'wrapper_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [wrapper_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 4, 'counter': 5, 'revcounter': 5, 'revcounter0': 4, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5690>}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 4, 'counter': 5, 'revcounter': 5, 'revcounter0': 4, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5690>}, {}, {}]
+Exception while resolving variable 'error_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [error_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 4, 'counter': 5, 'revcounter': 5, 'revcounter0': 4, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5690>}, {}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 4, 'counter': 5, 'revcounter': 5, 'revcounter0': 4, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5690>}, {}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 4, 'counter': 5, 'revcounter': 5, 'revcounter0': 4, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5690>}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 5, 'counter': 6, 'revcounter': 4, 'revcounter0': 3, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5960>}, {}]
+Exception while resolving variable 'form_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [form_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 5, 'counter': 6, 'revcounter': 4, 'revcounter0': 3, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5960>}, {}]
+Exception while resolving variable 'wrapper_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [wrapper_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 5, 'counter': 6, 'revcounter': 4, 'revcounter0': 3, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5960>}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 5, 'counter': 6, 'revcounter': 4, 'revcounter0': 3, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5960>}, {}, {}]
+Exception while resolving variable 'error_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [error_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 5, 'counter': 6, 'revcounter': 4, 'revcounter0': 3, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5960>}, {}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 5, 'counter': 6, 'revcounter': 4, 'revcounter0': 3, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5960>}, {}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 5, 'counter': 6, 'revcounter': 4, 'revcounter0': 3, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca5960>}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 6, 'counter': 7, 'revcounter': 3, 'revcounter0': 2, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca6770>}, {}]
+Exception while resolving variable 'form_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [form_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 6, 'counter': 7, 'revcounter': 3, 'revcounter0': 2, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca6770>}, {}]
+Exception while resolving variable 'wrapper_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [wrapper_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 6, 'counter': 7, 'revcounter': 3, 'revcounter0': 2, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca6770>}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 6, 'counter': 7, 'revcounter': 3, 'revcounter0': 2, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca6770>}, {}, {}]
+Exception while resolving variable 'error_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [error_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 6, 'counter': 7, 'revcounter': 3, 'revcounter0': 2, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca6770>}, {}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 6, 'counter': 7, 'revcounter': 3, 'revcounter0': 2, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca6770>}, {}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 6, 'counter': 7, 'revcounter': 3, 'revcounter0': 2, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca6770>}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 7, 'counter': 8, 'revcounter': 2, 'revcounter0': 1, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca50f0>}, {}]
+Exception while resolving variable 'form_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [form_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 7, 'counter': 8, 'revcounter': 2, 'revcounter0': 1, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca50f0>}, {}]
+Exception while resolving variable 'wrapper_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [wrapper_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 7, 'counter': 8, 'revcounter': 2, 'revcounter0': 1, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca50f0>}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 7, 'counter': 8, 'revcounter': 2, 'revcounter0': 1, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca50f0>}, {}, {}]
+Exception while resolving variable 'error_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [error_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 7, 'counter': 8, 'revcounter': 2, 'revcounter0': 1, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca50f0>}, {}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 7, 'counter': 8, 'revcounter': 2, 'revcounter0': 1, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca50f0>}, {}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 7, 'counter': 8, 'revcounter': 2, 'revcounter0': 1, 'first': False, 'last': False}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca50f0>}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 8, 'counter': 9, 'revcounter': 1, 'revcounter0': 0, 'first': False, 'last': True}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4be0>}, {}]
+Exception while resolving variable 'form_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'form_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [form_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 8, 'counter': 9, 'revcounter': 1, 'revcounter0': 0, 'first': False, 'last': True}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4be0>}, {}]
+Exception while resolving variable 'wrapper_class' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [wrapper_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 8, 'counter': 9, 'revcounter': 1, 'revcounter0': 0, 'first': False, 'last': True}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4be0>}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 8, 'counter': 9, 'revcounter': 1, 'revcounter0': 0, 'first': False, 'last': True}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4be0>}, {}, {}]
+Exception while resolving variable 'error_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [error_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 8, 'counter': 9, 'revcounter': 1, 'revcounter0': 0, 'first': False, 'last': True}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4be0>}, {}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 8, 'counter': 9, 'revcounter': 1, 'revcounter0': 0, 'first': False, 'last': True}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4be0>}, {}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/uni_form.html'.
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field_class': '', 'field_template': 'bootstrap4/field.html', 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'form': <OrderForm bound=False, valid=False, fields=(full_name;email;phone_number;country;post_code;town_or_city;address_line1;address_line2;county_or_state)>}, {'forloop': {'parentloop': {}, 'counter0': 8, 'counter': 9, 'revcounter': 1, 'revcounter0': 0, 'first': False, 'last': True}, 'field': <django.forms.boundfield.BoundField object at 0x7fb194ca4be0>}, {}]
+"GET /checkout/ HTTP/1.1" 200 33121
+File /home/gbemi/.local/lib/python3.10/site-packages/django/contrib/messages/storage/base.py first seen with mtime 1701687305.673992
+"GET /static/checkout/static/checkout/css/checkout.css HTTP/1.1" 404 1882
+File /home/gbemi/.local/lib/python3.10/site-packages/django/template/context_processors.py first seen with mtime 1701687305.8439918
+File /home/gbemi/.local/lib/python3.10/site-packages/django/conf/locale/en/formats.py first seen with mtime 1701687305.2839918
+File /home/gbemi/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py first seen with mtime 1701687305.8039918
+File /home/gbemi/.local/lib/python3.10/site-packages/django/conf/locale/en/__init__.py first seen with mtime 1701687305.2839918
+File /home/gbemi/.local/lib/python3.10/site-packages/stripe/_object_classes.py first seen with mtime 1702294663.740005
+File /home/gbemi/.local/lib/python3.10/site-packages/django/contrib/auth/context_processors.py first seen with mtime 1701687305.4739919
+File /home/gbemi/.local/lib/python3.10/site-packages/django/contrib/messages/context_processors.py first seen with mtime 1701687305.673992
+(0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-01-11 07:13:37.468959' AND "django_session"."session_key" = 'q9ct774v6p3h4uarcq7qslry0x14mlur') LIMIT 21; args=('2024-01-11 07:13:37.468959', 'q9ct774v6p3h4uarcq7qslry0x14mlur')
+(0.000) BEGIN; args=None
+"POST /checkout/ HTTP/1.1" 302 0
+(0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-01-11 07:13:37.506512' AND "django_session"."session_key" = 'q9ct774v6p3h4uarcq7qslry0x14mlur') LIMIT 21; args=('2024-01-11 07:13:37.506512', 'q9ct774v6p3h4uarcq7qslry0x14mlur')
+(0.001) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 2391 LIMIT 21; args=(2391,)
+(0.001) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 1794 LIMIT 21; args=(1794,)
+(0.001) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 2391 LIMIT 21; args=(2391,)
+(0.001) SELECT "products_product"."id", "products_product"."sku", "products_product"."name", "products_product"."description", "products_product"."price", "products_product"."category_id", "products_product"."rating", "products_product"."image_url", "products_product"."author_id", "products_product"."format", "products_product"."book_depository_stars", "products_product"."currency", "products_product"."old_price", "products_product"."isbn", "products_product"."slug" FROM "products_product" WHERE "products_product"."id" = 1794 LIMIT 21; args=(1794,)
+(0.001) SELECT "products_category"."id", "products_category"."name", "products_category"."friendly_name", "products_category"."description", "products_category"."slug" FROM "products_category" ORDER BY "products_category"."friendly_name" ASC; args=()
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,)
+"GET /bag/ HTTP/1.1" 200 15572
