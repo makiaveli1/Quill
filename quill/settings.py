@@ -180,7 +180,7 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Check if the app is running on AWS
+# Check if the app is running on Heroku with AWS S3
 if 'USE_AWS' in os.environ:
     # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
@@ -189,18 +189,24 @@ if 'USE_AWS' in os.environ:
     }
 
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = 'ckz8780-boutique-ado'
-    AWS_S3_REGION_NAME = 'us-east-1'
+    AWS_STORAGE_BUCKET_NAME = 'quill-01'  # Replace with your actual bucket name
+    AWS_S3_REGION_NAME = 'us-east-1'  # Replace with the correct region
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
     # Tell Django to use S3 for static and media files
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-    # Tell Django where static files are in S3
+    # Tell Django where static and media files are in S3
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+else:
+    STATIC_URL = '/static/'
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
