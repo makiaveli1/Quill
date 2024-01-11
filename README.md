@@ -16,7 +16,7 @@ Developed by Monica Murray
 
 An image of the finished site generated from [techsini](https://techsini.com/multi-mockup/index.php) which displays the application at four screen size breakpoints.
 
-Please visit the live site via [this link](https://mym-Quill-et-al-b7ea61e35a6e.herokuapp.com/).
+Please visit the live site via [this link](https://quill-24a1ef954cc0.herokuapp.com/).
 
 
 ## Purpose
@@ -200,6 +200,8 @@ On the checkout page, a user can opt-in to update their profile with their shipp
 
 #####  BUG
 Could not finish stripe setup due to a bug where whenever user clicked to complete order, stripe said webhook not responding and you get an invalid information error in admin console.  I have tried to fix this issue by setting up stripe again and making sure all credentials wheere present, but it still does not work.  I have also tried to contact stripe support
+
+Also main header is not fully responsive in mobile version. Will fix.
 #### Products
 
 The products available for purchase on Quill are listed on this page and the page provides easy-to-use sorting and filtering options to help users find what they want within the product listings.
