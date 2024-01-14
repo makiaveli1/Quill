@@ -41,81 +41,45 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
-    stripe_public_key = settings.STRIPE_PUBLIC_KEY
-    stripe_secret_key = settings.STRIPE_SECRET_KEY
+    stripe.api_key = settings.STRIPE_SECRET_KEY
+    stripe_total = 0  # Initialize stripe_total at the beginning
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
-        form_data = {
-            'full_name': request.POST['full_name'],
-            'email': request.POST['email'],
-            'phone_number': request.POST['phone_number'],
-            'country': request.POST['country'],
-            'post_code': request.POST['post_code'],
-            'town_or_city': request.POST['town_or_city'],
-            'address_line1': request.POST['address_line1'],
-            'address_line2': request.POST['address_line2'],
-            'county_or_state': request.POST['county_or_state'],
-        }
-        order_form = OrderForm(form_data)
+        order_form = OrderForm(request.POST)
 
         if order_form.is_valid():
-            try:
-                with transaction.atomic():
-                    order = order_form.save(commit=False)
-                    client_secret = request.POST.get('client_secret')
-                    logger.debug(f'Received client_secret: {request.POST.get("client_secret")}')
-                    logger.debug(f'Received bag: {bag}')
+            order = order_form.save(commit=False)
+            payment_intent_id = request.POST.get('payment_intent_id', None)
 
-                    if client_secret:
-                        pid = client_secret.split('_secret')[0]
-                        order.stripe_pid = pid
+            if payment_intent_id:
+                try:
+                    payment_intent = stripe.PaymentIntent.retrieve(payment_intent_id)
+                    if payment_intent.status == 'succeeded':
+                        order.stripe_pid = payment_intent_id
                         order.original_bag = json.dumps(bag)
                         order.save()
-                        logger.debug(f'Order {order.id} saved with PID: {pid}')
 
-                        payment_intent_id = request.POST.get(
-                            'payment_intent_id', '')
-                        if payment_intent_id and payment_intent_id == order.stripe_pid:
-                            order.payment_status = 'Completed'
-                            order.save()
-                            logger.debug(f'Order {order.id} payment completed')
-                            logger.debug(f'Received payment_intent_id: {payment_intent_id}')
-                            logger.debug(f'Expected Stripe PID: {order.stripe_pid}')
+                        for item_id, quantity in bag.items():
+                            product = get_object_or_404(Product, pk=item_id)
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                product=product,
+                                quantity=quantity,
+                            )
+                            order_line_item.save()
 
-                            # Process each item in the bag
-                            for item_id, quantity in bag.items():
-                                product = Product.objects.get(id=item_id)
-                                order_line_item = OrderLineItem(
-                                    order=order,
-                                    product=product,
-                                    quantity=quantity
-                                )
-                                order_line_item.save()
-
-                            request.session['save_info'] = 'save_info' in request.POST
-                            return redirect(reverse('checkout_success', args=[order.order_number]))
-                        else:
-                            logger.error(f'''Payment ID mismatch for order {order.id}, expected {
-                                         order.stripe_pid}, got {payment_intent_id}''')
-                            messages.error(request, "Payment ID mismatch.")
-                            return redirect(reverse('view_bag'))
+                        del request.session['bag']
+                        return redirect(reverse('checkout_success', args=[order.order_number]))
                     else:
-                        logger.error(
-                            'Client secret not provided for the payment.')
-                        messages.error(request, "Invalid payment information.")
-                        return redirect(reverse('view_bag'))
-
-            except Exception as e:
-                logger.error(f'Error processing checkout: {e}')
-                messages.error(
-                    request, "An error occurred while processing your order.")
-                return redirect(reverse('view_bag'))
+                        messages.error(request, "Payment was not successful, please try again.")
+                except stripe.error.StripeError as e:
+                    messages.error(request, f"An error occurred: {e.user_message}")
+            else:
+                messages.error(request, "No payment information found, please try again.")
         else:
-            logger.error(f'Invalid order form data: {order_form.errors}')
-            messages.error(
-                request, "There was an error with your form. Please double check your information.")
-            return render(request, 'checkout/checkout.html', {'order_form': order_form})
+            messages.error(request, "There was an error with your form. Please check your information.")
+
     else:
         # Handling GET request
         bag = request.session.get('bag', {})
@@ -123,22 +87,13 @@ def checkout(request):
             messages.error(request, "Your bag is empty.")
             return redirect(reverse('products'))
 
-        current_bag = bag_contents(request)
-        total = current_bag.get('grand_total', 0)
-        stripe_total = round(total * 100)
+        total = 0
+        for item_id, quantity in bag.items():
+            product = get_object_or_404(Product, pk=item_id)
+            total += quantity * product.price
 
-        if stripe_total <= 0:
-            messages.error(
-                request, "There is an error with the total amount. Please check your bag.")
-            return redirect(reverse('view_bag'))
+        stripe_total = round(total * 100)  # Stripe requires the amount to be in cents
 
-        stripe.api_key = stripe_secret_key
-        intent = stripe.PaymentIntent.create(
-            amount=stripe_total,
-            currency=settings.STRIPE_CURRENCY
-        )
-
-        # Handling user profile data for authenticated users
         order_form = OrderForm()
         if request.user.is_authenticated:
             try:
@@ -153,22 +108,26 @@ def checkout(request):
                     'address_line1': profile.default_address_line1,
                     'address_line2': profile.default_address_line2,
                     'county_or_state': profile.default_county_or_state,
+                    
                 }
                 order_form = OrderForm(initial=initial_data)
             except Profile.DoesNotExist:
-                logger.info(f'''Profile for user {
-                            request.user.username} does not exist.''')
+                order_form = OrderForm()
+
+    intent = None
+    if stripe_total > 0:
+        intent = stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
+        )
 
     context = {
         'order_form': order_form,
-        'stripe_client_secret': intent.client_secret if stripe_total > 0 else None,
-        'client_secret': intent.client_secret if stripe_total > 0 else None,
-        'total_items': len(bag),
-        'stripe_public_key': stripe_public_key,
+        'stripe_public_key': settings.STRIPE_PUBLIC_KEY,
+        'client_secret': intent.client_secret if intent else None,
     }
 
     return render(request, 'checkout/checkout.html', context)
-
 
 # Checkout Success
 

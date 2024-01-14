@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://quill-24a1ef954cc0.herokuapp.com/sitemap.xml
