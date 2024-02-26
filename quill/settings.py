@@ -52,9 +52,11 @@ INSTALLED_APPS = [
     'bag',
     'storages',
     'crispy_forms',
+    'crispy_bootstrap4',
     'profiles',
     'checkout',
     'django_extensions',
+    
 ]
 
 MIDDLEWARE = [
@@ -235,17 +237,16 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', 'whsec_6qnIKmZIcIcMIi6BhrUBgpuy
 #     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 
-# Logging Configuration
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
         'console': {
-            'level': 'DEBUG',
+            'level': 'INFO',  # Changed from DEBUG to INFO
             'class': 'logging.StreamHandler',
         },
         'file': {
-            'level': 'DEBUG',
+            'level': 'INFO',  # Changed from DEBUG to INFO
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'debug.log'),
         },
@@ -258,7 +259,7 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['console', 'file', 'mail_admins'],
-            'level': 'DEBUG',
+            'level': 'INFO',  # Changed from DEBUG to INFO
             'propagate': True,
         },
     },

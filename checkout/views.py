@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.http import JsonResponse
 import stripe
 import json
 import logging
@@ -19,25 +20,33 @@ logger = logging.getLogger(__name__)
 
 # Cache Checkout Data
 
-
 @require_POST
 def cache_checkout_data(request):
     try:
-        pid = request.POST.get('client_secret').split('_secret')[0]
+        logger.info("Processing payment...")
+        client_secret = request.POST.get('client_secret')
+        if not client_secret:
+            logger.error("Missing 'client_secret' in the request.")
+            raise ValueError("Missing 'client_secret' in the request.")
+        
+        pid = client_secret.split('_secret')[0]
+        if not pid.startswith('pi_'):
+            logger.error(f"Invalid 'client_secret' value: {client_secret}")
+            raise ValueError("Invalid 'client_secret' value.")
+
         stripe.api_key = settings.STRIPE_SECRET_KEY
+        save_info = request.POST.get('save_info', 'False').lower() == 'true'
         stripe.PaymentIntent.modify(pid, metadata={
             'bag': json.dumps(request.session.get('bag', {})),
-            'save_info': request.POST.get('save_info'),
-            'username': request.user.username,
+            'save_info': json.dumps(save_info),
+            'username': request.user.get_username() if request.user.is_authenticated else 'Anonymous',
         })
-        return HttpResponse(status=200)
-    except Exception as e:
-        messages.error(
-            request, """Your payment cannot be processed right now.
-            Please try again later.""")
-        return HttpResponse(content=e, status=400)
 
-# Checkout
+        logger.info("PaymentIntent modified successfully")
+        return JsonResponse({'status': 'success'}, status=200)
+    except Exception as e:
+        logger.error(f"Error processing payment: {str(e)}")
+        return JsonResponse({'error': str(e)}, status=400)
 
 
 def checkout(request):
@@ -54,7 +63,8 @@ def checkout(request):
 
             if payment_intent_id:
                 try:
-                    payment_intent = stripe.PaymentIntent.retrieve(payment_intent_id)
+                    payment_intent = stripe.PaymentIntent.retrieve(
+                        payment_intent_id)
                     if payment_intent.status == 'succeeded':
                         order.stripe_pid = payment_intent_id
                         order.original_bag = json.dumps(bag)
@@ -72,13 +82,15 @@ def checkout(request):
                         del request.session['bag']
                         return redirect(reverse('checkout_success', args=[order.order_number]))
                     else:
-                        messages.error(request, "Payment was not successful, please try again.")
-                except stripe.error.StripeError as e:
-                    messages.error(request, f"An error occurred: {e.user_message}")
+                        messages.error(
+                            request, "Payment was not successful, please try again.")
+                except stripe.error.StripeError as e:messages.error(request, f"An error occurred: {e.user_message}")
             else:
-                messages.error(request, "No payment information found, please try again.")
+                messages.error(
+                    request, "No payment information found, please try again.")
         else:
-            messages.error(request, "There was an error with your form. Please check your information.")
+            messages.error(
+                request, "There was an error with your form. Please check your information.")
 
     else:
         # Handling GET request
@@ -92,7 +104,8 @@ def checkout(request):
             product = get_object_or_404(Product, pk=item_id)
             total += quantity * product.price
 
-        stripe_total = round(total * 100)  # Stripe requires the amount to be in cents
+        # Stripe requires the amount to be in cents
+        stripe_total = round(total * 100)
 
         order_form = OrderForm()
         if request.user.is_authenticated:
@@ -108,7 +121,7 @@ def checkout(request):
                     'address_line1': profile.default_address_line1,
                     'address_line2': profile.default_address_line2,
                     'county_or_state': profile.default_county_or_state,
-                    
+
                 }
                 order_form = OrderForm(initial=initial_data)
             except Profile.DoesNotExist:

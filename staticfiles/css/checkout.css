@@ -1,0 +1,26 @@
+:root {
+    --text-adventure: #e7b040;
+    --background-logo: #F2DBAF; 
+    --shop-now: #F2DBAF;
+    --shop-now-hover: #e0b469; 
+}
+
+
+body, h1, h2, h3, p {
+    font-family: 'Jost', sans-serif;
+}
+
+/* Style for Stripe Elements container */
+#card-element {
+    background-color: white;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  }
+  
+  /* Style for invalid card details */
+  .StripeElement--invalid {
+    border-color: #fa755a;
+  }
+  

@@ -4,64 +4,59 @@ from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
 import stripe
 from checkout.webhook_handler import StripeWH_Handler
+import logging
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 
 @require_POST
 @csrf_exempt
 def webhook(request):
     """
-    Listen for webhooks from Stripe
+    Listen for webhooks from Stripe.
     """
 
-    # setup the Stripe API key and WHSecret to confirm the wh
-    # actually came from Stripe
+    # Set up Stripe API key and webhook secret to confirm the webhook came from Stripe
     wh_secret = settings.STRIPE_WH_SECRET
     stripe.api_key = settings.STRIPE_SECRET_KEY
 
-    # THE FOLLOWING IS FROM STRIPE, and then customised
-
-    # Get the webhook data and verify it's signature
     payload = request.body
-    sig_header = request.META['HTTP_STRIPE_SIGNATURE']
+    sig_header = request.META.get('HTTP_STRIPE_SIGNATURE')
     event = None
 
     try:
-        event = stripe.Webhook.construct_event(
-            payload, sig_header, wh_secret
-        )
+        event = stripe.Webhook.construct_event(payload, sig_header, wh_secret)
     except ValueError as e:
-        # invalid payload
-        return HttpResponse(content=e, status=400)
+        # Invalid payload
+        logger.error(
+            "Invalid payload received from Stripe webhook.", exc_info=True)
+        return HttpResponse(content="Invalid payload", status=400)
     except stripe.error.SignatureVerificationError as e:
-        # invalid signature
-        return HttpResponse(content=e, status=400)
+        # Invalid signature
+        logger.error("Invalid signature for Stripe webhook.", exc_info=True)
+        return HttpResponse(content="Invalid signature", status=400)
     except Exception as e:
-        # to catch any other exceptions other than the 2 from Stripe above
-        return HttpResponse(content=e, status=400)
+        # Other unexpected exceptions
+        logger.error("Error in Stripe webhook.", exc_info=True)
+        return HttpResponse(content="Error in webhook", status=400)
 
-    # There are over 100 different webhooks from Stripe
-    # so passing the event along to a WH Handler in a Class is best
-    # as we could even import it into other projects or even OpenSource it.
-
-    # set up a webhook handler
+    # Initialize the webhook handler
     handler = StripeWH_Handler(request)
 
-    # map webhook events to relevant handler functions
-    # in this dictionary, the keys are the wh names coming from Stripe, and
-    # the values will be the actual methods inside the handler
+    # Mapping of webhook events to relevant handler functions
     event_map = {
         'payment_intent.succeeded': handler.handle_payment_intent_succeeded,
-        'payment_intent.payment_failed':
-        handler.handle_payment_intent_payment_failed,
+        'payment_intent.payment_failed': handler.handle_payment_intent_payment_failed,
     }
 
-    # get the webhook type (key) from Stripe
-    event_type = event['type']
+    # Get the webhook type from Stripe
+    event_type = event.get('type')
 
-    # if there's a handler for it, get it from the event_map or use
-    # the generic one by default
+    # Get the appropriate handler function from the event_map, or use the generic handler by default
     event_handler = event_map.get(event_type, handler.handle_event)
 
-    # call the event handler with the event
+    # Execute the handler function and return its response
     response = event_handler(event)
+    logger.info(f"Handled webhook {event_type} successfully.")
     return response
