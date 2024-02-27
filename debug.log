@@ -1,0 +1,26 @@
+"POST /checkout/ HTTP/1.1" 302 0
+"GET /checkout/checkout_success/76890B6593664E958F30022A45528ED3/ HTTP/1.1" 200 6167
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /static/checkout/css/checkout.css HTTP/1.1" 404 1834
+Not Found: /checkout/checkout_success/76890B6593664E958F30022A45528ED3/media/icons8-quill-pen-32.png
+"GET /checkout/checkout_success/76890B6593664E958F30022A45528ED3/media/icons8-quill-pen-32.png HTTP/1.1" 404 3915
+"GET /products/ HTTP/1.1" 200 24248
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
+"GET /bag/ HTTP/1.1" 200 10392
+"GET /products/?category=crime-thriller HTTP/1.1" 200 23926
+"POST /bag/add/2389/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 24248
+"POST /bag/add/3166/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 24248
+"GET /bag/ HTTP/1.1" 200 12891
+"GET /checkout/ HTTP/1.1" 200 22516
+"GET /static/js/stripe_element.js HTTP/1.1" 304 0
+"POST /checkout/ HTTP/1.1" 302 0
+"GET /checkout/checkout_success/8AE7DD9404DC4A418639A4710983938B/ HTTP/1.1" 200 6167
+"GET /static/checkout/css/checkout.css HTTP/1.1" 404 1834
+Not Found: /checkout/checkout_success/8AE7DD9404DC4A418639A4710983938B/media/icons8-quill-pen-32.png
+"GET /checkout/checkout_success/8AE7DD9404DC4A418639A4710983938B/media/icons8-quill-pen-32.png HTTP/1.1" 404 3915
+"GET /products/ HTTP/1.1" 200 24248
+"GET / HTTP/1.1" 200 9674
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
