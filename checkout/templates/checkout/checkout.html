@@ -15,7 +15,38 @@
     <div class="row">
       <!-- Order Summary Section -->
       <div class="col-lg-6 mb-4">
-        <!-- ... existing order summary content ... -->
+        <div class="card border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Order Summary</h4>
+            <hr />
+            {% for item in bag_items %}
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <span><strong>Product:</strong> {{ item.product.name }}</span><br />
+                  <span><strong>Price:</strong> ${{ item.product.price }}</span><br />
+                  <span><strong>Quantity:</strong> {{ item.quantity }}</span><br />
+                  <span><strong>Subtotal:</strong> ${{ item.subtotal }}</span>
+                </div>
+                <div class="col-md-6">
+                  <!-- Optionally display product image if available -->
+                  {% if item.product.image_url %}
+                    <img src="{{ item.product.image_url }}" alt="{{ item.product.name }}" style="max-width: 100px; max-height: 100px;" />
+                  {% else %}
+                    <img src="{{ MEDIA_URL }}{{ item.product.image }}" alt="{{ item.product.name }}" style="max-width: 100px; max-height: 100px;" />
+                  {% endif %}
+                </div>
+              </div>
+              {% empty %}
+              <p>Your bag is empty.</p>
+            {% endfor %}
+            <div class="row">
+              <div class="col-12">
+                <hr />
+                <h5>Total: ${{ total }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Checkout Form Section -->
@@ -60,10 +91,10 @@
 {% endblock %}
 
 {% block postload_js %}
-<script type="text/javascript">
-    var stripePublicKey = "{{ stripe_public_key }}";
-    var clientSecret = "{{ client_secret }}"; // Assuming you want to directly access it in JS
-</script>
-<script src="https://js.stripe.com/v3/"></script>
-<script src="{% static 'js/stripe_element.js' %}"></script>
+  <script type="text/javascript">
+    var stripePublicKey = '{{ stripe_public_key }}'
+    var clientSecret = '{{ client_secret }}' // Assuming you want to directly access it in JS
+  </script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="{% static 'js/stripe_element.js' %}"></script>
 {% endblock %}
