@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     'bag',
     'storages',
     'crispy_forms',
-    'crispy_bootstrap4',
     'profiles',
     'checkout',
     'django_extensions',
