@@ -1,77 +1,62 @@
-"POST /checkout/ HTTP/1.1" 302 0
-"GET /checkout/checkout_success/76890B6593664E958F30022A45528ED3/ HTTP/1.1" 200 6167
-"GET /static/css/base.css HTTP/1.1" 200 9169
-"GET /static/checkout/css/checkout.css HTTP/1.1" 404 1834
-Not Found: /checkout/checkout_success/76890B6593664E958F30022A45528ED3/media/icons8-quill-pen-32.png
-"GET /checkout/checkout_success/76890B6593664E958F30022A45528ED3/media/icons8-quill-pen-32.png HTTP/1.1" 404 3915
-"GET /products/ HTTP/1.1" 200 24248
-"GET /static/products/css/products.css HTTP/1.1" 200 11931
-"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
-"GET /bag/ HTTP/1.1" 200 10392
-"GET /products/?category=crime-thriller HTTP/1.1" 200 23926
-"POST /bag/add/2389/ HTTP/1.1" 302 0
-"GET /products/ HTTP/1.1" 200 24248
-"POST /bag/add/3166/ HTTP/1.1" 302 0
-"GET /products/ HTTP/1.1" 200 24248
-"GET /bag/ HTTP/1.1" 200 12891
-"GET /checkout/ HTTP/1.1" 200 22516
-"GET /static/js/stripe_element.js HTTP/1.1" 304 0
-"POST /checkout/ HTTP/1.1" 302 0
-"GET /checkout/checkout_success/8AE7DD9404DC4A418639A4710983938B/ HTTP/1.1" 200 6167
-"GET /static/checkout/css/checkout.css HTTP/1.1" 404 1834
-Not Found: /checkout/checkout_success/8AE7DD9404DC4A418639A4710983938B/media/icons8-quill-pen-32.png
-"GET /checkout/checkout_success/8AE7DD9404DC4A418639A4710983938B/media/icons8-quill-pen-32.png HTTP/1.1" 404 3915
-"GET /products/ HTTP/1.1" 200 24248
+"GET /bag/ HTTP/1.1" 200 12872
 "GET / HTTP/1.1" 200 9674
-"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
-"GET /bag/ HTTP/1.1" 200 10392
-"GET /products/?category=computing HTTP/1.1" 200 24133
-"POST /bag/add/3169/ HTTP/1.1" 302 0
 "GET /products/ HTTP/1.1" 200 24248
-"GET /bag/ HTTP/1.1" 200 11585
-"GET /checkout/ HTTP/1.1" 200 22881
-"GET /bag/ HTTP/1.1" 200 11585
+"GET /products/?category=medical HTTP/1.1" 200 24075
+"GET /products/?category=biography HTTP/1.1" 200 23886
 "GET /products/?category=computing HTTP/1.1" 200 24133
-"POST /bag/add/3166/ HTTP/1.1" 302 0
+"GET /products/?category=crime-thriller HTTP/1.1" 200 23926
+"GET / HTTP/1.1" 200 9674
+"GET /products/?category=crime-thriller HTTP/1.1" 200 23926
+"GET / HTTP/1.1" 200 9674
 "GET /products/ HTTP/1.1" 200 24248
-"GET /bag/ HTTP/1.1" 200 12910
-"GET /checkout/ HTTP/1.1" 200 22881
+"GET /products/?sort=name&direction=asc HTTP/1.1" 200 24248
+"GET /products/?sort=name&direction=desc HTTP/1.1" 200 24249
+"GET /products/ HTTP/1.1" 200 24248
+"GET /products/?category=medical HTTP/1.1" 200 24075
+"GET /products/?category=biography HTTP/1.1" 200 23886
+"GET /products/?category=computing HTTP/1.1" 200 24133
+"GET /products/?category=crime-thriller HTTP/1.1" 200 23926
 Watching for file changes with StatReloader
 "GET / HTTP/1.1" 200 9674
 "GET /static/css/base.css HTTP/1.1" 200 9169
 "GET /media/Hero_Image.png HTTP/1.1" 200 2678314
 "GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
-"GET /bag/ HTTP/1.1" 200 10392
-Not Found: /bag/media/icons8-quill-pen-32.png
-"GET /bag/media/icons8-quill-pen-32.png HTTP/1.1" 404 3908
-"GET /checkout/ HTTP/1.1" 302 0
-"GET /products/ HTTP/1.1" 200 24248
+"GET /accounts/login/ HTTP/1.1" 200 9911
+Not Found: /accounts/login/media/icons8-quill-pen-32.png
+"GET /accounts/login/media/icons8-quill-pen-32.png HTTP/1.1" 404 6882
+"GET /accounts/login/ HTTP/1.1" 200 10142
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /accounts/signup/ HTTP/1.1" 200 10068
+Not Found: /accounts/signup/media/icons8-quill-pen-32.png
+"GET /accounts/signup/media/icons8-quill-pen-32.png HTTP/1.1" 404 6885
+"GET /accounts/signup/ HTTP/1.1" 200 10991
+"GET /accounts/signup/ HTTP/1.1" 200 10991
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /accounts/login/ HTTP/1.1" 200 10142
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 9983
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /products/add/ HTTP/1.1" 200 17620
+Not Found: /products/add/media/icons8-quill-pen-32.png
+"GET /products/add/media/icons8-quill-pen-32.png HTTP/1.1" 404 4519
+"GET /products/author/ HTTP/1.1" 200 10097
+Not Found: /products/author/media/icons8-quill-pen-32.png
+"GET /products/author/media/icons8-quill-pen-32.png HTTP/1.1" 404 4528
+"GET / HTTP/1.1" 200 9983
+"GET /products/ HTTP/1.1" 200 24557
 "GET /static/products/css/products.css HTTP/1.1" 200 11931
 "GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
 Not Found: /products/media/icons8-quill-pen-32.png
 "GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4507
-"POST /bag/add/3181/ HTTP/1.1" 302 0
-"GET /products/ HTTP/1.1" 200 24248
-"POST /bag/add/3181/ HTTP/1.1" 302 0
-"GET /products/ HTTP/1.1" 200 24248
-"GET /bag/ HTTP/1.1" 200 11548
-"GET /checkout/ HTTP/1.1" 200 23567
-"GET /static/css/checkout.css HTTP/1.1" 200 542
-"GET /static/js/stripe_element.js HTTP/1.1" 200 1876
-Not Found: /checkout/media/icons8-quill-pen-32.png
-"GET /checkout/media/icons8-quill-pen-32.png HTTP/1.1" 404 3765
-"GET /products/?category=computing HTTP/1.1" 200 24133
-"POST /bag/add/3166/ HTTP/1.1" 302 0
-"GET /products/ HTTP/1.1" 200 24248
-"GET /bag/ HTTP/1.1" 200 12873
-"GET /checkout/ HTTP/1.1" 200 24363
-"POST /checkout/ HTTP/1.1" 302 0
-"GET /checkout/checkout_success/F26FD86F92874BC0AFD43B645BC8C4E4/ HTTP/1.1" 200 6167
-"GET /static/checkout/css/checkout.css HTTP/1.1" 404 1834
-Not Found: /checkout/checkout_success/F26FD86F92874BC0AFD43B645BC8C4E4/media/icons8-quill-pen-32.png
-"GET /checkout/checkout_success/F26FD86F92874BC0AFD43B645BC8C4E4/media/icons8-quill-pen-32.png HTTP/1.1" 404 3915
-"GET /products/ HTTP/1.1" 200 24248
+"GET /accounts/logout/ HTTP/1.1" 200 9031
+Not Found: /accounts/logout/media/icons8-quill-pen-32.png
+"GET /accounts/logout/media/icons8-quill-pen-32.png HTTP/1.1" 404 6885
+"GET /accounts/logout/ HTTP/1.1" 200 9239
+"POST /accounts/logout/ HTTP/1.1" 302 0
 "GET / HTTP/1.1" 200 9674
-"GET /products/ HTTP/1.1" 200 24248
-/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
-Watching for file changes with StatReloader
+"GET /accounts/login/ HTTP/1.1" 200 10142
+"GET /accounts/signup/ HTTP/1.1" 200 10991
+"GET /accounts/login/ HTTP/1.1" 200 10142
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 9983
+"GET /products/?category=computing HTTP/1.1" 200 24442
