@@ -60,3 +60,129 @@ Not Found: /accounts/logout/media/icons8-quill-pen-32.png
 "POST /accounts/login/ HTTP/1.1" 302 0
 "GET / HTTP/1.1" 200 9983
 "GET /products/?category=computing HTTP/1.1" 200 24442
+"GET /profile/ HTTP/1.1" 200 26029
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+"GET /static/flags/ao.gif HTTP/1.1" 404 1795
+"GET /media/profiles/Screenshot_2024-01-02_145000_jgICuao.webp HTTP/1.1" 200 8696
+Not Found: /profile/media/icons8-quill-pen-32.png
+"GET /profile/media/icons8-quill-pen-32.png HTTP/1.1" 404 3549
+"GET /products/?category=computing HTTP/1.1" 200 24442
+"POST /bag/add/3166/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 24557
+"GET /products/ HTTP/1.1" 200 23955
+"POST /bag/add/3181/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 23955
+"POST /bag/add/1794/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 23955
+"GET /bag/ HTTP/1.1" 200 14475
+Not Found: /bag/media/icons8-quill-pen-32.png
+"GET /bag/media/icons8-quill-pen-32.png HTTP/1.1" 404 3908
+"GET / HTTP/1.1" 200 9983
+"GET /bag/ HTTP/1.1" 200 14475
+"GET / HTTP/1.1" 200 9983
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 9674
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /accounts/login/ HTTP/1.1" 200 10142
+Not Found: /accounts/login/media/icons8-quill-pen-32.png
+"GET /accounts/login/media/icons8-quill-pen-32.png HTTP/1.1" 404 6882
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 9983
+"GET /profile/ HTTP/1.1" 200 26029
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+"GET /media/profiles/Screenshot_2024-01-02_145000_jgICuao.webp HTTP/1.1" 200 8696
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/flags/ao.gif HTTP/1.1" 404 1795
+Not Found: /profile/media/icons8-quill-pen-32.png
+"GET /profile/media/icons8-quill-pen-32.png HTTP/1.1" 404 3549
+"GET /profile/ HTTP/1.1" 200 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3197
+"GET /profile/ HTTP/1.1" 200 26029
+"GET /static/flags/ao.gif HTTP/1.1" 404 1795
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+"POST /profile/ HTTP/1.1" 302 0
+"GET /profile/ HTTP/1.1" 200 26029
+"GET /static/flags/ao.gif HTTP/1.1" 404 1795
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 9674
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /accounts/login/ HTTP/1.1" 200 10142
+Not Found: /accounts/login/media/icons8-quill-pen-32.png
+"GET /accounts/login/media/icons8-quill-pen-32.png HTTP/1.1" 404 6882
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 9983
+"GET /profile/ HTTP/1.1" 200 11519
+"GET /static/css/profile.css HTTP/1.1" 404 1804
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+"GET /static/js/profile.js HTTP/1.1" 200 1196
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /media/profiles/Screenshot_2024-01-02_145000_jgICuao.webp HTTP/1.1" 200 8696
+Not Found: /profile/media/icons8-quill-pen-32.png
+"GET /profile/media/icons8-quill-pen-32.png HTTP/1.1" 404 3549
+"GET /static/css/profile.css HTTP/1.1" 404 1804
+"GET /profile/ HTTP/1.1" 200 11519
+"GET /static/js/profile.js HTTP/1.1" 304 0
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+"GET /static/css/profile.css HTTP/1.1" 200 2797
+"GET /profile/ HTTP/1.1" 200 11519
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+"GET /static/css/profile.css HTTP/1.1" 200 2626
+"GET /profile/ HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /static/css/profile.css HTTP/1.1" 200 1548
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+"GET /static/js/profile.js HTTP/1.1" 200 1196
+"GET /media/profiles/Screenshot_2024-01-02_145000_jgICuao.webp HTTP/1.1" 200 8696
+Not Found: /profile/link-to-about-us
+"GET /profile/link-to-about-us HTTP/1.1" 404 3510
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3197
+Not Found: /profile/link-to-privacy-policy
+"GET /profile/link-to-privacy-policy HTTP/1.1" 404 3528
+Not Found: /profile/link-to-contact-us
+"GET /profile/link-to-contact-us HTTP/1.1" 404 3516
+Not Found: /profile/link-to-faq
+"GET /profile/link-to-faq HTTP/1.1" 404 3495
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader

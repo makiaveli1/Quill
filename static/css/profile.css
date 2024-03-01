@@ -1,0 +1,75 @@
+/* Profile Card Adjustments */
+.profile-card {
+    width: 100%; 
+    max-width: 350px; 
+  }
+  
+  @media (min-width: 768px) {
+    .profile-card {
+      max-width: 500px; 
+    }
+  }
+  
+  /* Responsive Grid Layout Adjustments */
+  @media (min-width: 992px) { 
+    .col-lg-4 {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+    }
+  
+    .col-lg-8 {
+      flex: 0 0 66.66667%;
+      max-width: 66.66667%;
+  }
+  
+  /* Further enhance the card's content visibility */
+  .card-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  /* Responsive Table Adjustments */
+  .table-responsive {
+    overflow-x: auto; 
+  }
+  
+  /* Improving the table's legibility and aesthetics */
+  .table {
+    white-space: nowrap; 
+  }
+  
+  .table thead th {
+    background-color: var(--background-logo); 
+  }
+  
+  /* Button Adjustments for better visibility and interaction */
+  #edit-profile-btn {
+    padding: 10px 20px; 
+    font-size: 1.1rem; 
+  }
+  
+  /* Improving Profile Details Section for better alignment and spacing */
+  .profile-details-section {
+    padding: 2rem;
+  }
+  
+  /* Ensure all buttons have a consistent look and feel */
+  .btn {
+    border-radius: 0.25rem; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  /* Additional Responsiveness Adjustments */
+  @media (max-width: 576px) { 
+    .profile-card {
+      margin-bottom: 1rem; 
+    }
+  }
+  
+  h1, h2, h3, p {
+    color: #333; 
+    margin-bottom: 0.5rem;
+  }
+}

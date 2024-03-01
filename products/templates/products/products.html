@@ -2,122 +2,122 @@
 {% load static %}
 
 {% block extra_meta %}
-  <meta name="description" content="Discover a world of ebooks at Quill, from latest releases to timeless classics." />
-  <meta name="keywords" content="ebooks, digital books, online bookstore, Quill, reading, authors" />
-  <meta name="author" content="Quill" />
+<meta name="description" content="Discover a world of ebooks at Quill, from latest releases to timeless classics." />
+<meta name="keywords" content="ebooks, digital books, online bookstore, Quill, reading, authors" />
+<meta name="author" content="Quill" />
 {% endblock %}
 
 {% block extra_title %}
-  Ebooks Collection
+Ebooks Collection
 {% endblock %}
 
 {% block extra_css %}
-  <link rel="stylesheet" href="{% static 'products/css/products.css' %}" />
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}" />
 {% endblock %}
 
 {% block content %}
-  <!-- Core of the page -->
-  <div class="container">
-    <!-- Page title and category filters -->
-    <div class="row">
-      <div class="col text-center mt-3">
-        <h2 class="ebook-font mt-3">Explore Our Ebooks</h2>
-        {% for c in current_categories %}
-          <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name|urlencode }}"><span class="badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span></a>
-        {% endfor %}
-        <hr class="w-50 mb-1" />
-      </div>
-    </div>
-
-    <!-- Sorting Dropdown -->
-    <div class="row justify-content-end mb-2">
-      <div class="col-md-4 col-lg-3">
-        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-black">
-          <option value="reset">Sort by...</option>
-          <option value="name_asc">Name (A-Z)</option>
-          <option value="name_desc">Name (Z-A)</option>
-          <option value="price_asc">Price (low to high)</option>
-          <option value="price_desc">Price (high to low)</option>
-          <option value="author_asc">Author (A-Z)</option>
-          <option value="author_desc">Author (Z-A)</option>
-          <option value="category_asc">Category (A-Z)</option>
-          <option value="category_desc">Category (Z-A)</option>
-        </select>
-      </div>
+<!-- Core of the page -->
+<div class="container">
+  <!-- Page title and category filters -->
+  <div class="row">
+    <div class="col text-center mt-3">
+      <h2 class="ebook-font mt-3">Explore Our Ebooks</h2>
+      {% for c in current_categories %}
+        <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name|urlencode }}"><span class="badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span></a>
+      {% endfor %}
+      <hr class="w-50 mb-1" />
     </div>
   </div>
 
-  <!-- Products Display -->
-  <div class="row">
-    {% for product in products %}
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-        <div class="card h-100 text-center shadow-sm bg-light">
-          <a href="{% url 'product_detail' product.id %}"><img class="card-img-top p-3 lazy" data-src="{{ product.image_url|default:'path/to/default/image.jpg' }}" alt="Cover of {{ product.name }}" /></a>
-          <div class="card-body">
-            <h5 class="card-title">{{ product.name }}</h5>
-            <p class="card-text">{{ product.category.friendly_name }}</p>
-            <p class="card-text font-weight-bold">€{{ product.price }}</p>
-          </div>
-          <div class="card-footer bg-white">
-            <!-- Add to Cart Form -->
-            <form action="{% url 'add_to_bag' product.id %}" method="POST">
-              {% csrf_token %}
-              <input type="hidden" name="quantity" value="1" />
-              <input type="hidden" name="redirect_url" value="{{ request.path }}" />
-              <button type="submit" class="btn btn-primary btn-block">Add to Cart</button>
-            </form>
-          </div>
+  <!-- Sorting Dropdown -->
+  <div class="row justify-content-end mb-2">
+    <div class="col-md-4 col-lg-3">
+      <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-black">
+        <option value="reset">Sort by...</option>
+        <option value="name_asc">Name (A-Z)</option>
+        <option value="name_desc">Name (Z-A)</option>
+        <option value="price_asc">Price (low to high)</option>
+        <option value="price_desc">Price (high to low)</option>
+        <option value="author_asc">Author (A-Z)</option>
+        <option value="author_desc">Author (Z-A)</option>
+        <option value="category_asc">Category (A-Z)</option>
+        <option value="category_desc">Category (Z-A)</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- Products Display -->
+<div class="row">
+  {% for product in products %}
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card h-100 text-center shadow-sm bg-light">
+        <a href="{% url 'product_detail' product.id %}"><img class="card-img-top p-3 lazy" data-src="{{ product.image_url|default:'path/to/default/image.jpg' }}" alt="Cover of {{ product.name }}" /></a>
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.category.friendly_name }}</p>
+          <p class="card-text font-weight-bold">€{{ product.price }}</p>
+        </div>
+        <div class="card-footer bg-white">
+          <!-- Add to Cart Form -->
+          <form action="{% url 'add_to_bag' product.id %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="quantity" value="1" />
+            <input type="hidden" name="redirect_url" value="{{ request.path }}" />
+            <button type="submit" class="btn btn-primary btn-block">Add to Cart</button>
+          </form>
         </div>
       </div>
-    {% endfor %}
-  </div>
+    </div>
+  {% endfor %}
+</div>
 
-  <!-- Pagination -->
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <nav aria-label="Page navigation">
-          <ul class="pagination justify-content-center">
-            {% if products.has_previous %}
-              <li class="page-item">
-                <a class="page-link" href="?page=1" aria-label="First"><span aria-hidden="true">« First</span></a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="?page={{ products.previous_page_number }}" aria-label="Previous"><span aria-hidden="true">&laquo; Previous</span></a>
-              </li>
-            {% endif %}
+<!-- Pagination -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+          {% if products.has_previous %}
+            <li class="page-item">
+              <a class="page-link" href="?page=1" aria-label="First"><span aria-hidden="true">« First</span></a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="?page={{ products.previous_page_number }}" aria-label="Previous"><span aria-hidden="true">&laquo; Previous</span></a>
+            </li>
+          {% endif %}
 
-            {% with lower_limit=products.number|add:'-3' upper_limit=products.number|add:'3' %}
-              {% for num in products.paginator.page_range %}
-                {% if num >= lower_limit and num <= upper_limit %}
-                  <li class="page-item {% if num == products.number %}{% endif %}">
-                    <a class="page-link" href="?page={{ num }}">{{ num }}</a>
-                  </li>
-                {% endif %}
-              {% endfor %}
-            {% endwith %}
+          {% with lower_limit=products.number|add:'-3' upper_limit=products.number|add:'3' %}
+            {% for num in products.paginator.page_range %}
+              {% if num >= lower_limit and num <= upper_limit %}
+                <li class="page-item {% if num == products.number %}{% endif %}">
+                  <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          {% endwith %}
 
-            {% if products.has_next %}
-              <li class="page-item">
-                <a class="page-link" href="?page={{ products.next_page_number }}" aria-label="Next"><span aria-hidden="true">Next &raquo;</span></a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="?page={{ products.paginator.num_pages }}" aria-label="Last"><span aria-hidden="true">Last »</span></a>
-              </li>
-            {% endif %}
-          </ul>
-        </nav>
-      </div>
+          {% if products.has_next %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ products.next_page_number }}" aria-label="Next"><span aria-hidden="true">Next &raquo;</span></a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="?page={{ products.paginator.num_pages }}" aria-label="Last"><span aria-hidden="true">Last »</span></a>
+            </li>
+          {% endif %}
+        </ul>
+      </nav>
     </div>
   </div>
+</div>
 
-  <!-- Back to Top Button -->
-  <div class="btt-button shadow-sm rounded border border-black text-center" id="back-to-top-btn" style="cursor: pointer;">
-    <a class="btt-link d-inline-block">
-      <i class="fas fa-arrow-up text-black"></i>
-      <p class="text-muted">Top</p>
-    </a>
-  </div>
+<!-- Back to Top Button -->
+<div class="btt-button shadow-sm rounded border border-black text-center" id="back-to-top-btn" style="cursor: pointer;">
+  <a class="btt-link d-inline-block">
+    <i class="fas fa-arrow-up text-black"></i>
+    <p class="text-muted">Top</p>
+  </a>
+</div>
 {% endblock %}
 
 {% block postload_js %}

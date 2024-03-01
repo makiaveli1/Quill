@@ -14,83 +14,86 @@
 
 {% block extra_css %}
   <link rel="stylesheet" href="{% static 'products/css/products.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/profile.css' %}" /> <!-- Ensure you have a CSS file for profile-specific styles -->
 {% endblock %}
 
 {% block content %}
-  <div class="card mx-auto my-4 text-center" style="max-width: 35rem;">
-    <div class="card-body">
-      <h2 class="display-4">{{ user.username }}'s Account</h2>
-      <h3 class="h4 mb-4">Profile Details</h3>
-      <div class="profile-image-container mb-3">
-        {% if user.profile.image %}
-          <img src="{{ user.profile.image.url }}" alt="{{ user.username }}'s profile image" class="rounded-circle" />
-        {% else %}
-          <i class="fas fa-user fa-5x"></i>
-        {% endif %}
+  <div class="container py-5 my-5">
+    <div class="row">
+      <div class="col-lg-4 mb-3">
+        <!-- Profile Card -->
+        <div class="card profile-card">
+          <div class="card-body text-center">
+            {% if user.profile.image %}
+              <img src="{{ user.profile.image.url }}" alt="{{ user.username }}'s profile image" class="profile-image mb-3" />
+            {% else %}
+              <i class="fas fa-user-circle fa-5x mb-3"></i>
+            {% endif %}
+            <h2 class="card-title">{{ user.username }}</h2>
+            <p class="text-muted">{{ user.profile.bio }}</p>
+            <button class="btn btn-primary" id="edit-profile-btn">Edit Profile</button>
+          </div>
+        </div>
       </div>
-      <p class="mb-3">{{ user.profile.bio }}</p>
-      <button class="btn btn-lg btn-shop-now" id="edit-profile-btn">Edit Profile</button>
-    </div>
-    <!-- Profile Information Display -->
-    <div class="row user-info">
-      <div class="col-12">
-        <p>
-          <strong>Email:</strong> {{ user.email }}
-        </p>
-        <p>
-          <strong>Favorite Genre:</strong> {{ user.profile.favorite_genre }}
-        </p>
-        <p>
-          <strong>Phone Number:</strong> {{ user.profile.default_phone_number }}
-        </p>
-        <p>
-          <strong>Country:</strong> {{ user.profile.default_country }}
-        </p>
-      </div>
-    </div>
+      <div class="col-lg-8">
+        <!-- Order History Section -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Order History</h3>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Order</th>
+                    <th>Date</th>
+                    <th>Payment Status</th>
+                    <th>Fulfillment Status</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for order in orders %}
+                    <tr>
+                      <td>
+                        <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">{{ order.order_number }}</a>
+                      </td>
+                      <td>{{ order.date }}</td>
+                      <td>{{ order.payment_status }}</td>
+                      <td>{{ order.fulfillment_status }}</td>
+                      <td>{{ order.grand_total }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                      <td colspan="5">You have no order history.</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
-    <!-- Edit Profile Form (Initially Hidden) -->
-    <div class="edit-profile-form" id="edit-profile-form" style="display:none;">
-      <form action="{% url 'profile' %}" method="POST" enctype="multipart/form-data" class="profile-update-form">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button class="btn btn-black rounded-0 text-uppercase save-changes-btn" type="submit">Save Changes</button>
-      </form>
-    </div>
-
-    <!-- Order History Section -->
-    <div class="row order-history-section">
-      <div class="col-12">
-        <h3 class="order-history-title">Order History</h3>
-        <div class="order-history table-responsive">
-          <table class="table table-sm table-borderless">
-            <thead>
-              <tr>
-                <th class="text-muted">Order</th>
-                <th class="text-muted">Date</th>
-                <th class="text-muted">Payment Status</th>
-                <th class="text-muted">Fulfillment Status</th>
-                <th class="text-muted">Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for order in orders %}
-                <tr>
-                  <td>
-                    <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">#{{ order.order_number|truncatechars:6 }}</a>
-                  </td>
-                  <td>{{ order.date }}</td>
-                  <td>
-                    <span class="payment-status">{{ order.payment_status }}</span>
-                  </td>
-                  <td>
-                    <span class="fulfillment-status">{{ order.fulfillment_status }}</span>
-                  </td>
-                  <td>{{ order.grand_total }}</td>
-                </tr>
-              {% endfor %}
-            </tbody>
-          </table>
+        <!-- Profile Details Section -->
+        <div class="card mt-4">
+          <div class="card-header">
+            <h3 class="card-title">Profile Details</h3>
+          </div>
+          <div class="card-body">
+            <p>
+              <strong>Email:</strong> {{ user.email }}
+            </p>
+            <p>
+              <strong>Favorite Genre:</strong> {{ user.profile.favorite_genre }}
+            </p>
+            <p>
+              <strong>Phone Number:</strong> {{ user.profile.default_phone_number }}
+            </p>
+            <p>
+              <strong>Country:</strong> {{ user.profile.default_country }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -100,32 +103,5 @@
 {% block postload_js %}
   {{ block.super }}
   <script src="{% static 'js/countryfield.js' %}"></script>
-  <script>
-    // Toggle Edit Profile Form
-    document.addEventListener('DOMContentLoaded', () => {
-      const editProfileBtn = document.getElementById('edit-profile-btn')
-      const editProfileForm = document.getElementById('edit-profile-form')
-    
-      // Log to check if elements are found
-      console.log('Edit Profile Button:', editProfileBtn)
-      console.log('Edit Profile Form:', editProfileForm)
-    
-      if (editProfileBtn && editProfileForm) {
-        editProfileBtn.addEventListener('click', function () {
-          console.log('Edit profile button clicked') // Log button click
-          const isFormHidden = editProfileForm.style.display === 'none'
-          console.log('Is form hidden before toggle:', isFormHidden) // Log current display state of form
-    
-          editProfileForm.style.display = isFormHidden ? 'block' : 'none'
-          editProfileBtn.textContent = isFormHidden ? 'Hide Form' : 'Edit Profile'
-    
-          // Log the action taken
-          console.log('New display style for form:', editProfileForm.style.display)
-          console.log('New button text:', editProfileBtn.textContent)
-        })
-      } else {
-        console.error('Edit profile button or form not found') // Log if elements are not found
-      }
-    })
-  </script>
+  <script src="{% static 'js/profile.js' %}"></script> <!-- Move profile specific JS to a separate file -->
 {% endblock %}
