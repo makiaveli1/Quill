@@ -105,22 +105,22 @@
         font-size: 16px;
         padding: 10px;
         border: 2px solid #333;
-        border-right: none; /* Keep this if you want the button to be flush with the input */
+        border-right: none; 
         line-height: 1;
         width: 20rem;
     }
 
     .search-bar-container {
         display: flex;
-        justify-content: center; /* This will center the search form horizontally */
-        align-items: center; /* This will center the search form vertically */
+        justify-content: center; 
+        align-items: center; 
         position: absolute;
-        top: 100%; /* Adjust if necessary to position below the header */
+        top: 100%; 
         left: 0;
         right: 0;
         background: white;
         z-index: 1030;
-        display: none; /* Initially hidden */
+        display: none;
         border-top: 1px solid #ccc;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         padding: 10px 20px;
@@ -133,7 +133,6 @@
         color: white;
         border: none;
         cursor: pointer;
-        /* If you removed the border-right from the input, you might want to add a border to the left of the button to separate it visually */
         border-left: 2px solid #333;
     }
 
@@ -148,7 +147,7 @@
 
     /* Promo Banner Styling */
     .promo-banner {
-        transition: margin-top 0.3s ease; /* Smooth transition for pushing down */
+        transition: margin-top 0.3s ease; 
     }
 
     /* Adjusting the Promo Banner When Search is Visible */
@@ -324,16 +323,16 @@
     
     /* Social Media Icons */
     .social-link img {
-     width: 24px; /* Adjust the size as needed */
+     width: 24px; 
      height: auto;
-     margin: 0 10px; /* Adds spacing between icons */
+     margin: 0 10px; 
     }
 
     .social-links {
      position: relative;
-     bottom: 0; /* Moves social icons to the bottom */
+     bottom: 0; 
      left: 50%;
-     transform: translateX(-50%); /* Centers the social icons */
+     transform: translateX(-50%); 
      padding-bottom: 10px;
     }
 
@@ -345,7 +344,7 @@
     }
 
     .footer-bottom {
-     background-color: #D3C1A5; /* Darker shade for the bottom footer */
+     background-color: #D3C1A5; 
      padding: 10px 0;
     }
 
@@ -355,32 +354,36 @@
 
     .footer-nav a, .social-links a, .attribution-link {
      color: #333;
-     margin: 0 10px; /* Adjust spacing around the links */
+     margin: 0 10px; 
     }
 
     .footer-link {
-     color: #333; /* Adjust color as needed */
+     color: #333; 
     }
 
     /* Attribution link */
     .attribution-link {
      color: #333;
      font-size: 0.75rem;
-     display: block; /* Makes it easier to center */
+     display: block; 
      margin-top: 1rem;
     }
+
+    .custom-toast-background {
+        background-color: #e0b469 !important; 
+    }      
 
     @media (min-width: 768px) {
         /* Adjust positions for desktop view */
         .search-icon-container {
-          right: 120px; /* Adjust as needed */
+          right: 120px; 
         }
       
         .nav-item.dropdown {
-          right: 50px; /* Adjust as needed */
-        }
+          right: 50px;
       
         .cart-icon-container {
-          right: 20px; /* Adjust as needed */
+          right: 20px; 
         }
       }
+    }

@@ -1,0 +1,13 @@
+{% if messages %}
+  {% for message in messages %}
+    {% if 'success' in message.tags %}
+      {% include 'includes/toasts/toast_success.html' %}
+    {% elif 'error' in message.tags %}
+      {% include 'includes/toasts/toast_errors.html' %}
+    {% elif 'info' in message.tags %}
+      {% include 'includes/toasts/toast_info.html' %}
+    {% elif 'warning' in message.tags %}
+      {% include 'includes/toasts/toast_warning.html' %}
+    {% endif %}
+  {% endfor %}
+{% endif %}

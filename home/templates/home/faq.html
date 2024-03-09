@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_meta %}
+  <meta name="description" content="Frequently asked questions at Quill Bookstore. Get answers to your queries about orders, shipping, returns, and more." />
+  <meta name="keywords" content="Quill bookstore FAQ, book orders, shipping information, return policies" />
+  <meta name="author" content="Your Name or Store's Name" />
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/faq.css' %}" />
+{% endblock %}
+
+{% block extra_title %}
+  FAQ
+{% endblock %}
+
+{% block content %}
+  <div class="container my-5">
+    <h2 class="display-4 text-center mb-5">Frequently Asked Questions</h2>
+    <div class="row">
+      <div class="col-lg-3 mb-4">
+        <!-- Table of Contents -->
+        <div class="list-group sticky-top" id="faq-toc">
+          <a href="#collapseOne" class="list-group-item list-group-item-action">How do I place an order?</a>
+          <a href="#collapseTwo" class="list-group-item list-group-item-action">What payment methods do you accept?</a>
+          <a href="#collapseThree" class="list-group-item list-group-item-action">How long will delivery take?</a>
+          <a href="#collapseFour" class="list-group-item list-group-item-action">What is your return policy?</a>
+          <a href="#collapseFive" class="list-group-item list-group-item-action">Can I cancel or modify my order?</a>
+          <a href="#collapseSix" class="list-group-item list-group-item-action">Do you offer gift wrapping services?</a>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <!-- Accordion -->
+        <div id="accordion">
+          <!-- FAQ 1 -->
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0"><button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">How do I place an order?</button></h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">You can place an order online through our website by adding books to your cart and proceeding to checkout. If you need assistance, please contact us at [Your Contact Information].</div>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What payment methods do you accept?</button></h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">We accept all major credit cards, PayPal, and other payment methods. If you have any specific payment questions, please reach out to us.</div>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How long will delivery take?</button></h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">Delivery times vary based on your location and the shipping options you choose at checkout. Typically, orders within Ireland are delivered within 3-5 business days.</div>
+            </div>
+          </div>
+          <!-- FAQ 4 -->
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">What is your return policy?</button></h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body">We accept returns within 30 days of purchase, provided the book is in its original condition. Refunds will be issued to the original payment method after we receive the returned item.</div>
+            </div>
+          </div>
+          <!-- FAQ 5 -->
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Can I cancel or modify my order?</button></h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">Orders can be canceled or modified within 24 hours of placement. Please contact our customer service team immediately to assist you with any changes.</div>
+            </div>
+          </div>
+          <!-- FAQ 6 -->
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">Do you offer gift wrapping services?</button></h5>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+              <div class="card-body">Yes, we offer gift wrapping for a small additional charge. You can select this option at checkout and include a personalized message if desired.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block postload_js %}
+  {{ block.super }}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var faqTocLinks = document.querySelectorAll('#faq-toc a')
+      faqTocLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault()
+          var targetId = this.getAttribute('href')
+          var targetElement = document.querySelector(targetId)
+          $('html, body').animate(
+            {
+              scrollTop: $(targetElement).offset().top - 100
+            },
+            1000
+          )
+        })
+      })
+    })
+  </script>
+{% endblock %}

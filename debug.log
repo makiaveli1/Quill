@@ -186,3 +186,1056 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 /mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
 Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 9983
+"GET / HTTP/1.1" 200 9983
+Not Found: /link-to-about-us
+"GET /link-to-about-us HTTP/1.1" 404 3568
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 9983
+Not Found: /link-to-about-us
+"GET /link-to-about-us HTTP/1.1" 404 3415
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/views.py", line 8, in index
+    return render(request, 'home/index.html')
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'faq' not found. 'faq' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 173438
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 10004
+"GET /static/images/instagram-icon.png HTTP/1.1" 404 1834
+"GET /static/images/facebook-icon.png HTTP/1.1" 404 1831
+"GET /static/images/twitter-icon.png HTTP/1.1" 404 1828
+Not Found: /link-to-facebook
+"GET /link-to-facebook HTTP/1.1" 404 3577
+"GET / HTTP/1.1" 200 9995
+"GET /static/images/facebook-icon.png HTTP/1.1" 404 1831
+"GET /static/images/twitter-icon.png HTTP/1.1" 404 1828
+"GET /static/images/instagram-icon.png HTTP/1.1" 404 1834
+"GET / HTTP/1.1" 200 9995
+"GET /static/images/facebook-icon.png HTTP/1.1" 404 1831
+"GET /static/images/twitter-icon.png HTTP/1.1" 404 1828
+"GET /static/images/instagram-icon.png HTTP/1.1" 404 1834
+"GET / HTTP/1.1" 200 9571
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /about_us HTTP/1.1" 200 5846
+"GET /about_us HTTP/1.1" 200 5722
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /about_us HTTP/1.1" 200 9685
+"GET /about_us HTTP/1.1" 200 9862
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /products/ HTTP/1.1" 200 23543
+"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"GET / HTTP/1.1" 200 9571
+"GET /about_us HTTP/1.1" 200 9862
+"GET /privacy_policy HTTP/1.1" 200 17889
+"GET /privacy_policy HTTP/1.1" 200 17865
+"GET /products/ HTTP/1.1" 200 23543
+"GET / HTTP/1.1" 200 9571
+"GET /faq HTTP/1.1" 200 10825
+"GET /faq HTTP/1.1" 200 14540
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /faq HTTP/1.1" 200 13874
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /faq HTTP/1.1" 200 14421
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /faq HTTP/1.1" 200 14451
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET / HTTP/1.1" 200 9571
+"GET /faq HTTP/1.1" 200 14451
+"GET /privacy_policy HTTP/1.1" 200 17865
+"GET /about_us HTTP/1.1" 200 9862
+"GET / HTTP/1.1" 200 9571
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 9262
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /products/?category=crime-thriller HTTP/1.1" 200 22944
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"GET /bag/ HTTP/1.1" 200 9980
+Not Found: /bag/media/icons8-quill-pen-32.png
+"GET /bag/media/icons8-quill-pen-32.png HTTP/1.1" 404 4273
+"GET / HTTP/1.1" 200 9262
+"GET /products/?category=biography HTTP/1.1" 200 22904
+"GET / HTTP/1.1" 200 9262
+"GET /faq HTTP/1.1" 200 14142
+"GET / HTTP/1.1" 200 9262
+"GET /privacy_policy HTTP/1.1" 200 17556
+"GET / HTTP/1.1" 200 9262
+"GET /privacy_policy HTTP/1.1" 200 17556
+"GET /privacy_policy HTTP/1.1" 200 17556
+"GET /privacy_policy HTTP/1.1" 200 17556
+"GET /privacy_policy HTTP/1.1" 200 17556
+"GET /about_us HTTP/1.1" 200 9553
+"GET /privacy_policy HTTP/1.1" 200 17556
+"GET /faq HTTP/1.1" 200 14192
+"GET /static/css/faq.css HTTP/1.1" 200 615
+"GET /faq HTTP/1.1" 200 14192
+"GET /privacy_policy HTTP/1.1" 200 17607
+"GET /privacy_policy HTTP/1.1" 200 17607
+"GET /privacy_policy HTTP/1.1" 200 17607
+"GET /privacy_policy HTTP/1.1" 200 17607
+"GET /faq HTTP/1.1" 200 14142
+"GET /faq HTTP/1.1" 200 14142
+"GET /faq HTTP/1.1" 200 14192
+"GET /faq HTTP/1.1" 200 14192
+"GET /faq HTTP/1.1" 200 14192
+"GET /privacy_policy HTTP/1.1" 200 17607
+"GET /privacy_policy HTTP/1.1" 200 17606
+"GET /privacy_policy HTTP/1.1" 200 17606
+"GET /privacy_policy HTTP/1.1" 200 17606
+"GET /privacy_policy HTTP/1.1" 200 17606
+"GET /privacy_policy HTTP/1.1" 200 17606
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /static/css/faq.css HTTP/1.1" 200 615
+"GET /products/ HTTP/1.1" 200 23234
+"GET / HTTP/1.1" 200 9262
+"GET / HTTP/1.1" 200 9262
+"GET /products/?category=computing HTTP/1.1" 200 23151
+"POST /bag/add/3169/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 23234
+"GET /bag/ HTTP/1.1" 200 11173
+"GET /checkout/ HTTP/1.1" 200 23193
+"GET /static/css/checkout.css HTTP/1.1" 200 542
+"GET /static/js/stripe_element.js HTTP/1.1" 200 1876
+Not Found: /checkout/media/icons8-quill-pen-32.png
+"GET /checkout/media/icons8-quill-pen-32.png HTTP/1.1" 404 4130
+"POST /checkout/ HTTP/1.1" 302 0
+"GET /checkout/checkout_success/105A4C60C5C64CDC9E7B2B04E0972C96/ HTTP/1.1" 200 5755
+"GET /static/checkout/css/checkout.css HTTP/1.1" 404 1834
+Not Found: /checkout/checkout_success/105A4C60C5C64CDC9E7B2B04E0972C96/media/icons8-quill-pen-32.png
+"GET /checkout/checkout_success/105A4C60C5C64CDC9E7B2B04E0972C96/media/icons8-quill-pen-32.png HTTP/1.1" 404 4280
+"GET /products/ HTTP/1.1" 200 23234
+"GET /products/ HTTP/1.1" 200 23234
+Internal Server Error: /products/
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/engine.py", line 212, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: includes/toasts/toasts.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/products/views.py", line 89, in all_products
+    return render(request, "products/products.html", context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: includes/toasts/toasts.html
+"GET /products/ HTTP/1.1" 500 162892
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3562
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 9995
+"GET /static/css/base.css HTTP/1.1" 200 9169
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /products/?category=computing HTTP/1.1" 200 23884
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"POST /bag/add/3166/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 27253
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"POST /bag/add/1794/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 28289
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"POST /bag/add/3181/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 29297
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /products/ HTTP/1.1" 200 23967
+"POST /bag/add/3166/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 29350
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /products/ HTTP/1.1" 200 23967
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/css/base.css HTTP/1.1" 200 9315
+"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
+"POST /bag/add/3175/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 30452
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /products/ HTTP/1.1" 200 23967
+"GET /static/css/base.css HTTP/1.1" 200 8502
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
+"POST /bag/add/3175/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 30452
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /products/ HTTP/1.1" 200 23914
+"GET / HTTP/1.1" 200 9942
+"GET / HTTP/1.1" 200 9995
+"GET /static/css/base.css HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 208, in render
+    return template.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 177, in render
+    return self._render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/engine.py", line 212, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: includes/toasts/toast_error.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/home/views.py", line 8, in index
+    return render(request, 'home/index.html')
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/home/gbemi/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: includes/toasts/toast_error.html
+"GET / HTTP/1.1" 500 223899
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3562
+"GET / HTTP/1.1" 200 9995
+"GET /static/css/base.css HTTP/1.1" 200 8502
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /products/?category=crime-thriller HTTP/1.1" 200 23677
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"POST /bag/add/2391/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 27234
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /bag/ HTTP/1.1" 200 11898
+Not Found: /bag/media/icons8-quill-pen-32.png
+"GET /bag/media/icons8-quill-pen-32.png HTTP/1.1" 404 4273
+"GET / HTTP/1.1" 200 9995
+"GET /products/ HTTP/1.1" 200 23967
+"POST /bag/add/704/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 28231
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /products/ HTTP/1.1" 200 23967
+"POST /bag/add/3181/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 29302
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"POST /bag/add/3166/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 30408
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /bag/ HTTP/1.1" 200 15747
+"GET /checkout/ HTTP/1.1" 200 25989
+"GET /static/css/checkout.css HTTP/1.1" 200 542
+"GET /static/js/stripe_element.js HTTP/1.1" 200 1876
+Not Found: /checkout/media/icons8-quill-pen-32.png
+"GET /checkout/media/icons8-quill-pen-32.png HTTP/1.1" 404 4130
+"GET /bag/ HTTP/1.1" 200 15747
+"GET /checkout/ HTTP/1.1" 200 25989
+"GET / HTTP/1.1" 200 9995
+"GET /products/?category=crime-thriller HTTP/1.1" 200 23677
+"POST /bag/add/2389/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 31426
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /products/ HTTP/1.1" 200 23967
+"POST /bag/add/3166/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 31447
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /products/ HTTP/1.1" 200 23967
+"POST /bag/add/3181/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 31419
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /bag/ HTTP/1.1" 200 17035
+"POST /bag/delete/2389/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 22174
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"POST /bag/delete/2391/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 19831
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"POST /bag/delete/704/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 17544
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"POST /bag/delete/3181/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 15256
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"POST /bag/delete/3166/ HTTP/1.1" 302 0
+"GET /bag/ HTTP/1.1" 200 11705
+"GET /products/?category=computing HTTP/1.1" 200 23884
+"POST /bag/add/3166/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 27322
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"POST /bag/add/1794/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 28358
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /products/ HTTP/1.1" 200 23967
+"GET /static/css/base.css HTTP/1.1" 200 8500
+"POST /bag/add/1794/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 28358
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+Watching for file changes with StatReloader
+"GET /products/ HTTP/1.1" 200 23967
+"POST /bag/add/3181/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 29366
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /products/3181/ HTTP/1.1" 200 12689
+Not Found: /products/3181/media/icons8-quill-pen-32.png
+"GET /products/3181/media/icons8-quill-pen-32.png HTTP/1.1" 404 4887
+"GET / HTTP/1.1" 200 9995
+"GET /products/?category=biography HTTP/1.1" 200 23637
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 9995
+"GET /static/css/base.css HTTP/1.1" 200 8500
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /products/ HTTP/1.1" 200 23967
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"POST /bag/add/3181/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 29367
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /about_us HTTP/1.1" 200 10286
+"GET /products/ HTTP/1.1" 200 23967
+"GET /about_us HTTP/1.1" 200 10286
+"GET / HTTP/1.1" 200 9995
+Watching for file changes with StatReloader
+"GET /products/?category=biography HTTP/1.1" 200 23637
+"GET /static/css/base.css HTTP/1.1" 200 8500
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"POST /bag/add/1793/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 30416
+Not Found: /media/noimage.png
+"GET /media/noimage.png HTTP/1.1" 404 3795
+"GET /checkout/ HTTP/1.1" 200 26014
+"GET /static/css/checkout.css HTTP/1.1" 200 542
+"GET /static/js/stripe_element.js HTTP/1.1" 200 1876
+Not Found: /checkout/media/icons8-quill-pen-32.png
+"GET /checkout/media/icons8-quill-pen-32.png HTTP/1.1" 404 4130
+"GET / HTTP/1.1" 200 9875
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 9875
+"GET / HTTP/1.1" 200 10256
+"GET /static/css/base.css HTTP/1.1" 200 8500
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11761
+"GET /static/css/base.css HTTP/1.1" 200 8500
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11761
+"GET / HTTP/1.1" 200 11761
+"GET /static/css/base.css HTTP/1.1" 200 8760
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11761
+"GET /static/css/base.css HTTP/1.1" 200 9260
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11761
+"GET /static/css/base.css HTTP/1.1" 200 9025
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 11761
+"GET /static/css/base.css HTTP/1.1" 200 9025
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 200 8919
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11761
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 8919
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 8882
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 9105
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 9333
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 9297
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 8867
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 9143
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 9029
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 8853
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 8882
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 8874
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 8882
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 8853
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 8874
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 8848
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 8790
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 8760
+"GET / HTTP/1.1" 200 11749
+"GET /static/css/base.css HTTP/1.1" 200 8739
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11327
+"GET /static/css/base.css HTTP/1.1" 200 8739
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8709
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8800
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8661
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8776
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8655
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8702
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8701
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8702
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8702
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8703
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8703
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8703
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8702
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8702
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8703
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8850
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 9591
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8677
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 9181
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8677
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8872
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8875
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8883
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 200 8774
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11476
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8774
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 9855
+"GET /static/css/base.css HTTP/1.1" 200 8774
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8774
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9231
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9129
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 200 9087
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9087
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9095
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9096
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9091
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9091
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9085
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9051
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9087
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9165
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9036
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9035
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9035
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8969
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8947
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8947
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9042
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9897
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9896
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9897
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9857
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9895
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9896
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9896
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9896
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9896
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9895
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9895
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9883
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9883
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9883
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9883
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9509
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9509
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9883
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9883
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9883
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9883
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9509
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8803
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8280
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8803
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8665
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8658
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8632
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8578
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8660
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8731
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8658
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 200 8658
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8658
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9146
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9104
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9034
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8997
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8919
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8919
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8959
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8959
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8959
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8929
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8941
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8941
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8941
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8970
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8970
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 8970
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9336
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9286
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9466
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9466
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9466
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9466
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11519
+"GET /static/css/base.css HTTP/1.1" 200 9466
+"GET /products/ HTTP/1.1" 200 25491
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872

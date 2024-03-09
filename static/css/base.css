@@ -105,22 +105,22 @@
         font-size: 16px;
         padding: 10px;
         border: 2px solid #333;
-        border-right: none; /* Keep this if you want the button to be flush with the input */
+        border-right: none; 
         line-height: 1;
         width: 20rem;
     }
 
     .search-bar-container {
         display: flex;
-        justify-content: center; /* This will center the search form horizontally */
-        align-items: center; /* This will center the search form vertically */
+        justify-content: center; 
+        align-items: center; 
         position: absolute;
-        top: 100%; /* Adjust if necessary to position below the header */
+        top: 100%; 
         left: 0;
         right: 0;
         background: white;
         z-index: 1030;
-        display: none; /* Initially hidden */
+        display: none;
         border-top: 1px solid #ccc;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         padding: 10px 20px;
@@ -133,7 +133,6 @@
         color: white;
         border: none;
         cursor: pointer;
-        /* If you removed the border-right from the input, you might want to add a border to the left of the button to separate it visually */
         border-left: 2px solid #333;
     }
 
@@ -148,7 +147,7 @@
 
     /* Promo Banner Styling */
     .promo-banner {
-        transition: margin-top 0.3s ease; /* Smooth transition for pushing down */
+        transition: margin-top 0.3s ease; 
     }
 
     /* Adjusting the Promo Banner When Search is Visible */
@@ -275,112 +274,127 @@
     }
     
     /* Mailing List Section */
-    .subscribe-section {
-        background: var(--background-logo);
-        padding: 2rem 1rem;
-    }
-    
-    .subscribe-section form {
-        margin-top: 1rem;
-    }
-    
-    .subscribe-section input[type="email"] {
-        border: 2px solid #000;
-        padding: .5rem;
-        margin-right: .5rem;
-    }
-    
-    .subscribe-section button {
-        background: #000;
-        color: #fff;
-        border: 0;
-        padding: .5rem 1rem;
-    }
-
-    #mc_embed_signup{
-        background-color: #EAE4D4;
-        clear:left;
-        font:14px Helvetica,Arial,sans-serif;
+    #mc_embed_signup {
+        background-color: #EAE4D4; /* Subscription form background */
+        padding: 2rem; /* Padding around the form */
+        margin: 1rem auto; /* Center form in the page with top and bottom margin */
+        max-width: 100%; /* Maximum width of the form */
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 90%;
-        margin: 0 auto;
+        align-items: center; /* Aligns the children (h2, form, button) to the center */
+        font-family: Helvetica, Arial, sans-serif;
         font-size: 1rem;
     }
     
-    /* Footer */
-    footer {
-     color: #000;
-     background-color: var(--background-logo);
-     padding-top: 1rem;
+    #mc_embed_signup h2 {
+        text-align: center; /* Centers the title text */
+        width: 100%;
     }
     
-    footer p, footer a {
-     color: inherit;
-     text-decoration: none;
+    #mc_embed_signup form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #mc_embed_signup .mc-field-group {
+        width: 100%; /* Full width of the form */
+        margin-bottom: 1rem; /* Space between the input field and the button */
+    }
+    
+    #mc_embed_signup .mc-field-group input {
+        width: 100%;
+        padding: 0.5rem;
+        margin-left: 2rem;
+        border: 2px solid #000; /* Border for the input field */
+    }
+
+    #mc_embed_signup .button, #mc_embed_signup input[type="submit"] {
+        position: relative;
+        background-color: #000 !important; /* Background color for the button */
+        color: #fff !important; /* Text color for the button */
+        border: none !important;
+        left: 52rem;
     }
     
     /* Social Media Icons */
-    .social-link img {
-     width: 24px; /* Adjust the size as needed */
-     height: auto;
-     margin: 0 10px; /* Adds spacing between icons */
-    }
-
     .social-links {
-     position: relative;
-     bottom: 0; /* Moves social icons to the bottom */
-     left: 50%;
-     transform: translateX(-50%); /* Centers the social icons */
-     padding-bottom: 10px;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        margin-bottom: 1rem; 
+    }
+    
+    .social-link img {
+        width: 24px;
+        height: auto;
+        margin: 0 10px;
     }
 
-    /* Additional styles for the footer */
-    .footer-middle {
-     background-color: #F2DBAF;
-     padding: 20px 0;
-     text-align: center;
-    }
 
+    /* Footer */
+    footer {
+        color: #000;
+        background-color: var(--background-logo);
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .footer-bottom {
-     background-color: #D3C1A5; /* Darker shade for the bottom footer */
-     padding: 10px 0;
+        padding: 10px 0;
     }
 
-    .footer-nav, .social-links, .attribution-link {
-     padding-bottom: 10px;        
-    }
-
-    .footer-nav a, .social-links a, .attribution-link {
-     color: #333;
-     margin: 0 10px; /* Adjust spacing around the links */
-    }
-
-    .footer-link {
-     color: #333; /* Adjust color as needed */
-    }
-
-    /* Attribution link */
+    .footer-links a,
     .attribution-link {
-     color: #333;
-     font-size: 0.75rem;
-     display: block; /* Makes it easier to center */
-     margin-top: 1rem;
+        color: #333;
+        text-decoration: none;
+        margin: 0 5px;
     }
+    
+    .attribution-link {
+        font-size: 0.75rem;
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .custom-toast-background {
+        background-color: #e0b469 !important; 
+    }      
 
     @media (min-width: 768px) {
-        /* Adjust positions for desktop view */
         .search-icon-container {
-          right: 120px; /* Adjust as needed */
+          right: 120px; 
         }
       
         .nav-item.dropdown {
-          right: 50px; /* Adjust as needed */
-        }
+          right: 50px;
       
         .cart-icon-container {
-          right: 20px; /* Adjust as needed */
+          right: 20px; 
+        }
+
+        .footer-bottom, .social-links {
+            justify-content: center;
+            text-align: center;
         }
       }
+    }
+
+
+    @media (max-width: 900px) {
+        #mc_embed_signup {
+            padding: 1rem; /* Reduced padding on smaller screens */
+        }
+    
+        #mc_embed_signup .button, #mc_embed_signup input[type="submit"] {
+            position: relative;
+            background-color: #000 !important; /* Background color for the button */
+            color: #fff !important; /* Text color for the button */
+            border: none !important;
+            left: 12rem;
+        }
+    }
