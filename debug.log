@@ -1524,3 +1524,31 @@ Not Found: /profile/media/icons8-quill-pen-32.png
 Watching for file changes with StatReloader
 /mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
 Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 11773
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /products/ HTTP/1.1" 200 24136
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"GET / HTTP/1.1" 200 11773
+"GET /products/ HTTP/1.1" 200 24136
+"GET / HTTP/1.1" 200 11773
+"GET /products/ HTTP/1.1" 200 24136
+"GET /products/?category=medical HTTP/1.1" 200 23995
+"GET / HTTP/1.1" 200 11773
+"GET /products/ HTTP/1.1" 200 24136
+"GET /products/?category=medical HTTP/1.1" 200 23995
+"GET /products/?category=biography HTTP/1.1" 200 23806
+"GET /products/?category=medical HTTP/1.1" 200 23995
+"GET /products/?category=computing HTTP/1.1" 200 24053
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /products/?category=computing HTTP/1.1" 200 24053
+"GET /static/css/base.css HTTP/1.1" 200 10401
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"GET / HTTP/1.1" 200 11773
+"GET /products/ HTTP/1.1" 200 24136
+"GET /products/?category=medical HTTP/1.1" 200 23995
+"GET / HTTP/1.1" 200 11773
