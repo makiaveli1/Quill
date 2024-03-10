@@ -32,7 +32,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-!%afc554mw#k5(11juwv-t##dd
 DEBUG = True
 
 ALLOWED_HOSTS = ['quill-7g6f.onrender.com', '127.0.0.1', 'localhost']
-
+USE_CRISPY_BOOTSTRAP4 = True
 
 # Application definition
 
@@ -52,12 +52,15 @@ INSTALLED_APPS = [
     'bag',
     'storages',
     'crispy_forms',
-    'crispy_bootstrap4',
     'profiles',
     'checkout',
     'django_extensions',
-    
 ]
+
+if os.getenv('USE_CRISPY_BOOTSTRAP4') == 'True':
+    INSTALLED_APPS.append('crispy_bootstrap4')
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -115,7 +118,7 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'quill.wsgi.application'
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 
 # Database
