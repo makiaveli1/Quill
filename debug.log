@@ -2401,3 +2401,39 @@ Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 3562
 /mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
 Watching for file changes with StatReloader
+"GET /admin/ HTTP/1.1" 200 10680
+"GET /checkout/ HTTP/1.1" 200 23576
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 179
+Not Found: /checkout/media/icons8-quill-pen-32.png
+"GET /checkout/media/icons8-quill-pen-32.png HTTP/1.1" 404 179
+"GET /checkout/ HTTP/1.1" 200 23576
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 179
+"GET / HTTP/1.1" 200 11773
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 179
+"GET /products/ HTTP/1.1" 200 24127
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 179
+Not Found: /static/css/products.css
+"GET /static/css/products.css HTTP/1.1" 404 179
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 179
+"GET / HTTP/1.1" 200 11773
+Not Found: /static/css/base.css
+"GET /static/css/base.css HTTP/1.1" 404 179
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 11773
+"GET /static/css/base.css HTTP/1.1" 200 10401
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /admin/ HTTP/1.1" 200 10680
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 179
+"GET / HTTP/1.1" 200 11773
