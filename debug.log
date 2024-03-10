@@ -1681,3 +1681,9 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 /mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
 Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /checkout/ HTTP/1.1" 200 23576
+Not Found: /checkout/media/icons8-quill-pen-32.png
+"GET /checkout/media/icons8-quill-pen-32.png HTTP/1.1" 404 4130
+"GET / HTTP/1.1" 200 11773
