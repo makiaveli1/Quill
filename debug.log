@@ -1552,3 +1552,22 @@ Not Found: /products/media/icons8-quill-pen-32.png
 "GET /products/ HTTP/1.1" 200 24136
 "GET /products/?category=medical HTTP/1.1" 200 23995
 "GET / HTTP/1.1" 200 11773
+"GET / HTTP/1.1" 200 11773
+"GET /static/css/base.css HTTP/1.1" 200 10401
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /products/ HTTP/1.1" 200 24136
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"GET /products/ HTTP/1.1" 200 24136
+"GET /products/3175/ HTTP/1.1" 200 13059
+Not Found: /products/3175/media/icons8-quill-pen-32.png
+"GET /products/3175/media/icons8-quill-pen-32.png HTTP/1.1" 404 4887
+"GET /products/ HTTP/1.1" 200 24136
+"GET /products/3181/ HTTP/1.1" 200 12949
+Not Found: /products/3181/media/icons8-quill-pen-32.png
+"GET /products/3181/media/icons8-quill-pen-32.png HTTP/1.1" 404 4887
+"GET /bag/ HTTP/1.1" 200 10882
+Not Found: /bag/media/icons8-quill-pen-32.png
+"GET /bag/media/icons8-quill-pen-32.png HTTP/1.1" 404 4273
+"GET /products/ HTTP/1.1" 200 24136
