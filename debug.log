@@ -1239,3 +1239,288 @@ Watching for file changes with StatReloader
 "GET /static/products/css/products.css HTTP/1.1" 200 11931
 Not Found: /products/media/icons8-quill-pen-32.png
 "GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"GET /products/ HTTP/1.1" 200 23827
+"GET /static/css/base.css HTTP/1.1" 200 9466
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"GET / HTTP/1.1" 200 11464
+"GET / HTTP/1.1" 200 11464
+"GET /static/css/base.css HTTP/1.1" 200 10093
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11464
+"GET /static/css/base.css HTTP/1.1" 200 10093
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11464
+"GET /static/css/base.css HTTP/1.1" 200 10093
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11464
+"GET /static/css/base.css HTTP/1.1" 200 10093
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11464
+"GET /static/css/base.css HTTP/1.1" 200 10093
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11464
+"GET /static/css/base.css HTTP/1.1" 200 10168
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11464
+"GET /static/css/base.css HTTP/1.1" 200 10168
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11464
+"GET /static/css/base.css HTTP/1.1" 200 10168
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET / HTTP/1.1" 200 11464
+"GET /static/css/base.css HTTP/1.1" 200 10399
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /products/ HTTP/1.1" 200 23827
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"GET / HTTP/1.1" 200 11464
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /accounts/login/ HTTP/1.1" 200 10323
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /accounts/login/media/icons8-quill-pen-32.png
+"GET /accounts/login/media/icons8-quill-pen-32.png HTTP/1.1" 404 7247
+"GET /accounts/login/ HTTP/1.1" 200 10323
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+"GET /static/admin/css/base.css HTTP/1.1" 200 21207
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 18557
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+"GET /static/admin/css/login.css HTTP/1.1" 200 958
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3562
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 10680
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+Forbidden (CSRF token from POST incorrect.): /accounts/login/
+"POST /accounts/login/ HTTP/1.1" 403 2518
+Forbidden (CSRF token from POST incorrect.): /accounts/login/
+"POST /accounts/login/ HTTP/1.1" 403 2518
+"GET /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 11773
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11773
+"GET / HTTP/1.1" 200 11773
+"GET /static/css/base.css HTTP/1.1" 200 10400
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 11773
+"GET /static/css/base.css HTTP/1.1" 200 10401
+"GET /media/Hero_Image.png HTTP/1.1" 200 2678314
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+"GET /static/css/base.css HTTP/1.1" 304 0
+"GET /products/ HTTP/1.1" 200 24136
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"GET /products/ HTTP/1.1" 200 24136
+"GET /products/?sort=name&direction=desc HTTP/1.1" 200 24137
+"GET /products/?category=medical HTTP/1.1" 200 23995
+"GET /profile/ HTTP/1.1" 200 11700
+"GET /static/css/profile.css HTTP/1.1" 200 1548
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+"GET /static/js/profile.js HTTP/1.1" 200 1196
+"GET /media/profiles/Screenshot_2024-01-02_145000_jgICuao.webp HTTP/1.1" 200 8696
+Not Found: /profile/media/icons8-quill-pen-32.png
+"GET /profile/media/icons8-quill-pen-32.png HTTP/1.1" 404 3914
+"GET /products/ HTTP/1.1" 200 24136
+"GET /products/1794/ HTTP/1.1" 200 12998
+Not Found: /products/1794/media/icons8-quill-pen-32.png
+"GET /products/1794/media/icons8-quill-pen-32.png HTTP/1.1" 404 4887
+"GET /products/edit/1794/ HTTP/1.1" 200 18529
+Not Found: /products/edit/1794/media/icons8-quill-pen-32.png
+"GET /products/edit/1794/media/icons8-quill-pen-32.png HTTP/1.1" 404 4902
+"GET / HTTP/1.1" 200 11773
+"GET /accounts/logout/ HTTP/1.1" 200 9420
+Not Found: /accounts/logout/media/icons8-quill-pen-32.png
+"GET /accounts/logout/media/icons8-quill-pen-32.png HTTP/1.1" 404 7250
+"POST /accounts/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 11464
+"GET /accounts/signup/ HTTP/1.1" 200 11172
+Not Found: /accounts/signup/media/icons8-quill-pen-32.png
+"GET /accounts/signup/media/icons8-quill-pen-32.png HTTP/1.1" 404 7250
+"POST /accounts/signup/ HTTP/1.1" 302 0
+"GET /accounts/confirm-email/ HTTP/1.1" 200 8808
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /accounts/confirm-email/media/icons8-quill-pen-32.png
+"GET /accounts/confirm-email/media/icons8-quill-pen-32.png HTTP/1.1" 404 7271
+"GET /accounts/login/ HTTP/1.1" 200 10323
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /accounts/login/media/icons8-quill-pen-32.png
+"GET /accounts/login/media/icons8-quill-pen-32.png HTTP/1.1" 404 7247
+"GET /admin/auth/user/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 4522
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3562
+"POST /admin/login/?next=/admin/auth/user/ HTTP/1.1" 302 0
+"GET /admin/auth/user/ HTTP/1.1" 200 14320
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6584
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /static/admin/js/core.js HTTP/1.1" 200 5682
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+"GET /static/admin/js/filters.js HTTP/1.1" 200 978
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+"GET /admin/auth/user/3/change/ HTTP/1.1" 200 27047
+"GET /static/admin/css/forms.css HTTP/1.1" 200 8953
+"GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15292
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 11952
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+"GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+"GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+"GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+Forbidden (CSRF token from POST incorrect.): /accounts/login/
+"POST /accounts/login/ HTTP/1.1" 403 2518
+"GET /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 11773
+"GET /profile/ HTTP/1.1" 200 11700
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+"GET /profile/ HTTP/1.1" 200 11700
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+"GET /profile/ HTTP/1.1" 200 11700
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+"GET / HTTP/1.1" 200 11773
+"GET /accounts/logout/ HTTP/1.1" 200 9420
+"POST /accounts/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 11464
+"GET /accounts/login/ HTTP/1.1" 200 10323
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET /accounts/confirm-email/ HTTP/1.1" 200 8808
+"GET /admin/auth/user/3/change/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/auth/user/3/change/ HTTP/1.1" 200 4450
+"GET /accounts/confirm-email/Mw:1rj60p:bECUBI0xNy9BmUxm1dHCIPWC3WJ0AT99ywuulozNc10/ HTTP/1.1" 200 9046
+"GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /accounts/confirm-email/Mw:1rj60p:bECUBI0xNy9BmUxm1dHCIPWC3WJ0AT99ywuulozNc10/media/icons8-quill-pen-32.png
+"GET /accounts/confirm-email/Mw:1rj60p:bECUBI0xNy9BmUxm1dHCIPWC3WJ0AT99ywuulozNc10/media/icons8-quill-pen-32.png HTTP/1.1" 404 7433
+"POST /accounts/confirm-email/Mw:1rj61t:TFn7_nT-vz5Hj-l8mjpJPmYbtUUdtGHU4i3rz4sqgA0/ HTTP/1.1" 302 0
+"GET /accounts/login/ HTTP/1.1" 200 10323
+"GET /accounts/login/ HTTP/1.1" 200 10323
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 11521
+"GET /products/ HTTP/1.1" 200 23884
+"GET /products/1794/ HTTP/1.1" 200 12655
+"GET /accounts/logout/ HTTP/1.1" 200 9168
+"POST /accounts/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 11464
+"GET /accounts/login/ HTTP/1.1" 200 10323
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 11773
+"GET / HTTP/1.1" 200 11773
+"GET /products/ HTTP/1.1" 200 24136
+"GET /products/1794/ HTTP/1.1" 200 12998
+"GET /products/ HTTP/1.1" 200 24136
+"GET /profile/ HTTP/1.1" 200 11700
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+"GET /products/?category=computing HTTP/1.1" 200 24053
+"POST /bag/add/3166/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 24136
+"POST /bag/add/3175/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 24136
+"GET /bag/ HTTP/1.1" 200 13434
+Not Found: /bag/media/icons8-quill-pen-32.png
+"GET /bag/media/icons8-quill-pen-32.png HTTP/1.1" 404 4273
+"GET /checkout/ HTTP/1.1" 200 24440
+"GET /static/css/checkout.css HTTP/1.1" 200 542
+"GET /static/js/stripe_element.js HTTP/1.1" 200 1876
+Not Found: /checkout/media/icons8-quill-pen-32.png
+"GET /checkout/media/icons8-quill-pen-32.png HTTP/1.1" 404 4130
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /checkout/ HTTP/1.1" 200 24440
+"GET /static/css/checkout.css HTTP/1.1" 200 542
+"GET /static/css/base.css HTTP/1.1" 200 10401
+"GET /static/js/stripe_element.js HTTP/1.1" 200 1876
+Not Found: /checkout/media/icons8-quill-pen-32.png
+"GET /checkout/media/icons8-quill-pen-32.png HTTP/1.1" 404 4130
+"POST /checkout/ HTTP/1.1" 302 0
+"GET /checkout/checkout_success/A712D2DBC2AC4010ACEFF4A360A7694E/ HTTP/1.1" 200 6443
+"GET /static/checkout/css/checkout.css HTTP/1.1" 404 1834
+Not Found: /checkout/checkout_success/A712D2DBC2AC4010ACEFF4A360A7694E/media/icons8-quill-pen-32.png
+"GET /checkout/checkout_success/A712D2DBC2AC4010ACEFF4A360A7694E/media/icons8-quill-pen-32.png HTTP/1.1" 404 4280
+"GET /products/ HTTP/1.1" 200 24136
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"GET /profile/ HTTP/1.1" 200 11700
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+Not Found: /profile/media/icons8-quill-pen-32.png
+"GET /profile/media/icons8-quill-pen-32.png HTTP/1.1" 404 3914
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 200 12468
+"GET /static/css/profile.css HTTP/1.1" 200 1548
+"GET /static/css/base.css HTTP/1.1" 200 10401
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/js/countryfield.js HTTP/1.1" 404 1813
+"GET /media/profiles/Screenshot_2024-01-02_145000_jgICuao.webp HTTP/1.1" 200 8696
+"GET /static/js/profile.js HTTP/1.1" 200 1196
+Not Found: /profile/media/icons8-quill-pen-32.png
+"GET /profile/media/icons8-quill-pen-32.png HTTP/1.1" 404 3914
+"GET / HTTP/1.1" 200 11773
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/profiles/views.py changed, reloading.
+Watching for file changes with StatReloader

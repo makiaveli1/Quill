@@ -24,11 +24,11 @@
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 1030; /* High z-index to ensure the header stays on top */
+        z-index: 1030;
     }
     
     body {
-        padding-top: 70px; /* Adjust this value based on the height of your header */
+        padding-top: 70px;
     }
     
     .navbar {
@@ -48,7 +48,7 @@
         display: flex;
         align-items: center;
         position: absolute;
-        right: 10px; /* Adjust based on your design */
+        right: 10px;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -56,7 +56,7 @@
     /* Individual icon style adjustments for alignment and spacing */
     .search-icon-container,
     .nav-item.dropdown {
-        margin-right: 20px; /* Adjust the space between icons as needed */
+        margin-right: 20px;
     }
 
     /* Clear the marker from the dropdown to prevent displacement */
@@ -95,9 +95,9 @@
 
     .search-form {
         display: flex;
-        justify-content: center; /* Center the input and button inside the form */
-        width: 100%; /* Make the form take the full width of its parent */
-        margin-top: 10px; /* Only one margin-top is necessary */
+        justify-content: center;
+        width: 100%; 
+        margin-top: 10px;
     }
     
 
@@ -275,20 +275,20 @@
     
     /* Mailing List Section */
     #mc_embed_signup {
-        background-color: #EAE4D4; /* Subscription form background */
-        padding: 2rem; /* Padding around the form */
-        margin: 1rem auto; /* Center form in the page with top and bottom margin */
-        max-width: 100%; /* Maximum width of the form */
+        background-color: #EAE4D4; 
+        padding: 2rem; 
+        margin: 1rem auto; 
+        max-width: 100%; 
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Aligns the children (h2, form, button) to the center */
+        align-items: center; 
         font-family: Helvetica, Arial, sans-serif;
         font-size: 1rem;
     }
     
     #mc_embed_signup h2 {
-        text-align: center; /* Centers the title text */
+        text-align: center; 
         width: 100%;
     }
     
@@ -300,23 +300,23 @@
     }
     
     #mc_embed_signup .mc-field-group {
-        width: 100%; /* Full width of the form */
-        margin-bottom: 1rem; /* Space between the input field and the button */
+        width: 100%; 
+        margin-bottom: 1rem; 
     }
     
     #mc_embed_signup .mc-field-group input {
         width: 100%;
         padding: 0.5rem;
         margin-left: 2rem;
-        border: 2px solid #000; /* Border for the input field */
+        border: 2px solid #000; 
     }
 
     #mc_embed_signup .button, #mc_embed_signup input[type="submit"] {
         position: relative;
-        background-color: #000 !important; /* Background color for the button */
-        color: #fff !important; /* Text color for the button */
+        background-color: #000 !important; 
+        color: #fff !important; 
         border: none !important;
-        left: 52rem;
+        left: 9rem;
     }
     
     /* Social Media Icons */
@@ -365,36 +365,115 @@
         background-color: #e0b469 !important; 
     }      
 
-    @media (min-width: 768px) {
-        .search-icon-container {
-          right: 120px; 
-        }
-      
-        .nav-item.dropdown {
-          right: 50px;
-      
-        .cart-icon-container {
-          right: 20px; 
+    /* Extra Small Devices, Phones */
+    @media only screen and (max-width: 300px) {
+        body {
+            padding-top: 50px;
         }
 
-        .footer-bottom, .social-links {
-            justify-content: center;
-            text-align: center;
+        .navbar-brand img {
+            max-height: 30px;
         }
-      }
+
+        .nav-link {
+            padding: 0.3rem 0.6rem;
+        }
+
+        .hero-text {
+            font-size: 1.75rem;
+        }
+
+        .btn-lg {
+            padding: 0.4rem 1.5rem;
+            font-size: 1rem;
+        }
+
+        .search-input,
+        .search-button {
+            width: 100%;
+            margin-top: 0;
+        }
+
+        #mc_embed_signup,
+        #mc_embed_signup .mc-field-group input,
+        #mc_embed_signup .button {
+            position: relative;
+            width: 100%;
+            left: 1rem;
+        }
     }
 
-
-    @media (max-width: 900px) {
-        #mc_embed_signup {
-            padding: 1rem; /* Reduced padding on smaller screens */
+    /* Small Devices, Tablets */
+    @media only screen and (min-width: 601px) and (max-width: 900px) {
+        body {
+            padding-top: 60px;
         }
-    
+
+        .navbar-brand img {
+            max-height: 35px;
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+        }
+
+        .hero-text {
+            font-size: 2.5rem;
+        }
+
+        .btn-lg {
+            padding: 0.5rem 1.75rem;
+            font-size: 1.125rem;
+        }
+
+        .search-input,
+        .search-button {
+            width: auto;
+        }
+
+        #mc_embed_signup,
+        #mc_embed_signup .mc-field-group input,
+        #mc_embed_signup .button {
+            width: calc(100% - 4rem);
+            left: 5rem;
+        }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width: 901px) and (max-width: 1200px) {
+        .hero-text {
+            font-size: 3rem;
+        }
+
+        .btn-lg {
+            padding: 0.6rem 2rem;
+            font-size: 1.25rem;
+        }
+
+        #mc_embed_signup,
+        #mc_embed_signup .mc-field-group input,
+        #mc_embed_signup .button {
+            width: calc(100% - 4rem);
+            left: 45rem;
+        }
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width: 1201px) {
+        .hero-text {
+            font-size: 4rem;
+        }
+
+        .btn-lg {
+            padding: 0.75rem 2.5rem;
+            font-size: 1.5rem;
+        }
+
         #mc_embed_signup .button, #mc_embed_signup input[type="submit"] {
             position: relative;
-            background-color: #000 !important; /* Background color for the button */
-            color: #fff !important; /* Text color for the button */
+            background-color: #000 !important; 
+            color: #fff !important; 
             border: none !important;
-            left: 12rem;
+            left: 50rem;
         }
     }

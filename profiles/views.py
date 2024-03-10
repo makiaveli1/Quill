@@ -1,18 +1,18 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Profile
 from django.contrib.auth.decorators import login_required
-from .forms import ProfileForm  # Ensure this form is appropriately set up
+from .forms import ProfileForm
 from django.contrib import messages
-from products.models import Product  # Import Product model
+from checkout.models import Order  # Import the Order model
 
 
 @login_required
 def profile(request):
     """
-    Display and edit the user's profile, including managing their wishlist.
+    Display and edit the user's profile, including managing their wishlist and order history.
     """
-    user = request.user
-    profile, created = Profile.objects.get_or_create(user=user)
+    profile, created = Profile.objects.get_or_create(user=request.user)
+    orders = Order.objects.filter(user_profile=profile).order_by('-date')
 
     if request.method == 'POST':
         form = ProfileForm(request.POST, request.FILES, instance=profile)
@@ -32,6 +32,7 @@ def profile(request):
     context = {
         'form': form,
         'wishlist_products': wishlist_products,
+        'orders': orders,  # Pass orders to the template
         'on_profile_page': True,
     }
 
@@ -41,20 +42,20 @@ def profile(request):
 @login_required
 def order_history(request, order_number):
     """
-    Display a user's order history
+    Display a user's order history.
     """
-    order = get_object_or_404(Order, order_number=order_number,
-                              user=request.user)  # Ensure user has access to this order
+    order = get_object_or_404(
+        Order, order_number=order_number, user_profile__user=request.user)
 
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
         'A confirmation email was sent on the order date.'
     ))
 
-    template = 'orders/order_history.html'  # Adjust if using a different template
+    template = 'orders/order_history.html'
     context = {
         'order': order,
-        'from_profile': True,  # Differentiate access from direct purchase
+        'from_profile': True,
     }
 
     return render(request, template, context)
