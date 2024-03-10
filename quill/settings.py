@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'bag',
     'storages',
     'crispy_forms',
+    'crispy_bootstrap5',
     'profiles',
     'checkout',
     'django_extensions',
@@ -191,8 +192,8 @@ if 'USE_AWS' in os.environ:
     }
 
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = 'quill-01'  # Replace with your actual bucket name
-    AWS_S3_REGION_NAME = 'us-east-1'  # Replace with the correct region
+    AWS_STORAGE_BUCKET_NAME = 'quill-01'
+    AWS_S3_REGION_NAME = 'us-east-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
