@@ -52,13 +52,11 @@ INSTALLED_APPS = [
     'bag',
     'storages',
     'crispy_forms',
+    'crispy_bootstrap4',
     'profiles',
     'checkout',
     'django_extensions',
 ]
-
-if os.getenv('USE_CRISPY_BOOTSTRAP4') == 'True':
-    INSTALLED_APPS.append('crispy_bootstrap4')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
