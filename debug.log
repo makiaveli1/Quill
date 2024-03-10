@@ -1571,3 +1571,27 @@ Not Found: /products/3181/media/icons8-quill-pen-32.png
 Not Found: /bag/media/icons8-quill-pen-32.png
 "GET /bag/media/icons8-quill-pen-32.png HTTP/1.1" 404 4273
 "GET /products/ HTTP/1.1" 200 24136
+"GET /products/ HTTP/1.1" 200 24136
+"GET /static/css/base.css HTTP/1.1" 200 10401
+"GET /static/products/css/products.css HTTP/1.1" 200 11931
+"GET /static/products/js/lazyload.js HTTP/1.1" 200 1991
+Not Found: /products/media/icons8-quill-pen-32.png
+"GET /products/media/icons8-quill-pen-32.png HTTP/1.1" 404 4872
+"GET / HTTP/1.1" 200 11773
+"GET /bag/ HTTP/1.1" 200 10882
+Not Found: /bag/media/icons8-quill-pen-32.png
+"GET /bag/media/icons8-quill-pen-32.png HTTP/1.1" 404 4273
+"GET /products/?category=biography HTTP/1.1" 200 23806
+"POST /bag/add/1791/ HTTP/1.1" 302 0
+"GET /products/ HTTP/1.1" 200 24136
+"GET /bag/ HTTP/1.1" 200 12040
+"GET / HTTP/1.1" 200 11773
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 11773
+"GET /media/icons8-quill-pen-32.png HTTP/1.1" 200 605
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
+Watching for file changes with StatReloader
