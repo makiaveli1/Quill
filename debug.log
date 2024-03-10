@@ -2399,3 +2399,5 @@ Watching for file changes with StatReloader
 "GET /admin/ HTTP/1.1" 200 10680
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 3562
+/mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
+Watching for file changes with StatReloader
