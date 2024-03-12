@@ -29,13 +29,13 @@ LOCAL_DEV=True
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-!%afc554mw#k5(11juwv-t##dd-a#!3bya$8go30(wmzqb3vt9')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # Only enable DEBUG if the LOCAL_DEV environment variable is set to "True"
-if os.getenv('LOCAL_DEV') == 'True':
-    DEBUG = True
+# if os.getenv('LOCAL_DEV') == 'True':
+#     DEBUG = True
 
-ALLOWED_HOSTS = ['quill-7g6f.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['quill-7g6f.onrender.com', '127.0.0.1', 'localhost', 'quill-01.fly.dev',]
 USE_CRISPY_BOOTSTRAP4 = True
 
 # Application definition
