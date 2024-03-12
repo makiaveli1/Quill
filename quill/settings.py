@@ -35,7 +35,7 @@ DEBUG = True
 # if os.getenv('LOCAL_DEV') == 'True':
 #     DEBUG = True
 
-ALLOWED_HOSTS = ['quill-7g6f.onrender.com', '127.0.0.1', 'localhost', 'quill-01.fly.dev','quill-8413e0c50d2e.herokuapp.com']
+ALLOWED_HOSTS = ['quill-7g6f.onrender.com', '127.0.0.1', 'localhost', 'quill-02.fly.dev','quill-8413e0c50d2e.herokuapp.com']
 USE_CRISPY_BOOTSTRAP4 = True
 
 # Application definition
@@ -221,17 +221,14 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET')
 
-if 'DEVELOPMENT' in os.environ:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'likwidtv@gmail.com'
-else:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_USE_TLS = True
-    EMAIL_PORT = 587
-    EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
-    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER') 
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASS')
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
 
 
 LOGGING = {
