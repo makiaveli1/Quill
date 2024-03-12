@@ -35,7 +35,7 @@ DEBUG = True
 # if os.getenv('LOCAL_DEV') == 'True':
 #     DEBUG = True
 
-ALLOWED_HOSTS = ['quill-7g6f.onrender.com', '127.0.0.1', 'localhost', 'quill-01.fly.dev',]
+ALLOWED_HOSTS = ['quill-7g6f.onrender.com', '127.0.0.1', 'localhost', 'quill-01.fly.dev','quill-8413e0c50d2e.herokuapp.com']
 USE_CRISPY_BOOTSTRAP4 = True
 
 # Application definition
