@@ -93,7 +93,9 @@
 {% block postload_js %}
   <script type="text/javascript">
     var stripePublicKey = '{{ stripe_public_key }}'
-    var clientSecret = '{{ client_secret }}' // Assuming you want to directly access it in JS
+    var clientSecret = '{{ client_secret }}'
+    console.log('Debug - Stripe Public Key:', '{{ stripe_public_key }}');
+    console.log('Debug - Client Secret:', '{{ client_secret }}');
   </script>
   <script src="https://js.stripe.com/v3/"></script>
   <script src="{% static 'js/stripe_element.js' %}"></script>

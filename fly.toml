@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for quill-02 on 2024-03-12T12:45:11Z
+# fly.toml app configuration file generated for quill-1 on 2024-03-25T08:52:31Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'quill-02'
+app = 'quill-1'
 primary_region = 'lhr'
 console_command = '/code/manage.py shell'
 

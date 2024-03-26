@@ -2,6 +2,7 @@ from django.db import transaction
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
+from django.core.mail import send_mail
 from django.conf import settings
 from django.http import JsonResponse
 import stripe
@@ -117,8 +118,9 @@ def checkout(request):
                     )
                     order_line_item.save()
                 except Product.DoesNotExist:
-                    messages.error(request, f"One of the products in your bag wasn't found in our database. \
-                                    Please call us for assistance!")
+                    messages.error(request, f"""One of the products in your
+                                   bag wasn't found in our database.
+                                    Please call us for assistance!""")
                     order.delete()
                     return redirect(reverse('view_bag'))
             
@@ -131,7 +133,7 @@ def checkout(request):
         if not bag:
             messages.error(request, "Your bag is empty.")
             return redirect(reverse('products'))
-        
+
         stripe_total = round(calculate_bag_total(bag) * 100)  # Stripe requires amount in cents
         if stripe_total > 0:
             try:
@@ -141,13 +143,14 @@ def checkout(request):
                     metadata={'integration_check': 'accept_a_payment'}
                 )
             except stripe.error.StripeError as e:
-                messages.error(request, "Unable to create a payment intent. Please try again.")
+                messages.error(request,
+                               """Unable to create a payment intent. Please try again.""")
                 return redirect(reverse('checkout'))
 
             client_secret = intent.client_secret
         else:
             client_secret = None  # Handle cases where the total is 0 or bag is empty
-        
+       
         order_form = OrderForm()
         template = 'checkout/checkout.html'
         context = {
@@ -187,6 +190,19 @@ def checkout_success(request, order_number):
                      Your order number is {
                      order_number}.
                      A confirmation email will be sent to {order.email}.''')
+    
+    # Define email subject and message
+    subject = 'Your Order Confirmation'
+    message = f'Thank you for your order! Your order number is {order_number}.'
+
+    # Send the email
+    send_mail(
+        subject,
+        message,
+        settings.DEFAULT_FROM_EMAIL,
+        [order.email],
+        fail_silently=False,
+    )
 
     if 'bag' in request.session:
         del request.session['bag']
