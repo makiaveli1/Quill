@@ -32,8 +32,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = False
 
 # Only enable DEBUG if the LOCAL_DEV environment variable is set to "True"
-# if os.getenv('LOCAL_DEV') == 'True':
-#     DEBUG = True
+if os.getenv('LOCAL_DEV') == 'True':
+    DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'quill-1.fly.dev','quill-8413e0c50d2e.herokuapp.com']
 USE_CRISPY_BOOTSTRAP4 = True

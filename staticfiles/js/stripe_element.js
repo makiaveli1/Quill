@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize Stripe with the directly available public key
   const stripe = Stripe(stripePublicKey);
   const elements = stripe.elements();
-
+ 
   // Configuration for Stripe card element...
   const card = elements.create("card", { /* card style configuration */ });
   card.mount("#card-element");
