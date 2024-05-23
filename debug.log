@@ -855,3 +855,9 @@ Not Found: /profile/media/icons8-quill-pen-32.png
 "GET /products/?category=biography HTTP/1.1" 200 23688
 "GET /products/?category=crime-thriller HTTP/1.1" 200 23696
 /mnt/c/Users/likwi/OneDrive/Desktop/PROJS/Quill/quill/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 302 0
+"GET /accounts/login/?next=/profile/ HTTP/1.1" 200 10342
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 11773
+"GET / HTTP/1.1" 200 11773

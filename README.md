@@ -8,7 +8,7 @@ Quill is a ficticious eCommerce bookshop, built using Django, Python, Javascript
 
 Quill is a Business to Customer online retailer selling books.
 
-Developed by Monica Murray
+Project Built By Akadiri Oluwagbemi
 
 
 
