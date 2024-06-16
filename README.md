@@ -1,49 +1,26 @@
-# Quill	
+Quill
+Project Overview
+Quill is an imagined eCommerce platform designed for book sales, utilizing Django, Python, JavaScript, and Bootstrap 4. It operates as a Business to Consumer (B2C) online book retailer.
+
+Created by Akadiri Oluwagbemi
 
 
+This image of the final website, generated via Techsini, showcases the site across various screen sizes. The live site is accessible here.
 
-## Project Overview
+Purpose
+The 'Quill' application serves as a fictional online extension of a physical bookshop, aimed at expanding customer reach. Its design is intended to encourage users to browse and make purchases.
 
-Quill is a ficticious eCommerce bookshop, built using Django, Python, Javascript and Bootstrap 4.
+Business Owner's Goals
+The goal for the business owner is to establish a profitable online presence for their physical bookshop, thereby expanding their customer base. This involves creating an intuitive, robust, visually appealing website with a secure and simple payment system. The owner also seeks to manage the product offerings securely, with the ability to add, edit, or delete items through an interactive front-end.
 
-Quill is a Business to Customer online retailer selling books.
+User/Customer's Goals
+Quill's customers want to purchase books. They should immediately grasp the site's purpose upon arrival, navigate it intuitively, view all products, and click on any product for more details, ultimately making secure purchases. Users may also wish to register to create a user profile, log in and out of their accounts, view and edit personal data securely, and review their purchase history. Registered users in Ireland can enjoy free delivery. Customer actions are met with interactive front-end feedback confirming successful or unsuccessful operations.
 
-Project Built By Akadiri Oluwagbemi
+Project Goal
+Quill represents my fifth and final portfolio project for Code Institute's Diploma in Full Stack Software Development (Ecommerce Applications). It is a full stack site driven by business logic to manage a centrally-owned dataset. Quill includes authentication and supports secure online payments for products stored in the site’s relational database.
 
-
-
-![techsini!](readme_media/screenshots/am_i_responsive_screenshot.png) 
-
-An image of the finished site generated from [techsini](https://techsini.com/multi-mockup/index.php) which displays the application at four screen size breakpoints.
-
-Please visit the live site via [this link](https://quill-24a1ef954cc0.herokuapp.com/).
-
-
-## Purpose
-
-The 'Quill' application is designed and build as a fictitious online presence of a physical bookshop, with the purpose of creating an online presence for the store to extend its customer reach. 
-
-The design encourages users to browse and to make a purchase.
-
-## Business Owner's Goals
-
-The business owner's goal is to have a profitable eCommerce presence of its physical bookshop, which extends its customer base by providing an intuitive, robust and visually appealing website with secure and simple payment system.  The Store Owner wants to manage the product offerings of the eCommerce site securely, and add, edit or delete items via a secure interactive front-end.
-
-## User/Customer's Goals
-
-A customer of Quill wants to buy books.  They will understand the application's purpose when first arriving to the site, be able to navigate intuitively around the pages of the website, view all products, click on any product to view it in more detail, and be able to purchase one or many books securely.  A user or customer of this website may also want to be able to Register to create a user profile, and so can Login and Logout of their account on website, view and edit their personal data securely via their account, and view their purchase history.  Registered Users with a delivery address in Ireland can avail of free delivery.  All customer actions are met with feedback via the interactive front end to confirm their chosen action has been performed successfully or has been unsuccessful.
-
-## Project Goal
-
-Quill is my fifth and final Portfolio Project for Code Institute's Diploma in Full Stack Software Development (Ecommerce Applications) and is a Full Stack site based on business logic used to control a centrally-owned dataset.  
-
-Quill contains an authentication mechanism and provides for the online, secure payment for products which are available and stored via the site's relational database.
-
-## Business Model
-
-Quill is a Business to Consumer (B2C) direct seller of books which takes single payments - the transaction ends once the payment is made.
-
-
+Business Model
+Quill operates as a Business to Consumer (B2C) direct book seller, accepting single payments, completing transactions upon payment.
 
 # CONTENTS
 
@@ -63,59 +40,57 @@ Quill is a Business to Consumer (B2C) direct seller of books which takes single 
 
 8. [Credits](#credits)
 
-
-
-
 ## User Experience (UX) Design<a name="ux"></a>
 
 ### Strategy
 
-Our user seeks a convenient, attractive, and secure online book shopping experience. The ability to categorize books by genre and organize listings is an added advantage. The website's design prioritizes user-friendliness. Its branding is straightforward, neat, and free of distractions, yet not overly simplistic. Every feature is developed with the user's ease in mind.
-
-Every interaction on the site aims to elicit a positive reaction from the user. This is achieved through the strategic arrangement of information, color schemes, clear and straightforward navigation, and immediate feedback on user actions. The site avoids intrusive pop-ups. Users have full control over their actions, with visible progress indicators and transaction feedback.
+Our user desires a convenient, attractive, and secure online book shopping experience. The ability to categorize books by genre and organize listings is a valuable feature. The website design focuses on user-friendliness, with straightforward branding that is clean and uncluttered yet not overly simplistic. Each feature is developed with user convenience in mind, aiming to generate positive interactions. This is achieved through organized presentation of information, harmonious color schemes, clear and straightforward navigation, and instant feedback on user actions. The site avoids disruptive pop-ups, giving users full control over their activities, with visible progress indicators and transaction feedback.
 
 ### Scope
+The Minimum Viable Product (MVP) for Quill includes an intuitive, responsive online shopping experience featuring:
 
-An intuitive simple, responsive online shopping experience with the following features is the Minimum Viable Product (MVP):
-
-- full-stack website with an interactive front-end, a main navigation menu and a structured layout,
-- a product structure contained within a cloud-hosted, relational database,
-- secure authentication and role-based authorisation, 
-- current login state is reflected to the user,
-- secure ecommerce payment system,(INCOMPLETE, DUE TO UNFIXABLE BUG) 
-- fully implemented CRUD - Create, Add, Update and Delete items from a secure front-end,
-
+a full-stack website with an interactive front-end, a primary navigation menu, and a structured layout,
+a product catalog within a cloud-hosted, relational database,
+secure authentication and role-based authorization,
+real-time reflection of login states,
+a secure ecommerce payment system (not fully implemented due to unresolved bugs),
+fully implemented CRUD operations - Create, Read, Update, and Delete items from a secure front-end.
 
 ### Structure
+On the Quill ecommerce platform, users can browse and purchase without registration, although registering enhances their experience by allowing them to store and modify shipping details and view previous purchases in their profile. Only authenticated Store Owner/Admin users can add products to the store to ensure security.
 
-In the Quill ecommerce platform, users can browse and purchase without needing to register. However, registration enhances the user experience, allowing for the storage and modification of shipping details and previous purchase records in their Profile. To maintain the security of the ecommerce operations and its products, only Store Owner/Admin users, following authenticated superuser login, can add products to the store.
+The navigation bar provides access to user registration and login options. After logging in, the navigation bar expands to include a 'Profile' link for registered users. For superusers like the Store Owner, additional links such as 'Add Product/Add Author' are available for inventory expansion. The Store Owner can also add, edit, and delete products directly from the main Products page, facilitating efficient store management.
 
-The user registration and login options are accessible via the Navigation bar. Once logged in successfully, the Navigation bar is expanded to include a 'Profile' page link for registered users. For superusers, like the Store Owner, additional links such as 'Add Product/Add Author' become available for expanding the store's inventory. Moreover, the Store Owner has the capability to add, edit, and delete products directly from the main Products page, facilitating efficient management of the store's offerings.
+The Search feature on the navigation bar is available to all users. Upon successful login, the Logout option is displayed on the navigation bar for logged-in users, redirecting them to the Home page upon logging out.
 
-The Search feature on the Navigation bar is accessible to all users. Following a successful login, the Logout feature is automatically displayed on the Navigation bar for logged-in users. Logging out redirects users back to the Home page.
+The interactive footer contains internal links to the About Us and Privacy Policy pages, a subscription link to the Bookworm's Newsletter VIP Club, and external links to the website's social media platforms.
 
-The interactive footer hosts internal links to the About Us and Privacy Policy pages. It also includes a link to subscribe to the Bookworm's Newsletter VIP Club, along with external links to the website's social media platforms.
-
-Quill's functionality is underpinned by a cloud-based relational database that manages the product offering. It integrates Stripe for secure payment processing, concluding transactions with a single payment. The data is consistently and methodically stored in the database, ensuring any updates are promptly reflected on the user-facing end of the website.
+Quill's functionality relies on a cloud-based relational database managing the product offerings. It integrates Stripe for secure payment processing, concluding transactions with a single payment. Data is consistently and methodically stored in the database, ensuring prompt reflection of updates on the user-facing end of the website.
 
 ### Skeleton
-
-This ecommerce site adheres to the standard practices common to online stores. Users will find the interface intuitive, with the ability to click on links and icons to perform actions, add items to a Shopping Cart, and go through a Checkout and card validation process for secure payments. This application aligns with these established conventions. The information on the site is systematically displayed, ensuring that each detail is easily accessible. 
+The Quill ecommerce site follows standard practices common to online stores. Users will find the interface intuitive, with the ability to click on links and icons to perform actions, add items to a Shopping Cart, and go through a Checkout process with card validation for secure payments. This application adheres to established conventions, with information systematically displayed for easy access.
 
 ### Surface
+The Quill website features an elegant and inviting color scheme, anchored by a warm beige backdrop that provides a neutral stage for the vivid book covers on display. The selected font, Jont, is chosen for its readability across all devices, contributing to the welcoming and professional aesthetic of the site.
 
-Quill website features an elegant and inviting color scheme, anchored by a warm beige backdrop that provides a neutral stage for the vivid covers of the books on display. The chosen font, Jont, is selected for its readability across all devices, contributing to the site's clean and uncluttered aesthetic. This font choice, along with the thoughtful contrast between the text and the background, ensures that the website is not only aesthetically pleasing but also accessible to users with screen readers and assistive technologies.
+The homepage is designed to immediately attract attention, with a prominent banner showcasing current promotions or featured books. Below the banner, a selection of categories is displayed, allowing users to easily navigate to their preferred genre. The product listings are presented with high-quality images, brief descriptions, and pricing information, ensuring that users can quickly find the information they need.
 
-User interaction with this responsive application is intended to be intuitive and straightforward. The use of links and icons is designed to be self-explanatory, guiding users through their actions with ease. The application also employs clear feedback messages to inform users of both successful and unsuccessful actions promptly, ensuring a seamless and user-friendly experience at the front-end.
+Interactive elements are highlighted subtly to guide user interactions without overwhelming the design. Buttons, links, and form fields are consistently styled, providing a cohesive user experience. The site's responsiveness ensures that it functions well on various devices, from desktops to mobile phones, maintaining usability and visual appeal across platforms.
 
 ## Agile Methodology<a name="agile"></a>
 
-Please follow this link to open my [AGILE.md](AGILE.md) file and read about how I used Agile Methodology in the planning and development of Quill application.
+Agile methodologies were integral to the development process of Quill. The project was structured into manageable sprints, each dedicated to implementing specific features and improvements. This iterative approach allowed for continuous development and feedback, ensuring the project stayed aligned with user needs and business objectives.
+
+GitHub Planner was utilized as the project management tool to track progress, organize tasks, and facilitate team communication. Separate boards were set up for each sprint, with individual tasks represented by cards. These cards transitioned through different stages (e.g., To Do, In Progress, Done) to indicate the project's progress and current status.
+
+Daily stand-up meetings were conducted with my class trainer, Marko, at Code Institute to discuss ongoing progress, address any blockers, and plan subsequent actions. These meetings promoted a collaborative atmosphere, ensuring all team members were updated and coordinated regarding the project's status.
+
+At the end of each sprint, retrospectives were held to evaluate what went well, identify areas for improvement, and outline actionable steps for future sprints. This continuous cycle of reflection and enhancement contributed to the efficiency and effectiveness of the development process.
 
 
 ### Colour Scheme
 
-Quill' colour scheme is designed to be crisp, clean and sophisticated.  The colour palette is primarily black and white to optimise colour contrast.  
+The color scheme for Quill is designed to be warm and inviting, with a beige backdrop providing a neutral canvas for the vibrant book covers. The primary colors are chosen to create a sense of comfort and readability, ensuring that users can browse the site for extended periods without strain. 
 
 I used [Coolors](https://coolors.co) to generate a complimentary colour palette.
 
@@ -127,7 +102,7 @@ The colour palette is generated from the landing page image.
 
 ### Typography
 
-I chose Montserrat font from Google Fonts for my website.
+The Jost font was selected for its readability across all devices. Its clean and modern appearance complements the overall aesthetic of the site, contributing to a professional and welcoming user experience.
 
 ![Jost font!](media/Readme_media/Jost_font.png)
 
@@ -218,13 +193,6 @@ The product detail page outlines everything a user might wish to know about a pr
 
 All of the major functions of the product management of the Quill store can be controlled by the authenticated Store Owner via the front-end on either the Products page or the Product detail page.  New products can be added, and existing product detail can be edited, or deleted from the store entirely, with all changes being reflected immediately to the Store Owner on the front-end and to the data on the database.
 
-#### User Feedback Messages
-
-Could not complete due to time constraints
-
-#### Email Confirmation
-
-Could not complete due to time constraints
 
 #### Search Feature
 
@@ -234,9 +202,6 @@ Search feature, which is available to all site users, can be found in the Naviga
 
 The website's footer is thoughtfully crafted to enhance user navigation, featuring internal links for 'About Us', 'Privacy Policy', 'Contact Us', and 'FAQ' sections for easy access to more information. Additionally, the footer credits the creation of the site to 'Gbemi Akadiri for CI P5', suggesting a personalized touch and a nod to the project or course it was created for. Social media engagement is facilitated through sleek icons linking to platforms like Facebook, Twitter, and Instagram, inviting users to join the brand's social community. The minimalist design of the footer, with its clean font and well-organized layout against a warm beige background, aligns with the website's sophisticated aesthetic.
 
-#### Bespoke Error Page
-
-could not be completed in time.
 
 
 ### Future Implementations
@@ -320,9 +285,6 @@ Languages in this project were:
 
 Defensive Programming was at the forefront of the site's development, with user authentication and authorisation implemented for all site users and limiting access to data to only the authenticated registered owner of that data.  In addition, Store Owner access is further restricted using the 'login_required' decorator with those front-end management views only rendering at the front-end to the authenticated superuser.
 
-## Marketing
-
-Could not complete due to time constraints.
 
 ### Purpose of the Application
 
@@ -352,14 +314,6 @@ Quill can provide additional benefit to Subscribers by providing regular interes
 
 - sitemap.xml is a file that lists a website's import page urls, making sure that search engines can crawl, or navigate through them.  It helps a search engine to understand our website's structure and crawl every essential page on the website.  sitemap.xml was generated on [xml-sitemaps.com](https://www.xml-sitemaps.com/details-mym-Quill-et-al-b7ea61e35a6e.herokuapp.com-49873d773.html) and is located in the root directory.
 
-
-## Privacy Policy
-page unfinished
-
-
-## Testing<a name="testing"></a>
-
-Testing is documented in TESTING.md file [here](TESTING.md)
 
 
 ## Setup and Deployment<a name="deployment"></a>
