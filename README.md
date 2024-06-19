@@ -471,7 +471,7 @@ Creating a clone enables you to make a copy of the repository at that point in t
 
 To do this, you should:
 
-- Navigate to [my Github Repository](https://github.com/MoniMurray/Quill-et-al) 
+- Navigate to [my Github Repository](https://github.com/makiaveli1/Quill) 
 - Click on the arrow on the green code button at the top of the list of files
 - Select the 'Local' tab select the 'HTTPS' tab and click the icon to copy the prepopulated link
 - Navigate to your code editor of choice and within the terminal change the directory to the location you want to clone the repository to.
@@ -513,7 +513,7 @@ AWS is a cloud-based storage service which we use to store our media and static 
 - Finally, tell the browser to cache static files as they don't change very often, and this instruction will improve site speed and performance for the user.
 - Create a Media folder within the S3 bucket into which we upload all images used in our project, and grant them public-read access.
 
-You can see all this code in my [settings.py](Quill_et_al/settings.py) in this repo.
+You can see all this code in my [settings.py](C:\Users\likwi\OneDrive\Desktop\PROJS\Quill\quill\settings.py) in this repo.
 
 
 
